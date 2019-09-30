@@ -1,5 +1,6 @@
 #!/bin/sh
-sed -i list.m3u  '3d' list.m3u
+#sed -i list.m3u  '3d' list.m3u
+echo "#EXTINF:-1 tvg-name=""$2"",$2" >> list.m3u
 echo "http://192.168.1.40:6878/ace/getstream?id=${1#*://}&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng" >> list.m3u
 sshpass -p  639639 scp list.m3u  pi@192.168.1.45:/var/www/html
 JSON='{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.iptvsimple","enabled":"toggle"},"id":1}'
