@@ -64,4 +64,6 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
 
-          
+          cd $CURRENTDIRECTORY/obmenu-generator
+          ./install.sh 
+          cd .. 
