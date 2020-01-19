@@ -10,6 +10,7 @@ feh
 firefox
 gawk
 git-lite
+gsed
 htop
 leafpad
 liberation-fonts-ttf
@@ -41,7 +42,6 @@ sopcast
 tint2
 unrar
 unzip
-webcamd
 xauth
 xbindkeys
 xf86-input-keyboard
