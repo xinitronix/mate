@@ -5,6 +5,6 @@
 #Edit the $URL var with your custom port
 
 JSON='{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.iptvsimple","enabled":"toggle"},"id":1}'
-URL="http://192.168.1.45:8081/jsonrpc"
+URL="http://192.168.8.45:8081/jsonrpc"
 curl -s -X POST -H "Content-Type: application/json" -d $JSON $URL
 curl -s -X POST -H "Content-Type: application/json" -d $JSON $URL
