@@ -33,7 +33,9 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh
           cd .. 
             
-
+          cd $CURRENTDIRECTORY/mpd5
+          ./install.sh
+          cd .. 
 
           cd $CURRENTDIRECTORY/weatherconky
           ./install.sh

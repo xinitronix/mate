@@ -14,22 +14,26 @@ border_width = 0
 background_color = #1C1C1C 100
 border_color = #000000 100
 
+
+
+
 # Panel
 panel_monitor = all
-panel_position =  bottom center horizontal
+panel_position = bottom center horizontal
+panel_items = LTSCP
 panel_size = 104% 31
 panel_margin = -2 -1
 panel_padding = 0 0 10
 panel_dock = 0
 wm_menu = 1
-panel_layer = normal
+panel_layer = bottom
 panel_background_id = 1
 
 # Panel Autohide
 autohide = 0
-autohide_show_timeout = 0.2
-autohide_hide_timeout = 1
-autohide_height = 0
+autohide_show_timeout = 0.3
+autohide_hide_timeout = 1.5
+autohide_height = 6
 strut_policy = follow_size
 
 # Taskbar
@@ -109,5 +113,31 @@ bat2_font = Liberation Mono 8
 battery_font_color = #B5B5B5 100
 battery_padding = 2 0
 battery_background_id = 0
+
+
+
+
+# Buttons - Panel item = P
+# Exit dialog
+button = new
+button_icon = /home/definitly/Downloads/vpn.png
+#button_icon = system-shutdown
+button_text =
+button_tooltip = Start/Stop VPN
+button_lclick_command = startvpn
+button_rclick_command =
+button_mclick_command =
+button_uwheel_command =
+button_dwheel_command =
+button_font_color = #ffffff 100
+button_padding = 2 2
+button_background_id = 0
+button_centered = 1
+button_max_icon_size = 28
+
+
+
+
+
 
 # End of config
