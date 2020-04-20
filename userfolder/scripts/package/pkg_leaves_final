@@ -1,4 +1,4 @@
-automount
+
 bash
 cabextract
 conky
@@ -20,7 +20,6 @@ micro_httpd
 mpv
 mpd5
 mutt-lite
-nspluginwrapper
 nvidia-driver
 nvidia-settings
 obconf
