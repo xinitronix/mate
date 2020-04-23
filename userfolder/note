@@ -83,6 +83,6 @@ audio_player=mpv --cache=128
 
 doas mount_smbfs   -E utf8:cp866  -I 192.168.8.45 //user@host/share /mnt/
 http://192.168.8.40:6878/webui/app/ReplaceMe/server#proxy-server-playlist
-
+obmenu-generator -p -i
 мегафон 89267512201
 мтс 89859646816
