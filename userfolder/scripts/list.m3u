@@ -1,0 +1,48 @@
+#EXTM3U
+#EXTINF:-1 tvg-name=матч футбол 2,матч футбол 2
+http://192.168.8.40:6878/ace/getstream?id=955bc653f090c238b8d933b41d8a66fee1bf7893&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+#EXTINF:-1 tvg-name=okko,okko
+http://192.168.8.40:6878/ace/getstream?id=c43a41761ad88378db84c9565b5c6cba5ffd37e7&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+
+
+
+
+
+#EXTINF:-1 tvg-name=viasat sport hd,viasat sport hd
+http://192.168.8.40:6878/ace/getstream?id=e95e00dd1127c22d4ac7e7c1f745711ea879c61d&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+#EXTINF:-1 tvg-name=матч тв hd,матч тв hd
+http://192.168.8.40:6878/ace/getstream?id=781f1e0f92475b086b3988bf45da9fbf88de3e63&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+#EXTINF:-1 tvg-name=Россия 1,Россия 1
+#http://192.168.8.40:6878/ace/getstream?id=e21a5af3ce5de33183319373c31bdc72ed7336c4&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+https://livehlsvgtrk2.cdnvideo.ru/hls/russia_hd/playlist_3.m3u8?md5=9ZeEqRwh4p-oUwt7i3RNwA&e=1583517780&hls_proxy_host=70b013ca21e8364cd537747cf862272b
+
+
+#EXTINF:-1 tvg-name=сентанта,сентанта
+http://192.168.8.40:6878/ace/getstream?id=32d4a2f8f74211a986e4d75feab3a3d469edc2da&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+
+
+#EXTINF:-1 tvg-name=футбол,футбол
+http://192.168.8.40:6878/ace/getstream?id=78637dab85e7948057165ad0c80b3db475dd9c3d&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+
+#EXTINF:-1 tvg-name=евроспорт 1,евроспорт 1 
+http://192.168.8.40:6878/ace/getstream?id=5e9f075c9f6703b4dd355f649c424d715570e51b&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+#EXTINF:-1 tvg-name=футбол 3,футбол 3
+http://192.168.8.40:6878/ace/getstream?id=d2a36e305458e200c2a4952317fc33e38bd80187&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+#EXTINF:-1 tvg-name=сентанта,сентанта 
+http://192.168.8.40:6878/ace/getstream?id=b3ab939f6c55a8cda3475201dc77e16fedad0549&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+
+#EXTINF:-1 tvg-name=рентв,рентв
+http://192.168.8.40:6878/ace/getstream?id=fde4b4b3aa1c1e810e90149175b8955d7b9246f3&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+#EXTINF:-1 tvg-name=сентанта 1,сентанта 1
+http://192.168.8.40:6878/ace/getstream?id=b919b8b349c177783f63c4ed0e6ee72848c5bb59&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+
+
+
+#EXTINF:-1 tvg-name=футбол 2,футбол 2
+http://192.168.8.40:6878/ace/getstream?id=8d0173a77051330604c3b34603dae9c2123c4e82&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+
+#EXTINF:-1 tvg-name=матч премьер,матч премьер
+http://192.168.8.40:6878/ace/getstream?id=11b6aa16e978a409504b9e3e9c3b29c56f392bdf&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+
+#EXTINF:-1 tvg-name=Россия 24,Россия 24
+http://kotak.cf/third/tracks-v1a1/mono.m3u8|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
