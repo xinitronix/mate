@@ -57,6 +57,7 @@ xhost
 xinit
 xset
 xterm
+xdg-utils
 xwininfo
 xxkb
 zip
