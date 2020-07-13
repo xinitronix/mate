@@ -91,3 +91,4 @@ obmenu-generator -p -i
 setenv LD_PRELOAD /home/definitly/linuxulator-steam-utils/lib64/fmodfix/fmodfix.so
 cmake .. -D CMAKE_C_COMPILER=/usr/local/bin/gcc9 -D CMAKE_CXX_COMPILER=/usr/local/bin/g++9
 mpv --user-agent="Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0"
+setenv SDL_JOYSTICK_DEVICE /dev/input/event10
