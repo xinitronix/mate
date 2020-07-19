@@ -132,6 +132,8 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
                      echo '}' >> /etc/wpa_supplicant.conf
 
 
+                     mkdir -p  /usr/local/etc/pkg/repos
+
 
 
 
