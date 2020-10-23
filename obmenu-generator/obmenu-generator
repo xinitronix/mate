@@ -1,6 +1,6 @@
-#!/usr/local/bin/perl5.30.3
+#!/usr/local/bin/perl5.32.0
 
-# Copyright (C) 2010-2019 Daniel "Trizen" Șuteu <echo dHJpemVuQHByb3Rvbm1haWwuY29tCg== | base64 -d>.
+# Copyright (C) 2010-2020 Daniel "Trizen" Șuteu <echo dHJpemVuQHByb3Rvbm1haWwuY29tCg== | base64 -d>.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@
 # Name: obmenu-generator
 # License: GPLv3
 # Created: 25 March 2011
-# Latest edit: 16 October 2019
+# Latest edit: 23 June 2020
 # https://github.com/trizen/obmenu-generator
 
 use 5.014;
@@ -32,15 +32,15 @@ use 5.014;
 #use strict;
 #use warnings;
 
-use Linux::DesktopFiles 0.25;
+use Linux::DesktopFiles;
 
 my $pkgname = 'obmenu-generator';
-my $version = '0.86';
+my $version = '0.88';
 
 our ($CONFIG, $SCHEMA);
 my $output_h = \*STDOUT;
 
-my ($pipe, $static, $with_icons, $reload_config, $db_clean, $reconfigure, $update_config, $reconf_openbox);
+my ($pipe, $static, $with_icons, $reload_config, $db_clean, $update_config, $reconf_openbox);
 
 my $home_dir =
      $ENV{HOME}
@@ -71,15 +71,16 @@ menu:
     -m <id>    : menu id (default: 'root-menu')
     -t <label> : menu label text (default: 'Applications')
 
-other:
-    -S <file>  : absolute path to the schema.pl file
-    -C <file>  : absolute path to the config.pl file
-    -o <file>  : absolute path to the menu.xml file
+misc:
     -u         : update the config file
-    -r         : regenerate the config file
     -d         : regenerate the cache file
     -c         : reconfigure openbox automatically
     -R         : reconfigure openbox and exit
+    -S <file>  : absolute path to the schema.pl file
+    -C <file>  : absolute path to the config.pl file
+    -o <file>  : absolute path to the menu.xml file
+
+info:
     -h         : print this message and exit
     -v         : print version and exit
 
@@ -113,7 +114,7 @@ my $config_help = <<"HELP";
                             ],
 
 || ICON SETTINGS
-    | use_gtk3            : Use the Gtk3 library for resolving the icon-paths. (default: 0)
+    | use_gtk3            : Use the Gtk3 library for resolving the icon paths. (default: 0)
     | gtk_rc_filename     : Absolute path to the GTK configuration file.
     | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
     | icon_size           : Preferred size for icons. (default: 48)
@@ -134,6 +135,14 @@ my $config_help = <<"HELP";
         * use qr/.../i for case insensitive mode
 HELP
 
+sub remove_database {
+    my ($db) = @_;
+
+    foreach my $file ($db, "$db.dir", "$db.pag") {
+        unlink($file) if (-e $file);
+    }
+}
+
 if (@ARGV) {
     while (defined(my $arg = shift @ARGV)) {
         if ($arg eq '-i') {
@@ -142,15 +151,12 @@ if (@ARGV) {
         elsif ($arg eq '-p') {
             $pipe = 1;
         }
-        elsif ($arg eq '-r') {
-            $reconfigure = 1;
-        }
         elsif ($arg eq '-s') {
             $static = 1;
         }
         elsif ($arg eq '-d') {
             $db_clean = 1;
-            unlink $cache_db;
+            remove_database($cache_db);
         }
         elsif ($arg eq '-u') {
             $update_config = 1;
@@ -197,7 +203,7 @@ if (not -d $config_dir) {
 }
 
 if ($with_icons and not -d $icons_dir) {
-    unlink($cache_db);
+    remove_database($cache_db);
     require File::Path;
     File::Path::make_path($icons_dir)
       or warn "$0: can't create icon path `$icons_dir': $!\n";
@@ -264,7 +270,7 @@ sub dump_configuration {
     close $config_fh;
 }
 
-if (not -e $config_file or $reconfigure) {
+if (not -e $config_file) {
     dump_configuration();
 }
 
@@ -291,20 +297,6 @@ if ($CONFIG{VERSION} != $version) {
     $CONFIG{VERSION} = $version;
     dump_configuration();
 }
-
-#
-## Remove the overhead of loading some unneeded modules.
-#
-@INC{
-    qw(
-      Carp.pm
-      strict.pm
-      Exporter.pm
-      Tie/Hash.pm
-      warnings.pm
-      warnings/register.pm
-      )
-    } = ();
 
 my $desk_obj = Linux::DesktopFiles->new(
     %{$CONFIG{'Linux::DesktopFiles'}},
@@ -364,7 +356,7 @@ PIPE_MENU_HEADER
         close $fh;
 
         print STDERR <<'EOT';
-[*] A dynamic menu has been successfully generated!
+:: A dynamic menu has been successfully generated!
 EOT
 
         exec 'openbox', '--reconfigure';
@@ -385,10 +377,6 @@ sub get_icon_path {
     my ($name) = @_;
 
     state $gtk = do {
-
-        delete($INC{'Exporter.pm'}) if !defined($INC{'Exporter.pm'});
-        delete($INC{'Carp.pm'})     if !defined($INC{'Carp.pm'});
-        delete($INC{'Tie/Hash.pm'}) if !defined($INC{'Tie/Hash.pm'});
 
         require Digest::MD5;
 
@@ -444,13 +432,15 @@ sub get_icon_path {
 
 # Regenerate the cache db if the config or schema file has been modified
 if (!$db_clean and ((-M $config_file) < (-M $cache_db) or (-M _) > (-M $schema_file))) {
-    print STDERR "[*] Regenerating the cache DB...\n";
-    unlink $cache_db;
+    print STDERR ":: Regenerating the cache DB...\n";
+    remove_database($cache_db);
     $db_clean = 1;
 }
 
-require GDBM_File;
-tie my %cache_db, 'GDBM_File', $cache_db, &GDBM_File::GDBM_WRCREAT, 0640;
+eval { require GDBM_File };
+
+dbmopen(my %cache_db, $cache_db, 0777)
+  or die "Can't create/access database <<$cache_db>>: $!";
 
 # Regenerate the icon db if the GTKRC file has been modified
 if ($with_icons) {
@@ -462,10 +452,14 @@ if ($with_icons) {
     else {
         my $old_mtime = $cache_db{__GTKRC_MTIME__} // -1;
         if ($old_mtime != $gtkrc_mtime) {
-            print STDERR "[*] Regenerating the cache DB...\n";
-            untie %cache_db;
-            unlink $cache_db;
-            tie %cache_db, 'GDBM_File', $cache_db, &GDBM_File::GDBM_WRCREAT, 0640;
+            print STDERR ":: Regenerating the cache DB...\n";
+
+            dbmclose(%cache_db);
+            remove_database($cache_db);
+
+            dbmopen(%cache_db, $cache_db, 0777)
+              or die "Can't create database <<$cache_db>>: $!";
+
             $cache_db{__GTKRC_MTIME__} = $gtkrc_mtime;
         }
     }
@@ -499,6 +493,10 @@ foreach my $file ($desk_obj->get_desktop_files) {
     my $mtime    = (stat $file)[9];
     my $cache_ok = (%info and $info{__MTIME__} == $mtime);
 
+    if ($with_icons and $cache_ok and not exists $info{Icon}) {
+        $cache_ok = 0;
+    }
+
     if (not $cache_ok) {
 
         my $entry = $desk_obj->parse_desktop_file($file) // do {
@@ -525,10 +523,6 @@ foreach my $file ($desk_obj->get_desktop_files) {
         eval {
 
             state $x = do {
-
-                delete($INC{'Exporter.pm'}) if !defined($INC{'Exporter.pm'});
-                delete($INC{'Carp.pm'})     if !defined($INC{'Carp.pm'});
-
                 require Encode;
                 require File::DesktopEntry;
             };
@@ -695,7 +689,7 @@ dump_configuration() if $update_config;
 
 if ($static) {
     print STDERR <<'EOT';
-[*] A static menu has been successfully generated!
+:: A static menu has been successfully generated!
 EOT
     if ($reconf_openbox) {
         exec 'openbox', '--reconfigure';
