@@ -18,6 +18,7 @@ lxappearance
 linux-steam-utils
 linux-nvidia-libs
 linux_base-c7
+linux-c7-devtools
 mc
 micro_httpd
 mpv
