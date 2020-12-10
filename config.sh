@@ -41,6 +41,7 @@
 
                     echo  'if_urtwn_load="YES"'           >>                   /boot/loader.conf
                     echo  'legal.realtek.license_ack=1'   >>                   /boot/loader.conf
+                    echo  'nvidia-modeset_load="YES"'   >>                   /boot/loader.conf
 
 
 
