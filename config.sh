@@ -28,6 +28,13 @@
                      echo 'kld_list="radeonkms"'         >>                   /etc/rc.conf
                      echo 'KLD_LIST="linux linsysfs linprocfs"'  >>           /etc/rc.conf
                      echo 'allscreens_flags=" MODE_283"'         >>           /etc/rc.conf
+          echo 'sendmail_enable="NONE"'         >>           /etc/rc.conf
+echo 'sendmail_msp_queue_enable="NO"'         >>           /etc/rc.conf
+echo 'sendmail_outbound_enable="NO"'         >>           /etc/rc.conf
+echo 'sendmail_submit_enable="NO"'         >>           /etc/rc.conf
+                        
+                     
+
 #/boot/defaults/loader.conf 
                      echo  'nvidia_load="YES" '           >>                   /boot/defaults/loader.conf
                      echo  'vboxdrv_load="YES"'           >>                   /boot/defaults/loader.conf
