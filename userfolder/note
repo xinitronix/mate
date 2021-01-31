@@ -84,7 +84,7 @@ audio_player=mpv --cache=128
 
 08.05.2018 батарейки ааа поставлены в клавиатуру
 
-chromium  --proxy-server="socks5://192.168.8.40:9050"
+chrome  --proxy-server="socks5://192.168.8.40:9050"
 
 doas mount_smbfs   -E utf8:cp866  -I 192.168.8.45 //user@host/share /mnt/
 doas mount -t ufs /dev/ada0p2 mnt
