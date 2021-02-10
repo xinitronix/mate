@@ -21,6 +21,7 @@ linux-steam-utils
 linux-nvidia-libs
 linux_base-c7
 linux-c7-devtools
+libc6-shim 
 mc
 micro_httpd
 mpv
@@ -32,6 +33,7 @@ obconf
 p7zip
 pcmanfm
 pkg
+python3
 pkg_cutleaves
 polipo
 portmaster
