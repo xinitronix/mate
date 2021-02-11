@@ -90,6 +90,7 @@ chrome  --proxy-server="socks5://192.168.8.40:9050"
 doas mount_smbfs   -E utf8:cp866  -I 192.168.8.45 //user@host/share /mnt/
 doas mount -t ufs /dev/ada0p2 mnt
 doas ntfs-3g /dev/ada0p2 /ntfs-2TB
+/dev/ada0p2 /ntfs-2TB   ntfs   mountprog=/usr/local/bin/ntfs-3g,late,rw    0   0
 http://192.168.8.40:6878/webui/app/ReplaceMe/server#proxy-server-playlist
 obmenu-generator -p -i
 мегафон 89267512201
