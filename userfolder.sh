@@ -13,6 +13,7 @@ login2=rtorrent
  
                     mkdir /ntfs-2TB
                     chown  -R     $login:wheel     /ntfs-2TB
+                    chmod 0777  /ntfs-2TB
 
 
 #create user space
