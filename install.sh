@@ -68,6 +68,6 @@ CURRENTDIRECTORY=$(pwd)
 
           cd $CURRENTDIRECTORY/obmenu-generator
           ./install.sh 
-          cd $CURRENTDIRECTORY/obmenu-generator
+          cd $CURRENTDIRECTORY/xboxdrv
           ./install.sh 
           cd .. 
