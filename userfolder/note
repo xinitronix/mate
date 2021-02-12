@@ -45,6 +45,7 @@ xset s off & xset -dpms &
 VBoxManage  modifyvm android44  --mouse usbtablet
 
 pkg install autoconf automake findutils gmake cmake libtool gettext gsed gtar
+pkg install gstreamer1-plugins-good gcc10 jxrlib sdl2 openal-soft FAudio desktop-file-utils fontconfig
 
 doas ntpdate 1.ru.pool.ntp.org
 команды 
