@@ -7,7 +7,12 @@ login2=rtorrent
 
                     cp      $CURRENTDIRECTORY/userfolder/.Xdefaults             /home/$login2
                     echo    'defflow off'            >>                         /home/$login2/.screenrc
-
+                    
+ #/ntfs-2TB  
+ 
+ 
+                    mkdir /ntfs-2TB
+                    chown  -R     $login:wheel     /ntfs-2TB
 
 
 #create user space
