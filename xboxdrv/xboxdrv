@@ -18,9 +18,9 @@ xboxdrv_start()
 {
 if [ ! -f /var/run/${name}.run ]
     then
-  /usr/local/bin/xboxdrv -s &  echo $! > /var/run/${name}.run
-
-
+ /usr/local/bin/screen -m -d   /usr/local/bin/xboxdrv -s &  echo $! > /var/run/${name}.run
+  sleep 1
+  chmod 0666 /dev/input/event10
  fi
  }
  xboxdrv_stop()
