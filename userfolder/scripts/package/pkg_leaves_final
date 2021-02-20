@@ -65,6 +65,7 @@ xterm
 xdg-utils
 xwininfo
 xxkb
+winetricks
 zip
 p5-App-cpanminus
 p5-Gtk2
