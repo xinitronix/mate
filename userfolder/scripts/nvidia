@@ -1,0 +1,4 @@
+#!/bin/sh
+
+doas kldload nvidia.ko
+doas kldload nvidia-modeset.ko
