@@ -80,7 +80,7 @@ echo 'sendmail_submit_enable="NO"'         >>           /etc/rc.conf
 
 #                     echo 'linsys  /compat/linux/sys   linsysfs  rw 0 0' >>      /etc/fstab
 #/etc/sysctl.conf
-                     echo "compat.linux.osrelease=2.6.32" >>                      /etc/sysctl.conf
+                     echo "compat.linux.osrelease=3.6.32" >>                      /etc/sysctl.conf
                      echo "vfs.usermount=1" >> /etc/sysctl.conf
 
 #/usr/local/etc/doas.conf
