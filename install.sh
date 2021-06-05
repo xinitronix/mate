@@ -2,6 +2,10 @@
 
 CURRENTDIRECTORY=$(pwd)
 
+           cd $CURRENTDIRECTORY/userfolder/scripts/package
+           ./install.sh
+           cd $CURRENTDIRECTORY
+
           ./accounts.sh
           ./config.sh
           ./flash.sh
