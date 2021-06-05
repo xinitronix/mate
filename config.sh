@@ -76,7 +76,7 @@ echo 'sendmail_submit_enable="NO"'         >>           /etc/rc.conf
                      echo 'fdesc   /dev/fd            fdescfs   rw  0 0' >>       /etc/fstab
                      echo 'proc    /proc               procfs   rw  0 0' >>       /etc/fstab
                      echo '/dev/da0 /mnt             ufs      rw,noauto 0 0' >>   /etc/fstab
-                     echo '/dev/ada0p2 /ntfs-2TB   ntfs   mountprog=/usr/local/bin/ntfs-3g,late,rw,uid=1002    0   0' >> /etc/fstab
+ #                   echo '/dev/ada0p2 /ntfs-2TB   ntfs   mountprog=/usr/local/bin/ntfs-3g,late,rw,uid=1002    0   0' >> /etc/fstab
 
 #                     echo 'linsys  /compat/linux/sys   linsysfs  rw 0 0' >>      /etc/fstab
 #/etc/sysctl.conf
