@@ -12,9 +12,11 @@ login2=rtorrent
  
  
                     mkdir /ntfs-2TB
-                    chown  -R     $login:wheel     /ntfs-2TB
+                    chown  -R     $login:wheel        /ntfs-2TB
                     chmod 0777  /ntfs-2TB
-                    ln -s  /ntfs-2TB                              /home/$login/2TB
+                    ln -s  /ntfs-2TB                  /home/$login/2TB
+                    chown  -R     $login:wheel        /home/$login/2TB
+                    chmod 0777     /home/$login/2TB
 
 #create user space
                      cp -rf $CURRENTDIRECTORY/userfolder/.[a-zA-Z0-9]*   /home/$login  
