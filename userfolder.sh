@@ -34,6 +34,8 @@ login2=rtorrent
 #                      mkdir  /home/$login/.themes
 #                      chown  -R      $login:wheel                       /home/$login/.themes    
 
+                       ln -s  /ntfs-2TB                              /home/$login/2TB
+
 #create pic folder      
 #                       mkdir  /home/$login/pic
 #                       chown  -R      $login:wheel                      /home/$login/pic
