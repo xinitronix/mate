@@ -23,7 +23,7 @@ login2=rtorrent
                      cp -rf $CURRENTDIRECTORY/userfolder/[a-zA-Z0-9]*    /home/$login   
                      chown  -R  $login:wheel /home/$login
 #create downloads folder
-                       mkdir  /home/$login/downloads
+                       ln -s          /ntfs-2TB/downloads                 /home/$login/downloads
                        chown  -R      $login:wheel                        /home/$login/downloads
 #create VirtualBox VMs folder
 
