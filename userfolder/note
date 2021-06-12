@@ -106,3 +106,4 @@ doas chmod 0666 /dev/input/event10
 doas chown -R definitly:wheel /media
 setenv LD_LIBRARY_PATH /usr/home/definitly/.steam/steam/ubuntu12_32/steam-runtime_0.20201203.1/usr/lib/x86_64-linux-gnu/
 setenv WINEPREFIX /home/definitly/wine64
+doas sysctl compat.linux.emul_path=/compat/linux
