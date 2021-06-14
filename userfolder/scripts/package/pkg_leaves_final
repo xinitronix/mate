@@ -67,6 +67,7 @@ xdg-utils
 xwininfo
 xxkb
 winetricks
+wine-proton
 zip
 p5-App-cpanminus
 p5-Gtk2
