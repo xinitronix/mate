@@ -10,7 +10,7 @@
  #                   echo 'hald_enable="yes"'            >>                   /etc/rc.conf
                      echo 'dbus_enable="yes"'            >>                   /etc/rc.conf
                      echo 'apache22_enable="YES"'        >>                   /etc/rc.conf
-                     echo 'linux_enable="YES"'           >>                   /etc/rc.conf
+                     echo 'linux_enable="NO"'           >>                   /etc/rc.conf
                      
                      echo 'dahdi_enable="YES"'           >>                   /etc/rc.conf
                      echo 'wlans_urtwn0="wlan0"'         >>                   /etc/rc.conf
