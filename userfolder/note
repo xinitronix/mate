@@ -102,6 +102,7 @@ setenv LD_PRELOAD /usr/local/steam-utils/lib64/fmodfix/fmodfix.so
 setenv LD_PRELOAD /usr/local/steam-utils/lib64/fakeudev/libudev.so.0
 cmake .. -D CMAKE_C_COMPILER=/usr/local/bin/gcc9 -D CMAKE_CXX_COMPILER=/usr/local/bin/g++9
 mpv --user-agent="Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0"
+doas service xboxdrv start
 setenv SDL_JOYSTICK_DEVICE /dev/input/event10
 doas chmod 0666 /dev/input/event10
 doas chown -R definitly:wheel /media
