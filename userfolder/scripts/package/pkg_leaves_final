@@ -38,7 +38,7 @@ pkg
 python3
 pkg_cutleaves
 portmaster
-py37-pip
+py38-pip
 py27-dateutil
 rpm2cpio
 rrdtool
