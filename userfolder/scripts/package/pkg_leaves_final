@@ -24,6 +24,7 @@ linux-nvidia-libs
 linux_base-c7
 linux-c7-devtools
 libc6-shim 
+iceauth
 mc
 micro_httpd
 mpv
