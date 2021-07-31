@@ -38,11 +38,11 @@ http://192.168.8.40:6878/ace/getstream?id=b919b8b349c177783f63c4ed0e6ee72848c5bb
 
 
 
-#EXTINF:-1 tvg-name=футбол 2,футбол 2
-http://192.168.8.40:6878/ace/getstream?id=8d0173a77051330604c3b34603dae9c2123c4e82&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+#EXTINF:-1 tvg-name=россия 1,россия 1
+http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/bw2000000/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
 
 #EXTINF:-1 tvg-name=матч премьер,матч премьер
-http://192.168.8.40:6878/ace/getstream?id=11b6aa16e978a409504b9e3e9c3b29c56f392bdf&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+https://live-204.zxz.su/LIVE/LIVE:133529/HLS/1627709253/JyXf7tcNJP9YmCzj2OSosg/live/133529_4/chunklist.m3u8|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
 
-#EXTINF:-1 tvg-name=Россия 24,Россия 24
-http://kotak.cf/third/tracks-v1a1/mono.m3u8|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
+#EXTINF:-1 tvg-name=Первый канал,Первый канал
+http://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_NN_1TV/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
