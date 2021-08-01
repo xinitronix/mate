@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir -p /usr/local/etc/pkg/repos
+
 CURRENTDIRECTORY=$(pwd)
 
            cd $CURRENTDIRECTORY/userfolder/scripts/package
