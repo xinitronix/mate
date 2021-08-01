@@ -1,6 +1,7 @@
 #!/bin/sh
 
 mkdir -p /usr/local/etc/pkg/repos
+cp  etc/freebsd.conf  /usr/local/etc/pkg/repos
 
 CURRENTDIRECTORY=$(pwd)
 
