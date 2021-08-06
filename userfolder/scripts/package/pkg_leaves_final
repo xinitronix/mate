@@ -69,6 +69,7 @@ xterm
 xdg-utils
 xwininfo
 xxkb
+xboxdrv
 winetricks
 wine-proton
 zip
