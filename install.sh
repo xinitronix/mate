@@ -80,3 +80,5 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/xboxdrv
           ./install.sh 
           cd .. 
+          
+          reboot
