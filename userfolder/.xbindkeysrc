@@ -65,48 +65,6 @@
 #"rxvt"
 #  Control + b:2 + Release
 
-
-
-
-
-
-
-
-
-
-
-"/usr/local/bin/cpic"
-    m:0xc + c:56
-    Control+Alt + b
-
-
-"~/.scripts/vnc_win.sh"
-    m:0x40 + c:55
-    Mod4 + v
-
-
-
-#"doas ~/.scripts/orglinux.sh"
-#    m:0xc + c:46
-#    Control+Alt + l
-
-#"doas ~/.scripts/mount.sh"
-#    m:0xc + c:30
-#    Control+Alt + u
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##################################
 # End of xbindkeys configuration #
 ##################################
@@ -134,9 +92,7 @@ Control+Alt + s
 "/usr/local/bin/screensavon.sh"
 m:0x40 + c:39
 Mod4 + s
-"/usr/local/bin/screensavoff.sh"
-m:0x40 + c:56
-Mod4 + b
+
 
 "~/chantimicro.sh"
 m:0x40 + c:60
