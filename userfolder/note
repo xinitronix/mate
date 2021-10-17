@@ -110,3 +110,4 @@ setenv LD_LIBRARY_PATH /usr/home/definitly/.steam/steam/ubuntu12_32/steam-runtim
 setenv WINEPREFIX /home/definitly/wine64
 doas sysctl compat.linux.emul_path=/compat/linux
 LD_PRELOAD=monofix.so %command%
+doas sysctl hw.snd.default_unit=4
