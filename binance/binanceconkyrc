@@ -1,0 +1,9 @@
+out_to_console yes
+gap_y -540
+out_to_x no
+update_interval 2
+total_run_times 0
+use_spacer none
+
+TEXT
+tHDD:${color}${execi 30  curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=FORBUSD' | jq -r .price} 
