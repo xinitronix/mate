@@ -69,7 +69,11 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
          
-          cd $CURRENTDIRECTORY/xscreensaver
+   #       cd $CURRENTDIRECTORY/xscreensaver
+   #       ./install.sh 
+   #       cd .. 
+          
+          cd $CURRENTDIRECTORY/binance
           ./install.sh 
           cd .. 
 
