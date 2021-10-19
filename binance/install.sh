@@ -8,6 +8,7 @@ CURRENTDIRECTORY=$(pwd)
 cp  /usr/local/bin/conky                           /usr/local/bin/conkybinance
 cp $CURRENTDIRECTORY/binance-on-off         /usr/local/bin
 cp $CURRENTDIRECTORY/binance-on-off.sh      /usr/local/bin
+cp $CURRENTDIRECTORY/binanceconky     /usr/local/bin
 
 ln -s  /usr/local/lib/libxcb.so.1.1.0       /usr/local/lib/libxcb.so.2
 
