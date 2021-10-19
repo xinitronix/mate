@@ -6,4 +6,4 @@ total_run_times 0
 use_spacer none
 
 TEXT
-tHDD:${color}${execi 30  curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=FORBUSD' | jq -r .price} 
+${color}${execi 30  curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=FORBUSD' | jq -r .price | cut -b 1-7 } 
