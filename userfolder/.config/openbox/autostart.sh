@@ -1,7 +1,7 @@
 
 pic=$(ls | grep *jpg)
 
-feh --bg-scale ~/.config/openbox/wallpaper/$pic
+feh --bg-scale ~/.config/openbox/wallpaper/1.jpg
 setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" -variant ",winkeys"  &  
 #xcompmgr -cfCF &
 xset m 0 & 
