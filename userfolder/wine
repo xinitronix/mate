@@ -2,6 +2,7 @@ setenv WINESERVER /usr/local/wine-proton/bin/wineserver
 setenv WINE /usr/local/wine-proton/bin/wine64
 setenv WINEPREFIX ~/.farcry4
 setenv DXVK_HUD devinfo,fps
+winetricks dxvk 
 
 
 setenv WINESERVER  /home/definitly/.i386-wine-pkg/usr/local/wine-proton/bin/wineserver32
