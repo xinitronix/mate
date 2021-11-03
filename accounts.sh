@@ -15,3 +15,4 @@ login2=rtorrent
 
               pw groupmod video    -m $login
               pw groupmod operator -m $login
+              pw groupmod vboxusers -m $login
