@@ -78,6 +78,7 @@ xxkb
 xboxdrv
 winetricks
 wine-proton
+wine-devel
 zip
 p5-App-cpanminus
 p5-Gtk2
