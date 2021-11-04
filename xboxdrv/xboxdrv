@@ -34,7 +34,7 @@ if [ ! -f /var/run/${name}.run ]
     then
  
  /usr/local/bin/screen -dmS xboxdrv_init /usr/local/bin/xboxdrv
- sleep 1
+ sleep 2
  chmod 0666 /dev/input/event10
  touch /var/run/${name}.run
  echo "Started ${name}."
