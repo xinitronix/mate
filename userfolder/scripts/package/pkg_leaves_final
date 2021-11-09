@@ -44,7 +44,6 @@ pkg_cutleaves
 portmaster
 py38-pip
 py38-qt5-widgets
-py27-dateutil
 rpm2cpio
 rrdtool
 ruby
