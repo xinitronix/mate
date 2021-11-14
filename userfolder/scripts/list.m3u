@@ -45,4 +45,8 @@ http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/bw2000000/variant.m3u8?versio
 https://live-204.zxz.su/LIVE/LIVE:133529/HLS/1627709253/JyXf7tcNJP9YmCzj2OSosg/live/133529_4/chunklist.m3u8|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
 
 #EXTINF:-1 tvg-name=Первый канал,Первый канал
-http://rt-vlg-nn-htlive.cdn.ngenix.net/hls/CH_R03_OTT_VLG_NN_1TV/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
+http://rt-ct-yarl-htlive.cdn.ngenix.net/hls/CH_R03_OTT_CT_YARL_1TV/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0 
+
+
+#EXTINF:-1 tvg-name=Первый канал,Первый канал
+https://live-204.zxz.su/LIVE/LIVE:133529/HLS/1636902391/4UVsYAzicApNegDjgpL-LA/live/133529_4/chunklist.m3u8|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0 
