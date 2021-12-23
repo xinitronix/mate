@@ -112,3 +112,4 @@ doas sysctl compat.linux.emul_path=/compat/linux
 LD_PRELOAD=monofix.so %command%
 doas sysctl hw.snd.default_unit=4
 curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"Player.Open","params":{"item":{"channelid":17}}}' http://192.168.8.45:8081/jsonrpc
+youtube-dl --no-cache-dir -o - --proxy socks5://192.168.8.45:9050/ "https://www.youtube.com/watch?v=pk6Y2-5BB4M&list=RDCMUCIGQQYFbXK5yQ7uHISU6x7g&index=7" | mpv -
