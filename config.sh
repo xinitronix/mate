@@ -28,11 +28,11 @@
                      echo 'kld_list="nvidia-modeset linux64"'         >>                   /etc/rc.conf
  #                   echo 'KLD_LIST="linux linsysfs linprocfs"'  >>           /etc/rc.conf
                      echo 'allscreens_flags=" MODE_283"'         >>           /etc/rc.conf
-          echo 'sendmail_enable="NONE"'         >>           /etc/rc.conf
-echo 'sendmail_msp_queue_enable="NO"'         >>           /etc/rc.conf
-echo 'sendmail_outbound_enable="NO"'         >>           /etc/rc.conf
-echo 'sendmail_submit_enable="NO"'         >>           /etc/rc.conf
-                        
+                     echo 'sendmail_enable="NONE"'               >>           /etc/rc.conf
+                     echo 'sendmail_msp_queue_enable="NO"'       >>           /etc/rc.conf
+                     echo 'sendmail_outbound_enable="NO"'        >>           /etc/rc.conf
+                     echo 'sendmail_submit_enable="NO"'          >>           /etc/rc.conf
+                     echo 'dsbmd_enable="YES"'                   >>           /etc/rc.conf   
                      
 
 #/boot/defaults/loader.conf 
