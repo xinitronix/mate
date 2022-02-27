@@ -80,6 +80,7 @@ xdg-utils
 xwininfo
 xxkb
 xboxdrv
+xfce4-taskmanager
 winetricks
 wine-proton
 wine-devel
