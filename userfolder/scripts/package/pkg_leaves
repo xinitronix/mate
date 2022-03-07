@@ -18,6 +18,9 @@ sshpass
 tint2
 xterm
 xxkb
+xinit
+xf86-input-keyboard
+xf86-input-mouse
 xorg-minimal
 p5-App-cpanminus
 p5-Gtk2
