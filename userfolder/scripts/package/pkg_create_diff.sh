@@ -1,17 +1,18 @@
 #!/bin/sh
+rm /tmp/1.txt
+rm /tmp/2.txt
+
+   for path in $(ls ~/All); do
 
 
-   for path in $(ls All); do
-
-
-       echo "${path%-*}" > /tmp/1.txt
+       echo "${path%-*}" >> /tmp/1.txt
 
    done
 
 for path in $(pkg info -q); do
 
 
-     echo "${path%-*}"   > /tmp/2.txt
+     echo "${path%-*}"   >> /tmp/2.txt
 
    done
 
