@@ -19,7 +19,7 @@ for path in $(pkg info -q); do
 
    done
 
-   sort /tmp/3.txt >> tmp/2.txt
+   sort /tmp/3.txt >> /tmp/2.txt
 
 
     for pkg in    $(diff /tmp/1.txt /tmp/2.txt -u | grep -v '^@@.*@@$' | grep "+" | sed -e 's/^.//' | sed '1d' | sed '1d');do
