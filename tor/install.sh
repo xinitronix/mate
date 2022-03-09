@@ -20,9 +20,9 @@ CURRENTDIRECTORY=$(pwd)
                       mkdir -p          /var/run/tor
                       chmod -R 0777     /var/run/tor
                       touch             /var/log/tor
-                      chmod 0002        /var/log/tor
-
-
+                      chmod 0777        /var/log/tor
+                      tocuh             /var/log/notices.log
+                      chmod 0777        /var/log/notices.log
                       mkdir -p          /var/run/polipo
                       chmod -R 0777     /var/run/polipo
                       touch             /var/log/polipo
