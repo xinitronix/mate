@@ -133,6 +133,12 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 
                       echo 'setenv DISPLAY :0'       >> /home/rtorrent/.cshrc
 
+##vpntor settings for vpn user
+
+
+                      echo 'setenv DISPLAY :0'       >> /home/vpn/.cshrc
+
+
 #wpa_supplicant.conf
 
 
