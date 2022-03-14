@@ -88,5 +88,9 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/power
           ./install.sh 
           cd .. 
+
+          cd $CURRENTDIRECTORY/protonvpn
+          ./install.sh 
+          cd .. 
           
           reboot
