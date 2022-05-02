@@ -19,6 +19,23 @@ cd "$WINEPREFIX/dosdevices"
 ln -s $WINEPREFIX/drive_c c:
 ln -s / z:
 
-
-
 setenv PATH /opt/i386-wine-devel/usr/local/bin:$PATH
+
+
+[Software\\Wow6432Node\\Bohemia Interactive\\ArmA 2\\BattlEye] 1650736051
+#time=1d8573a3509f100
+"MAIN"="Z:\\ntfs-2TB\\steam\\steamapps\\common\\Arma 2"
+
+[Software\\Wow6432Node\\bohemia interactive studio\\arma 2] 1651500270
+#time=1d85e2d8ae3a3ba
+"data"="Z:\\ntfs-2TB\\steam\\steamapps\\common\\Arma 2"
+"key"=hex:87,9c,73,bf,ca,0c,02,f5,f9,ac,72,f7,50,6a,be
+"main"="Z:\\ntfs-2TB\\steam\\steamapps\\common\\Arma 2"
+
+[Software\\Wow6432Node\\bohemia interactive studio\\arma 2 oa\\expansions\\arma 2] 1623641095
+#time=1d760ccd872165c
+"loadafter"="ARMA 2 OA"
+"loadbefore"=""
+"moddir"="CA"
+"path"="SOFTWARE\\Bohemia Interactive Studio\\ArmA 2"
+
