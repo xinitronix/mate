@@ -18,7 +18,7 @@ login=definitly
              
                    else
 
-                       cp  $CURRENTDIRECTORY/xorg.conf.nvidia  /etc/X11/xorg.conf 
+                       cp  $CURRENTDIRECTORY/xorg.conf  /etc/X11/xorg.conf 
 
                      fi 
 
