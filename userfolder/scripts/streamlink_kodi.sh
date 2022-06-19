@@ -1,6 +1,6 @@
 #!/bin/sh
 
-m3u=$(echo  "streamlink $1 best" | base64 | tr -d '\r\n')
+m3u=$(echo  "streamlink $1 720p" | base64 | tr -d '\r\n')
 
 
 sed '$d' list.m3u >> list.m3u.new
@@ -9,4 +9,4 @@ echo ""http://127.0.0.1:53422/base64/$m3u/"|user-agent=Mozilla/5.0 (X11; FreeBSD
 ./reloadlist.sh
 ./reloadlist.sh
 sleep 3
-curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"Player.Open","params":{"item":{"channelid":17}}}' http://192.168.8.45:8081/jsonrpc
+curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"Player.Open","params":{"item":{"channelid":16}}}' http://192.168.8.45:8081/jsonrpc
