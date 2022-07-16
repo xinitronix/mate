@@ -14,8 +14,8 @@ fi
 
 pkg install -y virtualbox-ose 
 
-pw groupmod vboxusers -m definitly
-pw groupmod operator  -m definitly
+doas pw groupmod vboxusers -m definitly
+doas pw groupmod operator  -m definitly
      chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
      chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
      kldload   vboxdrv.ko
