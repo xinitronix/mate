@@ -13,3 +13,11 @@ doas rm  -R /var/db/portsnap/
 doas zfs destroy zroot/usr/ports
 doas ln -s /home/definitly/2TB/var/db/portsnap  /var/db/portsnap
 doas ln -s /home/definitly/2TB/ports /usr/ports
+
+cp "/ntfs-2TB/freebsd config/ssh/id_rsa" ~/.ssh
+cp "/ntfs-2TB/freebsd config/ssh/id_rsa.pub" ~/.ssh
+cp "/ntfs-2TB/freebsd config/ssh/known_hosts" ~/.ssh 
+
+
+doas cp "/ntfs-2TB/freebsd config/proton/pass.txt"  /usr/local/etc/proton
+doas cp "/ntfs-2TB/freebsd config/proton/us-free-08.protonvpn.com.tcp.ovpn"  /usr/local/etc/proton
