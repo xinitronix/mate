@@ -7,5 +7,5 @@
 ./reloadlist.sh
 ./reloadlist.sh
 sleep 3
-curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"Player.Open","params":{"item":{"channelid":17}}}' http://192.168.8.45:8081/jsonrpc
+curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"Player.Open","params":{"item":{"channelid":16}}}' http://192.168.8.45:8081/jsonrpc
 
