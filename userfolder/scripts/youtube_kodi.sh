@@ -1,6 +1,6 @@
 #!/bin/sh
 
-m3u=$(yt-dlp -f 22 -g $1)
+m3u=$(yt-dlp -f $2 -g $1)
 
 
  sed '$d' list.m3u >> list.m3u.new
