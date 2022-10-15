@@ -1,5 +1,5 @@
 #!/bin/sh
 fg="white"
-bg="#898a79"
+bg="black"
 fn="-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*"
 conky -d -c ~/.dzenconkyrc | dzen2 -h 15   -fg $fg -bg $bg   -fn  $fn
