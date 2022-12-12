@@ -32,21 +32,23 @@ http://192.168.8.40:6878/ace/getstream?id=d2a36e305458e200c2a4952317fc33e38bd801
 http://192.168.8.40:6878/ace/getstream?id=b3ab939f6c55a8cda3475201dc77e16fedad0549&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
 
 #EXTINF:-1 tvg-name=рентв,рентв
-http://192.168.8.40:6878/ace/getstream?id=fde4b4b3aa1c1e810e90149175b8955d7b9246f3&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
-#EXTINF:-1 tvg-name=сентанта 1,сентанта 1
-http://192.168.8.40:6878/ace/getstream?id=b919b8b349c177783f63c4ed0e6ee72848c5bb59&hlc=1&transcode_audio=0&transcode_mp3=0&transcode_ac3=0&preferred_audio_language=eng
+http://zabava-htlive.cdn.ngenix.net/hls/CH_RENTV/bw2000000/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
+
+#EXTINF:-1 tvg-name=нтв,нтв
+http://zabava-htlive.cdn.ngenix.net/hls/CH_NTV/bw2000000/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
+
 
 
 
 #EXTINF:-1 tvg-name=россия 1,россия 1
 http://zabava-htlive.cdn.ngenix.net/hls/CH_RUSSIA1/bw2000000/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
 
-#EXTINF:-1 tvg-name=матч премьер,матч премьер
-https://live-204.zxz.su/LIVE/LIVE:133529/HLS/1627709253/JyXf7tcNJP9YmCzj2OSosg/live/133529_4/chunklist.m3u8|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
+#EXTINF:-1 tvg-name=заезда,звезда
+http://zabava-htlive.cdn.ngenix.net/hls/CH_ZVEZDA/bw2000000/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0
 
 #EXTINF:-1 tvg-name=Первый канал,Первый канал
 http://rt-ct-yarl-htlive.cdn.ngenix.net/hls/CH_R03_OTT_CT_YARL_1TV/variant.m3u8?version=2|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0 
 
 
 #EXTINF:-1 tvg-name=Первый канал,Первый канал
-https://live-204.zxz.su/LIVE/LIVE:133529/HLS/1636902391/4UVsYAzicApNegDjgpL-LA/live/133529_4/chunklist.m3u8|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0 
+dfddfd|user-agent=Mozilla/5.0 (X11; FreeBSD amd64; rv:77.0) Gecko/20100101 Firefox/77.0 
