@@ -71,4 +71,7 @@ login2=rtorrent
 
 chown  -R      $login:wheel   /mnt
 
-                        
+cp       $CURRENTDIRECTORY/userfolder/scripts/reloadlist    /usr/local/bin
+cp       $CURRENTDIRECTORY/userfolder/scripts/echoplaylist  /usr/local/bin
+
+                   
