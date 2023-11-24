@@ -97,3 +97,32 @@ Mod4 + s
 "~/chantimicro.sh"
 m:0x40 + c:60
 Mod4 + period
+"/usr/local/bin/dzen2-on-off"
+m:0x40 + c:40
+Mod4 + d
+"/usr/local/bin/tint2-on-off"
+m:0x40 + c:28
+Mod4 + t
+"/usr/local/bin/togglescreen.sh"
+m:0x40 + c:53
+Mod4 + x
+"/usr/local/bin/conkynote.sh"
+m:0x40 + c:57
+Mod4 + n
+"/usr/local/bin/weather-on-off.sh"
+m:0x40 + c:25
+Mod4 + w
+"/usr/local/bin/timeconky-on-off.sh"
+m:0xe + c:28
+Control+Alt + t
+"/usr/local/bin/conkyscroll-on-off"
+m:0xc + c:39
+Control+Alt + s
+"/usr/local/bin/binance-on-off"
+m:0x40 + c:56
+Mod4 + b
+"/usr/local/bin/binance-on-off.sh"
+m:0x5 + c:56
+Control+Shift + b
+"~/.scripts//dsd.sh"
+b:9
