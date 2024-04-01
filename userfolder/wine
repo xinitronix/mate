@@ -38,23 +38,3 @@ setenv PATH /opt/i386-wine-devel/usr/local/bin:$PATH
 "loadbefore"=""
 "moddir"="CA"
 "path"="SOFTWARE\\Bohemia Interactive Studio\\ArmA 2"
-
- pkg install git libtool gettext findutils gsed gtar bash automake cmake gmake ninja rsync
-
-To prevent the need to build many other packages that are needed as dependencies, we also recommend installing the following packages:
-
-# pkg install aspell bison btparse chmlib clamav cups djvulibre doxygen exempi exif exiv2 facile ffmpeg file firebird30-client gamin gpgme gstreamer1-plugins gtk3 htdig html2ps iceauth imlib2 intltool iw-hspell jasper jpeg-turbo lcms2 libgphoto2 libgpod libmng libmtp libofx libotr libqalculate libssh libvisual04 libwmf libxine libxslt meanwhile mysql56-client nas ocaml-num openexr pl-libgadu png poppler postgresql11-client pulseaudio py39-boost-libs py39-rdiff-backup ruby samba413 sane-backends sqlite streamripper subversion torsocks transfig unixODBC upower xf86-video-vesa xmedcon xmodmap xorg-fonts xorg-server xprop xrandr xscreensaver xset xsetroot yaz
-
-Cloning the repo
-
-Now that we have git, we can go ahead and clone the r14.1.x branch:
-
-$ git clone --single-branch --branch r14.1.x https://mirror.git.trinitydesktop.org/gitea/TDE/tde-packaging.git
-
-Keep in mind this will install the complete repository, which includes build scripts for Linux. The only directory you need in this repo is the freebsd one.
-Building the port
-Spread ports from GIT folder to /usr/ports
-
-Starting with TDE R14.1.0, the ports are ready to be integrated into the standard port structure in /usr/ports. For this reason, each TDE port now contains "TDE port map" information in the header, which contains information for synchronization from the GIT source folder to the target folder in /usr/ports. The tde-ports-map script is used to perform synchronization:
-
-$ sudo ~/tde-packaging/freebsd/tde-ports-map
