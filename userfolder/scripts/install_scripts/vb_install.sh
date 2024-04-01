@@ -18,5 +18,5 @@ doas pw groupmod vboxusers -m definitly
 doas pw groupmod operator  -m definitly
      chmod +x  /usr/local/lib/virtualbox/VBoxHeadless 
      chmod +x  /usr/local/lib/virtualbox/VirtualBox                                                                                      
-     kldload   vboxdrv.ko
-     kldload   vboxnetadp.ko
+doas     kldload   vboxdrv.ko
+doas     kldload   vboxnetadp.ko
