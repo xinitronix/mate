@@ -9,6 +9,8 @@ doas zpool import media1
 doas zpool import media2
 doas zpool import ntfs-2TB
 
+doas rm -R /var/cache/pkg
+doas ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
 doas rm  -R /var/db/portsnap/
 doas zfs destroy zroot/usr/ports
 doas ln -s /home/definitly/2TB/var/db/portsnap  /var/db/portsnap
