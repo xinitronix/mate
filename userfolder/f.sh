@@ -16,6 +16,8 @@ doas zfs destroy zroot/usr/ports
 doas ln -s /home/definitly/2TB/var/db/portsnap  /var/db/portsnap
 doas ln -s /home/definitly/2TB/ports /usr/ports
 
+ln -s /home/definitly/2TB/i386-wine-pkg  /home/definitly/.i386-wine-pkg
+
 cp "/ntfs-2TB/freebsd config/ssh/id_rsa" ~/.ssh
 cp "/ntfs-2TB/freebsd config/ssh/id_rsa.pub" ~/.ssh
 cp "/ntfs-2TB/freebsd config/ssh/known_hosts" ~/.ssh 
