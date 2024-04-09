@@ -2,7 +2,7 @@
 
 #m3u=$(echo  "streamlink $1 720p" | base64 | tr -d '\r\n')
 
-m3u=$(streamlink --stream-url $1)
+m3u=$(streamlink --stream-url $1 480p)
 sed '$d' list.m3u >> list.m3u.new
 mv list.m3u.new list.m3u
 rm /tmp/list.m3u
