@@ -9,6 +9,8 @@ doas zpool import media1
 doas zpool import media2
 doas zpool import ntfs-2TB
 
+doas rm -R /usr/obj
+doas ln -s /home/definitly/2TB/obj /usr/obj
 doas rm -R /var/cache/pkg
 doas ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
 doas rm  -R /var/db/portsnap/
