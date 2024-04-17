@@ -55,7 +55,7 @@ alias krtmp     killall -9 rtmpsrv
 alias m3u8          ~/scripts/tcpdump_m3u8.sh
 alias extract     ~/.scripts/extract
 setenv TERM xterm-256color
-
+setenv SDL_JOYSTICK_DEVICE /dev/input/event10
 
 
 
