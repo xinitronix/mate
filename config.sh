@@ -108,7 +108,7 @@
                    echo 'kern.ipc.shm_allow_removed=1'    >>           /etc/sysctl.conf 
 
 #/boot/device.hints  
-                   echo 'hint.pcm.%d.vol="100"'         >>           /boot/device.hints
+                   echo 'hint.pcm.0.vol="100"'         >>           /boot/device.hints
 
 
 
