@@ -75,8 +75,8 @@ unrar
 unzip
 xauth
 xbindkeys
-xf86-input-keyboard
-xf86-input-mouse
+#xf86-input-keyboard
+#xf86-input-mouse
 xf86-video-vesa
 xhost
 xinit
@@ -90,7 +90,7 @@ xfce4-taskmanager
 winetricks
 wine-proton
 wine-devel
-webcamd
+#webcamd
 zip
 p5-App-cpanminus
 p5-Gtk2
