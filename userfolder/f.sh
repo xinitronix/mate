@@ -25,7 +25,7 @@ cp "/ntfs-2TB/freebsd config/ssh/id_rsa.pub" ~/.ssh
 cp "/ntfs-2TB/freebsd config/ssh/known_hosts" ~/.ssh 
 
 cp -R "/home/definitly/2TB/freebsd config/firefox" ~/.mozilla
-
+cp -R "/home/definitly/2TB/freebsd config/TelegramDesktop" ~/.local/share
 
 doas cp "/ntfs-2TB/freebsd config/proton/pass.txt"  /usr/local/etc/proton
 doas cp "/ntfs-2TB/freebsd config/proton/us-free-08.protonvpn.com.tcp.ovpn"  /usr/local/etc/proton
