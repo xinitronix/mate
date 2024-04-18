@@ -92,7 +92,8 @@ xboxdrv
 xfce4-taskmanager
 winetricks
 wine-proton
-wine-devel
+#wine-devel
+wine8
 #webcamd
 zip
 p5-App-cpanminus
