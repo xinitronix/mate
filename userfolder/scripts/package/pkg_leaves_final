@@ -44,6 +44,7 @@ obconf
 obfs4proxy-tor
 openvpn
 p7zip
+pavucontrol
 pcmanfm
 pkg
 python3
@@ -52,6 +53,7 @@ portmaster
 py39-qt5
 py39-pip
 py39-qt5-widgets
+py39-streamlink
 rpm2cpio
 rrdtool
 ruby
