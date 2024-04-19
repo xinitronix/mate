@@ -111,7 +111,7 @@
                    echo 'hint.pcm.3.vol="100"'         >>           /boot/device.hints
 
 #wine-proton
-                  ln -s /usr/local/wine-proton/bin/wine  /usr/local/bin/proton
+                   ln -s /usr/local/wine-proton/bin/wine  /usr/local/bin/proton
 
                    
  
