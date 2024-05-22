@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=mountiso
+Exec=/home/definitly/.scripts/mountiso.sh %f
+Categories=Other;
+NoDisplay=true
+MimeType=application/x-cd-image
+Terminal=true
+X-KeepTerminal=true
