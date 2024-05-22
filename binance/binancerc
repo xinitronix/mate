@@ -30,8 +30,8 @@ cpu_avg_samples 2
 #####################
 TEXT
          
-       ${color green}${execi  30  curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=FORBUSD' | jq -r .price| cut -b 1-7 } 
-       ${color orange}${execi 30  curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=BTCBUSD' | jq -r .price | cut -b 1-8 }
+       ${color green}${execi  30  curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=BAKEUSDT' | jq -r .price| cut -b 1-7 } 
+       ${color orange}${execi 30  curl -s 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT' | jq -r .price | cut -b 1-8 }
 
 
 ${image ~/.binance/for.png -p 0,21  -s 16x16} 
