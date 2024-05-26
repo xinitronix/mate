@@ -1,0 +1,26 @@
+mpv  --user-agent="Mozilla/5.0 (Windows NT 10.0; rv:95.0) Gecko/20100101 Firefox/68.0"
+
+https://m3u8.video.matchtv.ru/media/playlist/ch_85fa049130e3ab43ae4dc21c84230eef/17_86669241/720/e866bfceca7065ae365d894747cb3fa0/1715764200.m3u8?sr=14&seek=1715719200
+https://m3u8.video.matchtv.ru/media/playlist/ch_85fa049130e3ab43ae4dc21c84230eef/17_86669241/360/e866bfceca7065ae365d894747cb3fa0/1715764200.m3u8?sr=14&seek=1715719500
+
+exec   setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" -variant ",winkeys"  & 
+mpv --v --ytdl-format=18 "https://www.youtube.com/watch?v=q3uset8iQUc"
+https://vk.com/video-88310283_456243784
+
+https://vkvsd216.mycdn.me/hls/6431925734074.m3u8/sig/GDkkZ_3lwQc/srcIp/178.176.78.143/urls/45.136.21.85/expires/1716335413374/clientType/13/srcAg/GECKO/fromCache/1/mid/7979310132154/id/6431925734074/6431925734074_low/index.m3u8
+
+wpa_passphrase
+https://www.youtube.com/watch?v=4kluAX056GY
+drm-510-kmod gpu-firmware-radeon-kmod-r300
+
+pkg install xorg xterm mc leafpad mpv py39-streamlink git-lite tint2 screen openbox wpa_supplicant portsnap doas portsnap drm-510-kmod gpu-firmware-radeon-kmod-r300
+gpg --output definitly.gnucash --batch --passphrase WaAg8erv63ui7ae   -d definitly.gnucash.gpg
+HUAWEI-B315-AFCA
+HR63B1DMTJ4
+
+ Audio/Video desynchronisation detected! Possible reasons include too slow
+[cplayer] hardware, temporary CPU spikes, broken drivers, and broken files. Audio
+[cplayer] position will not match to the video (see A-V status field).
+[cplayer] Consider trying `--profile=fast` and/or `--hwdec=auto-safe` as they may help
+
+yt-dlp -F https://vk.com/video-211154316_456239765
