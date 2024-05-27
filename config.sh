@@ -82,6 +82,7 @@
 #/etc/sysctl.conf
                      echo "compat.linux.osrelease=3.6.32" >>                      /etc/sysctl.conf
                      echo "vfs.usermount=1" >> /etc/sysctl.conf
+                     echo "security.bsd.unprivileged_chroot=1"    >> /etc/sysctl.conf
 
 #/usr/local/etc/doas.conf
 
