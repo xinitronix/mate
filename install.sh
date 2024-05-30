@@ -63,7 +63,10 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/scrollconky
           ./install.sh 
           cd .. 
-
+         
+          cd $CURRENTDIRECTORY/ubuntu_chroot
+          ./install.sh
+          cd .. 
 
           cd $CURRENTDIRECTORY/webcamd
           ./install.sh 
