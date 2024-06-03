@@ -4,10 +4,10 @@ rm -R ~/.mozilla/firefox
 #sshpass -p  639639 scp -r  pi@192.168.8.45:/home/pi/TelegramDesktop ~/.local/share
 #fetch https://addons.mozilla.org/firefox/downloads/file/3816867/ublock_origin-1.37.2-an+fx.xpi
 #firefox ublock_origin-1.37.2-an+fx.xpi
-doas zpool import zada2
-doas zpool import media1
-doas zpool import media2
-doas zpool import -f  ntfs-2TB
+#doas zpool import zada2
+#doas zpool import media1
+#doas zpool import media2
+#doas zpool import -f  ntfs-2TB
 
 doas rm -R /usr/obj
 doas ln -s /home/definitly/2TB/obj /usr/obj
