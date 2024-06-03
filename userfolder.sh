@@ -75,3 +75,7 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/reloadlist    /usr/local/bin
 cp       $CURRENTDIRECTORY/userfolder/scripts/echoplaylist  /usr/local/bin
 cp       $CURRENTDIRECTORY/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
 cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin              
+ zpool import zada2
+ zpool import media1
+ zpool import media2
+ zpool import -f  ntfs-2TB
