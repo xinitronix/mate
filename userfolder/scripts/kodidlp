@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #m3u=$(echo  "streamlink $1 480p" | base64 | tr -d '\r\n')
-rm /tmp/list.m3u
+doas rm /tmp/list.m3u
 m3u=$(streamlink --stream-url $1 480p)
 #sed '$d' list.m3u >> list.m3u.new
 #mv list.m3u.new list.m3u

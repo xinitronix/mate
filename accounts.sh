@@ -8,7 +8,7 @@ login1=ff
 passwd2=639639
 login2=rtorrent
 passwd3=639639
-login3=vpn
+login3=dwm
 
 #create accounts
               echo $passwd1 | pw useradd $login1 -m -g wheel -s /bin/csh -h 0
