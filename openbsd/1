@@ -22,5 +22,5 @@ HR63B1DMTJ4
 [cplayer] hardware, temporary CPU spikes, broken drivers, and broken files. Audio
 [cplayer] position will not match to the video (see A-V status field).
 [cplayer] Consider trying `--profile=fast` and/or `--hwdec=auto-safe` as they may help
-
+make DWM_CONF='/home/dwm/config.h' reinstall
 yt-dlp -F https://vk.com/video-211154316_456239765
