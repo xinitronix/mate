@@ -87,6 +87,7 @@
 #/usr/local/etc/doas.conf
 
                     echo -e "permit nopass keepenv definitly\n"            >>    /usr/local/etc/doas.conf
+                    echo -e "permit nopass keepenv dwm\n"                  >>    /usr/local/etc/doas.conf
 
 
 #root .cshrc
