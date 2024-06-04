@@ -1,0 +1,11 @@
+exec   setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" -variant ",winkeys"  &  
+firefox &
+pcmanfm &
+xterm -e screen &
+feh --bg-scale ~/Downloads/1.jpg
+while true; do
+           xsetroot -name "$( date +"%F %R" )"
+           sleep 1m    # Update time every minute
+        done &
+
+exec dwm
