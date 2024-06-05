@@ -9,4 +9,4 @@ xxkb &
 firefox &
 ~/scripts/x2.sh &
 
-xterm -e screen &
+xterm -e screen_check.sh &
