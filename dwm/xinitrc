@@ -2,7 +2,7 @@ exec   setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" -va
 firefox &
 pcmanfm &
 xterm -e screen_check.sh &
-feh --bg-scale ~/Downloads/1.jpg
+feh --bg-scale ~/1.jpg
 while true; do
            xsetroot -name "$(free | grep 'mem_free:' | awk '{print $5}' | sed 's/.$//')\
  temp:$(sysctl -n dev.cpu.0.temperature | cut -c 1-2)\
