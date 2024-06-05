@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILE="/home/definitly/2TB/gnucash/definitly.gnucash.gpg"
+FILE="/ntfs-2TB/gnucash/definitly.gnucash.gpg"
 
 if [  -f "$FILE" ]; then
     echo "Файл $FILE  существует"
@@ -10,10 +10,10 @@ fi
 
 
 
-gpg -c --batch --passphrase   /home/definitly/2TB/gnucash/definitly.gnucash
+gpg -c --batch --passphrase    /ntfs-2TB/gnucash/definitly.gnucash
 
-cp /home/definitly/2TB/gnucash/definitly.gnucash.gpg ~/2TB/GIT/gnucash
-cd ~/2TB/GIT/gnucash
+cp /ntfs-2TB/gnucash/definitly.gnucash.gpg /ntfs-2TB/GIT/gnucash
+cd /ntfs-2TB/GIT/gnucash
 git config --global user.email "you@example.com"
 git config --global user.name "Ваше Имя"
 git add --all
