@@ -27,9 +27,9 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/switchscreen
           ./install.sh
           cd ..
-          cd $CURRENTDIRECTORY/postinstall
-          ./install.sh
-          cd ..  
+ #         cd $CURRENTDIRECTORY/postinstall
+ #         ./install.sh
+ #        cd ..  
           cd $CURRENTDIRECTORY/noteconky
           ./install.sh
           cd .. 
