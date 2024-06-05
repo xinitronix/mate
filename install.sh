@@ -87,7 +87,11 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/xboxdrv
           ./install.sh 
           cd .. 
-
+         
+          cd $CURRENTDIRECTORY/dwm
+          ./install.sh 
+          cd .. 
+  
           cd $CURRENTDIRECTORY/power
           ./install.sh 
           cd .. 
