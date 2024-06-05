@@ -82,7 +82,9 @@ login=definitly
 ln -s   /home/$login/.scripts/mountiso.sh /usr/local/bin/mountiso
 ln -s   /home/$login/.scripts/umountiso.sh  /usr/local/bin/umountiso
 
+# copy screen_check.sh
 
+cp   screen_check.sh   /usr/local/bin
                         
 
 #create  aliases.db
