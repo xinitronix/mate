@@ -4,7 +4,7 @@ pcmanfm &
 xterm -e screen &
 feh --bg-scale ~/Downloads/1.jpg
 while true; do
-           xsetroot -name "cpu: $(top -bn 1 | grep "CPU:" | awk '{print $2 }' )  $( date +"%F %R" )"
+           xsetroot -name " temp:$(sysctl -n dev.cpu.0.temperature | cut -c 1-2) $(top -bn 1 | awk '{print $12}' | awk '(NR == 10)')    cpu: $(top -bn 1 | grep "CPU:" | awk '{print $2 }' )  $( date +"%F %R" )"
            sleep 10    # Update time every minute
         done &
 
