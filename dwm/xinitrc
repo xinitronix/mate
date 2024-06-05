@@ -4,8 +4,8 @@ pcmanfm &
 xterm -e screen &
 feh --bg-scale ~/Downloads/1.jpg
 while true; do
-           xsetroot -name "$( date +"%F %R" )"
-           sleep 1m    # Update time every minute
+           xsetroot -name "cpu: $(top -bn 1 | grep "CPU:" | awk '{print $2 }' )  $( date +"%F %R" )"
+           sleep 10    # Update time every minute
         done &
 
 exec dwm
