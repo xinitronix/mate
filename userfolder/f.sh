@@ -9,14 +9,14 @@ rm -R ~/.mozilla/firefox
 #doas zpool import media2
 #doas zpool import -f  ntfs-2TB
 
-doas rm -R /usr/obj
-doas ln -s /home/definitly/2TB/obj /usr/obj
-doas rm -R /var/cache/pkg
-doas ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
-doas rm  -R /var/db/portsnap/
-doas zfs destroy zroot/usr/ports
-doas ln -s /home/definitly/2TB/var/db/portsnap  /var/db/portsnap
-doas ln -s /home/definitly/2TB/ports /usr/ports
+#doas rm -R /usr/obj
+#doas ln -s /home/definitly/2TB/obj /usr/obj
+#doas rm -R /var/cache/pkg
+#doas ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
+#doas rm  -R /var/db/portsnap/
+#doas zfs destroy zroot/usr/ports
+#doas ln -s /home/definitly/2TB/var/db/portsnap  /var/db/portsnap
+#doas ln -s /home/definitly/2TB/ports /usr/ports
 
 ln -s /home/definitly/2TB/i386-wine-pkg  /home/definitly/.i386-wine-pkg
 

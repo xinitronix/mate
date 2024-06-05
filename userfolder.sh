@@ -79,3 +79,13 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
  zpool import media1
  zpool import media2
  zpool import -f  ntfs-2TB
+ rm -R /usr/obj
+ ln -s /ntfs-2TB/obj /usr/obj
+ rm -R /var/cache/pkg
+ ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
+ rm  -R /var/db/portsnap/
+ zfs destroy zroot/usr/ports
+ ln -s /ntfs-2TB/var/db/portsnap  /var/db/portsnap
+ ln -s /ntfs-2TB/ports /usr/ports
+ zfs destroy zroot/usr/src
+ ln -s /ntfs-2TB/src /usr/src
