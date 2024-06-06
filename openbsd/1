@@ -17,7 +17,7 @@ pkg install xorg xterm mc leafpad mpv py39-streamlink git-lite tint2 screen open
 gpg --output definitly.gnucash --batch --passphrase WaAg8erv63ui7ae   -d definitly.gnucash.gpg
 HUAWEI-B315-AFCA
 HR63B1DMTJ4
-
+hw.above4g_allow
  Audio/Video desynchronisation detected! Possible reasons include too slow
 [cplayer] hardware, temporary CPU spikes, broken drivers, and broken files. Audio
 [cplayer] position will not match to the video (see A-V status field).
