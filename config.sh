@@ -115,6 +115,9 @@
 #/etc/resolvconf.conf   
                    echo 'resolvconf=NO'       >>    /etc/resolvconf.conf
 
+#/etc/src.conf
+                  echo 'WITHOUT_REPRODUCIBLE_BUILD=YES' >> /etc/src.conf
+
 #/etc/resolv.conf   
                  echo 'nameserver 8.8.8.8'  >     /etc/resolv.conf
 
