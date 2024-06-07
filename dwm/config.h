@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "xterm", "2", "3", "firefox", "pcmanfm", "6", "7", "8", "9" };
+static const char *tags[] = { "xterm", "2", "3", "firefox", "file manager", "links", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -29,7 +29,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "XTerm",     "xterm",       NULL,       1,            0,           -1 },
 	{ "firefox",  "Navigator",       NULL,       1 << 3,       0,           -1 },
-        { "Pcmanfm",  "pcmanfm",       NULL,       1 << 4,       0,           -1 },
+        { "Xfe",  "xfe",       NULL,       1 << 4,       0,           -1 },
+        { "Links",  "Links",       NULL,       1 << 5,       0,           -1 },
 };
 
 /* layout(s) */
@@ -61,14 +62,16 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "xterm", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
-static const char *pcmanfmcmd[]  = { "pcmanfm", NULL };
+static const char *pcmanfmcmd[]  = { "xfe", NULL };
+static const char *linkscmd[]  = { "links+g", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
         { MODKEY|ShiftMask,             XK_f, spawn,          {.v = firefoxcmd } },
-        { MODKEY|ShiftMask,             XK_p, spawn,          {.v = pcmanfmcmd } },
+        { MODKEY|ShiftMask,             XK_x, spawn,          {.v = pcmanfmcmd } },
+        { MODKEY|ShiftMask,             XK_l, spawn,          {.v = linkscmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
