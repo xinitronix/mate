@@ -12,8 +12,9 @@ topprocess=$(top -bn 1 | awk '{print $12}' | awk '(NR == 10)')
 loadcpu=cpu:$(top -bn 1 | grep "CPU:" | awk '{print $2 }' )
 loadtop=$(top -bn 1 | awk '{print $11}' | awk '(NR == 10)')
 skb=$(xset -q | awk 'BEGIN { a[1]="ru"; a[0]="en"; } /LED/ { print a[$10 && 32]; }')
+compat=$(sysctl -a | grep compat.linux.emul_path | awk '{print $2 }' | cut -c 9-)
 
-      xsetroot -name "$skb $tempcity $freemem $tcpu $loadcpu $topprocess $loadtop $date"
+      xsetroot -name "$compat $skb $tempcity $freemem $tcpu $loadcpu $topprocess $loadtop $date"
 
       sleep 5
 done
