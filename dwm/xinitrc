@@ -3,13 +3,4 @@ firefox &
 pcmanfm &
 xterm -e screen_check.sh &
 feh --bg-scale ~/1.jpg
-while true; do
-           xsetroot -name "$(curl -s "https://api.openweathermap.org/data/2.5/weather?id=524894&appid=9cabf88b4c9c983d726a820860e3a5b6&units=metric" | jq -r '.main.temp')℃\
-  $(free | grep 'mem_free:' | awk '{print $5}' | sed 's/.$//')\
- temp:$(sysctl -n dev.cpu.0.temperature | cut -c 1-2)\
- $(top -bn 1 | awk '{print $12}' | awk '(NR == 10)')\
- $(top -bn 1 | awk '{print $11}' | awk '(NR == 10)')\
- cpu:$(top -bn 1 | grep "CPU:" | awk '{print $2 }' )  $( date +"%F %R" )"
-           sleep 10    # Update time every minute
-        done &
 exec dwm
