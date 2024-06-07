@@ -11,7 +11,7 @@ mc
 #openbox
 nvidia-driver
 ncftp
-pcmanfm
+#pcmanfm
 screen
 sbxkb
 setxkbmap
@@ -25,6 +25,8 @@ xf86-input-mouse
 #xfce4-terminal
 xdg-utils
 xorg-minimal
+jq
+xsetroot
 #p5-App-cpanminus
 #p5-Gtk2
 #p5-GDBM
