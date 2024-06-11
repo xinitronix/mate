@@ -6,6 +6,9 @@ login=dwm
     cp xinitrc   /home/$login/.xinitrc
     cp Xdefaults /home/$login/.Xdefaults
     cp -r applications  /home/$login/.local/share
+    mkdir -p         /home/$login/.config/xfe
+    cp -r    scripts       /home/$login/.config/xfe/
+    chown  -R      $login:wheel      /home/$login/.config/xfe/scripts
     chown  -R      $login:wheel    /home/$login/dwm_bar.sh
     chown  -R      $login:wheel   /home/$login/.xinitrc
     chown  -R      $login:wheel   /home/$login/.Xdefaults
