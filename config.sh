@@ -34,7 +34,7 @@
                      echo 'sendmail_submit_enable="NO"'          >>           /etc/rc.conf
                      echo 'dsbmd_enable="YES"'                   >>           /etc/rc.conf   
                      echo 'vm_enable="YES"' >> /etc/rc.conf
-                     echo 'vm_dir="/ntfs-2TB/vm"'  >> /etc.conf
+                     echo 'vm_dir="/ntfs-2TB/vm"'  >> /etc/rc.conf
                      
 
 #/boot/defaults/loader.conf 
