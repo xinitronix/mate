@@ -4,7 +4,7 @@ HD=/ntfs-2TB/vm/antix/disk0.img
 USB="5/0/0"
 UEFI=/usr/local/share/uefi-firmware/BHYVE_UEFI.fd
 MEM=4G
-VM="win10"
+VM="antix"
 IF="tap0"
 MAC="mac=00:A0:98:78:32:10"
 DPY="w=1918,h=1058"
