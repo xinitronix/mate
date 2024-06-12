@@ -35,6 +35,8 @@
                      echo 'dsbmd_enable="YES"'                   >>           /etc/rc.conf   
                      echo 'vm_enable="YES"' >> /etc/rc.conf
                      echo 'vm_dir="/ntfs-2TB/vm"'  >> /etc/rc.conf
+                     echo 'cloned_interfaces="bridge0 tap0"' >> /etc/rc.conf
+                     echo 'ifconfig_bridge0="addm re0  addm tap0"'  >> /etc/rc.conf
                      
 
 #/boot/defaults/loader.conf 
