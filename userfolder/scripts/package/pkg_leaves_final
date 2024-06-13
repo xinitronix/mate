@@ -50,10 +50,10 @@ pkg
 python3
 pkg_cutleaves
 portmaster
-py39-qt5
-py39-pip
-py39-qt5-widgets
-py39-streamlink
+py311-qt5
+py311-pip
+py311-qt5-widgets
+py311-streamlink
 rpm2cpio
 rrdtool
 ruby
