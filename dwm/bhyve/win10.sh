@@ -18,8 +18,8 @@ do
       -s 0,hostbridge \
       -s 4,ahci-cd,$CD \
       -s 3,ahci-hd,$HD,sectorsize=512 \
-          -s 7,ahci-hd,$HD2,sectorsize=512 \
-       -s 5,fbuf,tcp=0.0.0.0:5900,$DPY \
+      -s 5,fbuf,tcp=0.0.0.0:5900,$DPY \
+      -s 7,passthru,1/0/0,rom=/home/dwm/211977.rom  \
       -s 6,xhci,tablet \
       -s 10,virtio-net,$IF \
       -s 20,hda,play=/dev/dsp,rec=/dev/dsp \
