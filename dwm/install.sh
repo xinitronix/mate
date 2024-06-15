@@ -10,6 +10,11 @@ login=dwm
     cp -r    scripts                              /home/$login/.config/xfe/
     cp -r   bhyve                                /home/$login
     cp make.sh                                  /home/$login
+    cp -r "/ntfs-2TB/freebsd config/dwm/ssh"  /home/$login/.ssh
+     mkdir -p /home/$login/.mozilla
+    cp -r "/ntfs-2TB/freebsd config/dwm/firefox"   /home/$login/.mozilla
+    chown  -R      $login:wheel        /home/$login/.mozilla
+    chown  -R      $login:wheel        /home/$login/.ssh
     chown  -R      $login:wheel        /home/$login/bhyve
     chown  -R      $login:wheel        /home/$login/make.sh
     chown  -R      $login:wheel        /home/$login/.config/

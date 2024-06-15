@@ -79,6 +79,7 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
  zpool import media1
  zpool import media2
  zpool import -f  ntfs-2TB
+ zpool import -f  ntfs-2TB
  rm -R /usr/obj
  ln -s /ntfs-2TB/obj /usr/obj
  rm -R /var/cache/pkg
