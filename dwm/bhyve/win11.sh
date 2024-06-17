@@ -19,7 +19,7 @@ do
       -s 4,ahci-cd,$CD \
       -s 3,ahci-hd,$HD,sectorsize=512 \
        -s 5,fbuf,tcp=0.0.0.0:5900,$DPY \
-       -s 2,passthru,1/0/0 \
+       -s 2,passthru,0/2/0 \
       -s 6,xhci,tablet \
       -s 10,virtio-net,$IF \
       -s 20,hda,play=/dev/dsp,rec=/dev/dsp \

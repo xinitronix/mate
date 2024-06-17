@@ -95,7 +95,7 @@ done
 
 readonly clean="${clean-"false"}"
 readonly cmd_redirect="${cmd_redirect-"/dev/null"}"
-readonly src_dir="${src_dir-"/ntfs-2TB/corvin-src-140"}"
+readonly src_dir="${src_dir-"/usr/src"}"
 echo $src_dir
 readonly with_bhf="${with_bhf-"true"}"
 readonly with_kernel="${with_kernel-"true"}"
