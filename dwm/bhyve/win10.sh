@@ -3,7 +3,7 @@ CD=/ntfs-2TB/downloads/ISO/virtio-win-0.1.118.iso
 HD=/bhyve/win10/win10.img
 HD2=/home/dwm/windows10.img
 USB="5/0/0"
-UEFI=/usr/local/share/uefi-firmware/BHYVE_BHF_UEFI.fd
+UEFI=/home/dwm/BHYVE_BHF_UEFI.fd
 #UEFI=/home/dwm/BHYVE_CODE.fd
 #UEFI=/usr/local/share/uefi-firmware/BHYVE_UEFI_CODE.fd 
 MEM=6G
@@ -22,7 +22,7 @@ do
       -s 3,ahci-hd,$HD,sectorsize=512 \
       -s 5,fbuf,tcp=0.0.0.0:5900,$DPY \
       -s 6,xhci,tablet \
-      -s 2,passthru,0/2/0,rom=/home/dwm/intel.rom \
+      -s 2,passthru,0/2/0,rom=/home/dwm/GM107.rom \
       -s 10,virtio-net,$IF \
       -s 20,hda,play=/dev/dsp,rec=/dev/dsp \
       -s 31,lpc \
