@@ -1,0 +1,193 @@
+#!/bin/sh
+# SPDX-License-Identifier: 0BSD
+# Copyright (C) 2023 Beckhoff Automation GmbH & Co. KG
+
+
+
+
+
+CD=/ntfs-2TB/downloads/ISO/virtio-win-0.1.118.iso
+HD=/bhyve/win10/win10.img
+HD2=/ntfs-2TB/vm/antix/disk0.img
+
+USB="5/0/0"
+UEFI=/home/dwm/BHYVE_BHF_UEFI.fd
+#UEFI=/home/dwm/BHYVE_CODE.fd
+#UEFI=/usr/local/share/uefi-firmware/BHYVE_UEFI_CODE.fd 
+MEM=6G
+vm_name="win10"
+IF="tap0"
+MAC="mac=00:A0:98:78:32:10"
+DPY="w=1920,h=1080"
+
+
+
+
+
+
+
+set -e
+set -u
+
+usage() {
+	cat >&2 << EOF
+USAGE: ${0##*/} [COMMAND]
+
+Control the virtual machine environment named '${vm_name}'
+
+COMMANDS:
+    start       Start the VM
+    stop        Shutdown the running VM
+    help        Print this help message
+
+EXAMPLES
+# run the virual machine
+${0##*/} start
+
+# shutdown the virtual machine
+${0##*/} stop
+
+EOF
+}
+
+
+
+attach() {
+
+doas devctl detach  -f pci0:0:20:0
+doas  devctl set driver   pci0:0:20:0 xhci
+doas devctl attach pci0:0:20:0
+doas  devctl detach -f  pci0:0:2:0
+doas devctl set driver pci0:0:2:0 vgapci
+doas devctl attach  pci0:0:2:0
+
+
+}
+
+# Setups the VM environment and actually executes the bhyve process
+run_vm() {
+
+
+
+echo start
+
+doas devctl detach pci0:0:20:0
+doas devctl set driver pci0:0:20:0 ppt
+doas devctl detach pci0:0:2:0
+doas devctl set driver pci0:0:2:0 ppt
+
+	
+
+	
+
+	while true; do
+
+		if test -e "/dev/vmm/${vm_name}"; then
+			bhyvectl --vm="${vm_name}" --destroy
+
+		fi
+
+		_bhyve_rc=0
+		
+
+doas   bhyve \
+      -c 4,sockets=2,cores=2 -S -A  \
+      -s 0,hostbridge \
+      -s 4,ahci-cd,$CD \
+      -s 3,ahci-hd,$HD,sectorsize=512 \
+      -s 5,fbuf,tcp=0.0.0.0:5900,$DPY \
+      -s 10,virtio-net,$IF \
+      -s 11,passthru,0/20/0 \
+      -s 2,passthru,0/2/0 \
+      -s 8,xhci,tablet \
+      -s 20,hda,play=/dev/dsp,rec=/dev/dsp \
+      -s 31,lpc \
+      -l bootrom,$UEFI,fwcfg=qemu  \
+      -m $MEM -H -w \
+      $vm_name         ||    _bhyve_rc=$?
+ 
+
+
+  
+
+		if test "${_bhyve_rc}" -ne 0; then
+   doas       bhyvectl --vm="${vm_name}" --destroy
+echo start 3
+sleep 10
+         attach 
+sleep 10
+ attach                   
+	break
+		fi
+
+echo stop
+  	done
+}
+
+shutdown_vm() {
+
+
+
+
+	# do not trap on exit during shutdown command
+	trap '' EXIT
+	set +e
+	set +u
+
+doas 	kill "${_pid}"
+        sleep 10
+doas       bhyvectl --vm=${vm_name} --destroy
+echo stop 1 
+  attach
+
+      }
+
+get_bhyve_pid() {
+	printf "%s" "$(pgrep -f "bhyve: ${vm_name}")"
+}
+
+
+
+# Default values for VM configuration
+readonly vm_name="win10"
+readonly vm_vnc_port="5900"
+readonly _cmd="${1?Error: No COMMAND specified$(usage)}"
+
+_pid="$(get_bhyve_pid)"
+case "${_cmd}" in
+	start)
+		if test -z "${_pid:+x}"; then
+			run_vm
+		else
+			printf "%s is already running with pid: %s\n" "${vm_name}" "${_pid}"
+			exit 1
+		fi
+		;;
+
+	stop)
+
+
+                
+		if ! test -z "${_pid:+x}"; then
+			shutdown_vm
+		fi
+		;;
+
+	status)
+		if ! test -z "${_pid:+x}"; then
+			printf "'%s' is running with pid: %s\n" "${vm_name}" "${_pid}"
+		else
+			printf "'%s' is not running.\n" "${vm_name}"
+		fi
+		;;
+
+	-h | --help | help)
+		usage
+		;;
+
+	*)
+		usage
+		printf "Unknown COMMAND: '%s'\n" "${_cmd}"
+		exit 1
+		;;
+esac

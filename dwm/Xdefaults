@@ -11,8 +11,8 @@ xterm*termName: xterm-256color
 xterm*ScrollBar*width:         26 
 xterm*scrollbar.background:    black 
 xterm*scrollbar.foreground:    lightgreen 
-XTerm*faceName: DejaVu Sans Mono 
-XTerm*faceSize: 11
+XTerm*faceName:  Cascadia Code NF
+XTerm*faceSize: 14
 #xterm*selectToClipboard: true
 
 
