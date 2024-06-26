@@ -111,13 +111,9 @@ doas   bhyve \
   
 
 		if test "${_bhyve_rc}" -ne 0; then
-   doas       bhyvectl --vm="${vm_name}" --destroy
-echo start 3
-sleep 10
-         attach 
-sleep 10
- attach                   
-	break
+                   echo start 3
+                    attach 
+               break
 		fi
 
 echo stop
