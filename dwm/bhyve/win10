@@ -2,30 +2,6 @@
 # SPDX-License-Identifier: 0BSD
 # Copyright (C) 2023 Beckhoff Automation GmbH & Co. KG
 
-
-
-
-
-CD=/ntfs-2TB/downloads/ISO/virtio-win-0.1.118.iso
-HD=/bhyve/win10/win10.img
-HD2=/ntfs-2TB/vm/antix/disk0.img
-
-USB="5/0/0"
-UEFI=/home/dwm/BHYVE_BHF_UEFI.fd
-#UEFI=/home/dwm/BHYVE_CODE.fd
-#UEFI=/usr/local/share/uefi-firmware/BHYVE_UEFI_CODE.fd 
-MEM=6G
-vm_name="win10"
-IF="tap0"
-MAC="mac=00:A0:98:78:32:10"
-DPY="w=1920,h=1080"
-
-
-
-
-
-
-
 set -e
 set -u
 
@@ -50,104 +26,137 @@ ${0##*/} stop
 EOF
 }
 
+# Cleanup any resources used by the VM after shutdown
+cleanup() {
+	# do not trap during cleanup procedure
+	trap '' EXIT
+	set +e
+	set +u
+
+	pfctl -a "bhf/bhyve/${vm_name}" -f /dev/null > /dev/null 2>&1
+	if test -e "${temp_firewall_rules}"; then
+		rm "${temp_firewall_rules}"
+	fi
+}
 
 
-attach() {
+CD=/ntfs-2TB/downloads/ISO/virtio-win-0.1.118.iso
+HD=/bhyve/win10/win10.img
+HD2=/home/dwm/windows10.img
+USB="5/0/0"
+UEFI=/home/dwm/BHYVE_BHF_UEFI.fd
+#UEFI=/home/dwm/BHYVE_CODE.fd
+#UEFI=/usr/local/share/uefi-firmware/BHYVE_UEFI_CODE.fd 
+MEM=6G
+VM="win10"
+IF="tap0"
+MAC="mac=00:A0:98:78:32:10"
+DPY="w=1920,h=1080"
 
-echo stop 3
-doas devctl detach   pci0:0:20:0
-doas  devctl set driver   pci0:0:20:0 xhci
-doas devctl attach pci0:0:20:0
-doas  devctl detach   pci0:0:2:0
-doas devctl set driver pci0:0:2:0 vgapci
-doas devctl attach  pci0:0:2:0
 
+
+
+
+
+detach() {
+echo stop
+
+ devctl detach  -f pci0:0:20:0
+ devctl set driver   pci0:0:20:0 xhci
+ devctl attach pci0:0:20:0
+ devctl detach -f  pci0:0:2:0
+ devctl set driver pci0:0:2:0 vgapci
+ devctl attach  pci0:0:2:0
 
 }
 
+
+attach() {
+echo start
+ devctl detach pci0:0:20:0
+ devctl set driver pci0:0:20:0 ppt
+ devctl set driver pci0:0:2:0 vgapci
+ devctl detach pci0:0:2:0
+ devctl set driver pci0:0:2:0 ppt
+
+}
+
+
 # Setups the VM environment and actually executes the bhyve process
 run_vm() {
+	trap 'cleanup' EXIT
+  
+  detach_vgapci &
+  sleep 2
+  detach_xhci &
+  sleep 2
+  detach
+  sleep 2
+  attach	
 
-
-
-echo start
-
-doas devctl detach pci0:0:20:0
-doas devctl set driver pci0:0:20:0 ppt
-doas devctl detach pci0:0:2:0
-doas devctl set driver pci0:0:2:0 ppt
-
-	
-
-	
-
-	while true; do
+         while true; do
 
 		if test -e "/dev/vmm/${vm_name}"; then
 			bhyvectl --vm="${vm_name}" --destroy
-
 		fi
 
 		_bhyve_rc=0
-		
-
-doas   bhyve \
+		 bhyve \
       -c 4,sockets=2,cores=2 -S -A  \
       -s 0,hostbridge \
       -s 4,ahci-cd,$CD \
       -s 3,ahci-hd,$HD,sectorsize=512 \
       -s 5,fbuf,tcp=0.0.0.0:5900,$DPY \
-      -s 10,virtio-net,$IF \
-      -s 11,passthru,0/20/0 \
+      -s 6,xhci,tablet \
       -s 2,passthru,0/2/0 \
-      -s 8,xhci,tablet \
+      -s 11,passthru,0/20/0 \
+      -s 10,virtio-net,$IF \
       -s 20,hda,play=/dev/dsp,rec=/dev/dsp \
       -s 31,lpc \
       -l bootrom,$UEFI,fwcfg=qemu  \
       -m $MEM -H -w \
-      $vm_name         ||    _bhyve_rc=$?
- 
-
-
-  
+      "${vm_name}" || _bhyve_rc=$?
 
 		if test "${_bhyve_rc}" -ne 0; then
-          sleep 10
-                   echo start 3
-./attach.sh
-echo start 4
-                   sleep 10
-                    attach 
-               break
+                bhyvectl --vm="${vm_name}" --destroy
+                 sleep 10
+ #           /usr/local/bin/detach_vgapci &
+                      
+  #          /usr/local/bin/detach_xhci &
+                      
+                      detach 
+                      break
 		fi
 
-echo stop
-  	done
+	done
 }
 
 shutdown_vm() {
-
-
-
-
 	# do not trap on exit during shutdown command
 	trap '' EXIT
 	set +e
 	set +u
 
-doas 	kill "${_pid}"
+	kill "${_pid}"
         sleep 10
-doas       bhyvectl --vm=${vm_name} --destroy
-echo stop 1 
-  attach
+        bhyvectl --vm="${vm_name}" --destroy
+        /usr/local/bin/detach_vgapci &
+                      sleep 2
+            /usr/local/bin/detach_xhci &
+                      sleep 2
+        detach 
 
-      }
+}
 
 get_bhyve_pid() {
 	printf "%s" "$(pgrep -f "bhyve: ${vm_name}")"
 }
 
-
+# Execution of virtual machines requires root previleges
+if test "$(id -u)" -ne 0; then
+	printf "%s must be run as root\n" "${0##*/}"
+	exit 1
+fi
 
 # Default values for VM configuration
 readonly vm_name="win10"
@@ -166,9 +175,6 @@ case "${_cmd}" in
 		;;
 
 	stop)
-
-
-                
 		if ! test -z "${_pid:+x}"; then
 			shutdown_vm
 		fi
