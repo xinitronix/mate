@@ -10,6 +10,8 @@ firefox
 leafpad
 linux_base-c7
 mc
+icewm
+
 openbox
 nvidia-driver
 ncftp
@@ -18,6 +20,7 @@ screen
 sbxkb
 setxkbmap
 sshpass
+tigervnc-viewer
 tint2
 xterm
 xxkb

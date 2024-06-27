@@ -4,4 +4,4 @@ pcmanfm &
 xterm -e screen_check.sh &
 feh --bg-scale ~/1.jpg
   ~/dwm_bar.sh &
-exec dwm
+exec icewm
