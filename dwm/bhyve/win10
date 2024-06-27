@@ -54,10 +54,11 @@ EOF
 
 attach() {
 
-doas devctl detach  -f pci0:0:20:0
+echo stop 3
+doas devctl detach   pci0:0:20:0
 doas  devctl set driver   pci0:0:20:0 xhci
 doas devctl attach pci0:0:20:0
-doas  devctl detach -f  pci0:0:2:0
+doas  devctl detach   pci0:0:2:0
 doas devctl set driver pci0:0:2:0 vgapci
 doas devctl attach  pci0:0:2:0
 
@@ -111,7 +112,11 @@ doas   bhyve \
   
 
 		if test "${_bhyve_rc}" -ne 0; then
+          sleep 10
                    echo start 3
+./attach.sh
+echo start 4
+                   sleep 10
                     attach 
                break
 		fi
