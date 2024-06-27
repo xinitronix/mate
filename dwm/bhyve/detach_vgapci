@@ -1,0 +1,9 @@
+#!/bin/sh
+ echo detach_vgapci
+ devctl detach -f  pci0:0:2:0
+ echo detach_vgapci 2 
+ devctl set driver pci0:0:2:0 vgapci
+ echo detach_vgapci 3
+ devctl attach  pci0:0:2:0
+ echo detach_vgapci 4
+
