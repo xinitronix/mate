@@ -13,6 +13,13 @@ MAC="mac=00:A0:98:78:32:10"
 DPY="w=1920,h=1080"
 
 
+# Execution of virtual machines requires root previleges
+if test "$(id -u)" -ne 0; then
+	printf "%s must be run as root\n" "${0##*/}"
+	exit 1
+fi
+
+
 
 detach() {
 echo stop
@@ -42,13 +49,12 @@ detach_vgapci &
   sleep 2
   detach_xhci &
   sleep 2
-  detach
-  sleep 2
   attach
 
   ifconfig $IF up
 while true
 do
+echo start 2
       bhyve \
       -c 4,sockets=2,cores=2 -S -A  \
       -s 0,hostbridge \

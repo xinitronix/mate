@@ -90,8 +90,6 @@ run_vm() {
   sleep 2
   detach_xhci &
   sleep 2
-  detach
-  sleep 2
   attach	
 
          while true; do
