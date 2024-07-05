@@ -69,6 +69,10 @@ login2=rtorrent
 #                     echo './f.sh'                                                  >>            /home/$login/.login 
 
 
+#update-desktop-database
+
+update-desktop-database /home/$login/.local/share/applications
+
 chown  -R      $login:wheel   /mnt
 
 cp       $CURRENTDIRECTORY/userfolder/scripts/reloadlist    /usr/local/bin
@@ -90,3 +94,4 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
  ln -s /ntfs-2TB/ports /usr/ports
  zfs destroy zroot/usr/src
  ln -s /ntfs-2TB/src /usr/src
+
