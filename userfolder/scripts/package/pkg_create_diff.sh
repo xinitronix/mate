@@ -5,7 +5,7 @@ rm /tmp/3.txt
    
 
 
-   for path in $(ls ~/All); do
+   for path in $(ls /home/definitly/2TB/All ); do
 
 
        echo "${path%-*}" >> /tmp/1.txt
@@ -24,7 +24,7 @@ for path in $(pkg info -q); do
 
     for pkg in    $(diff /tmp/1.txt /tmp/2.txt -u | grep -v '^@@.*@@$' | grep "+" | sed -e 's/^.//' | sed '1d' | sed '1d');do
 
-      cd ~/All
+      cd  /home/definitly/2TB/All
       doas pkg create $pkg
 
     done
