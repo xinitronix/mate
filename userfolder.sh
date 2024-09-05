@@ -95,3 +95,9 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
  zfs destroy zroot/usr/src
  ln -s /ntfs-2TB/src /usr/src
 
+#firefox emoji 
+mkdir -p /home/$login/.fonts/mozilla/
+cp /usr/local/lib/firefox/fonts/TwemojiMozilla.ttf /home/$login/.fonts/mozilla/
+cd /home/$login/.fonts/mozilla/
+mkfontdir mozilla/
+mkfontscale mozilla/
