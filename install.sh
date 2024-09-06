@@ -100,6 +100,12 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
 
+          cd $CURRENTDIRECTORY/zapret
+          ./install.sh 
+          cd .. 
+
+
+
           cd $CURRENTDIRECTORY/protonvpn
           ./install.sh 
           cd .. 
