@@ -26,11 +26,11 @@ lutris-freebsd-g20210927
 leafpad
 liberation-fonts-ttf
 lxappearance
-linux-steam-utils
-linux-nvidia-libs
-linux_base-c7
-linux-c7-devtools
-libc6-shim 
+#linux-steam-utils
+#linux-nvidia-libs
+#linux_base-c7
+#linux-c7-devtools
+#libc6-shim 
 iceauth
 mc
 micro_httpd
