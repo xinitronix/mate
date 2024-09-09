@@ -20,9 +20,9 @@ rm -R ~/.mozilla/firefox
 
 ln -s /home/definitly/2TB/i386-wine-pkg  /home/definitly/.i386-wine-pkg
 
-cp "/ntfs-2TB/freebsd config/ssh/id_rsa" ~/.ssh
-cp "/ntfs-2TB/freebsd config/ssh/id_rsa.pub" ~/.ssh
-cp "/ntfs-2TB/freebsd config/ssh/known_hosts" ~/.ssh 
+cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" ~/.ssh
+cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa.pub" ~/.ssh
+cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" ~/.ssh 
 
 cp -R "/home/definitly/2TB/freebsd config/firefox" ~/.mozilla
 cp -R "/home/definitly/2TB/freebsd config/TelegramDesktop" ~/.local/share
