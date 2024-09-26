@@ -14,7 +14,7 @@ alias ll	ls -lAF
 
 # These are normally set through /etc/login.conf.  You may override them here
 # if wanted.
- set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/bin  $HOME/.local/bin)
+ set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/bin  $HOME/.local/bin  /opt/trinity/bin)
 # setenv	BLOCKSIZE	K
 # A righteous umask
 # umask 22
@@ -53,7 +53,8 @@ alias cds       cd  ~/scripts
 alias rtmp          ~/scripts/rtmp.sh
 alias krtmp     killall -9 rtmpsrv
 alias m3u8          ~/scripts/tcpdump_m3u8.sh
-alias extract     ~/.scripts/extract
+alias extract     ~/.scripts/extractd 
+alias myrepo     doas pkg install -r myrepo  \!:1
 setenv TERM xterm-256color
 setenv SDL_JOYSTICK_DEVICE /dev/input/event10
 
