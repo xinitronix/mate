@@ -57,7 +57,7 @@ alias extract     ~/.scripts/extractd
 alias myrepo     doas pkg install -r myrepo  \!:1
 setenv TERM xterm-256color
 setenv SDL_JOYSTICK_DEVICE /dev/input/event10
-
+setenv DOCKER_HOST tcp://192.168.8.103:2375
 
 
 
