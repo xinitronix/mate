@@ -191,7 +191,7 @@ button_max_icon_size = 28
 #-------------------------------------
 # Button 2
 button = new
-button_icon = system-shutdown
+button_icon = /home/definitly/.config/icons/shutdown.png
 button_text = 
 button_tooltip = shutdown
 button_lclick_command = powerpy
