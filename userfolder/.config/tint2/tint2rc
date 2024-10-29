@@ -208,7 +208,7 @@ button_max_icon_size = 0
 #-------------------------------------
 # Button 3
 button = new
-button_icon = /home/definitly/Downloads/vpn1.png
+button_icon = /home/definitly/.config/icons/ubuntu.png
 button_text = 
 button_tooltip = ubuntu_chroot
 button_lclick_command = ubuntu_chroot
