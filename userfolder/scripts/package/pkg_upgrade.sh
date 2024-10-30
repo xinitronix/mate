@@ -9,7 +9,7 @@ fi
 
 
 rm /tmp/pkg_upgrade.txt
-rm pkg_upgrade
+
 
 echo N |  pkg upgrade -r FreeBSD | grep - | sed -r 's/([^ ]*).*/\1/' | tr -d ":" >> /tmp/pkg_upgrade.txt
 
