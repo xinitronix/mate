@@ -104,7 +104,9 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
 
-
+         cd $CURRENTDIRECTORY/dockerbox
+          ./install.sh 
+          cd ..
 
           cd $CURRENTDIRECTORY/protonvpn
           ./install.sh 
