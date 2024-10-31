@@ -174,10 +174,10 @@ ac_disconnected_cmd =
 #-------------------------------------
 # Button 1
 button = new
-button_icon = /home/definitly/Downloads/vpn.png
+button_icon = /home/definitly/.config/icons/docker.png
 button_text = 
 button_tooltip = Start/Stop VPN
-button_lclick_command = startvpn
+button_lclick_command = dockerbox.py
 button_rclick_command = 
 button_mclick_command = 
 button_uwheel_command = 
