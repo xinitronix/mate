@@ -6,9 +6,32 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 import os
 import getpass
-
+import subprocess
 start_docker = "doas service dockerbox onestart"
 stop_docker =  "doas service dockerbox onestop"
+
+
+
+class AnotherWindow(Gtk.Window):
+    def __init__(self):
+        Gtk.Window.__init__(self, title="GCT")
+        self.set_default_size(200, 100)
+        self.connect("destroy", lambda x: Gtk.main_quit())
+        label = Gtk.Label()
+        label.set_alignment(0, 0)
+        self.add(label)
+        self.show_all()
+        sub_proc =  subprocess.check_output(['doas','service','dockerbox','status'], universal_newlines=True)
+        sub_outp = ""
+        label.set_text(label.get_text() + sub_proc)
+        print (sub_proc)
+        self.add(Gtk.Label("This is another window"))
+        self.show_all()
+
+
+
+
+
 
 class bl_exit:
    
@@ -27,13 +50,17 @@ class bl_exit:
 
         self.status.set_label("Rebooting, please standby...")
         os.system(stop_docker.format("Reboot"))
-        win = Gtk.Window()
-        win.connect("destroy", Gtk.main_quit)
-        win.show_all()
         Gtk.main_quit()
 
+    def status_action(self,btn):
+    
+        self.status.set_label("Rebooting, please standby...")
+        os.system(stop_docker.format("Reboot"))
+        Gtk.main_quit()
 
-
+    def open_window(self, win):
+        subw = AnotherWindow()
+    
     def create_window(self):
         self.window = Gtk.Window()
         title = "DockerBox"
@@ -68,6 +95,13 @@ class bl_exit:
         self.button_box.pack_start(self.reboot,True, True, 0)
         self.reboot.show()
 
+
+        #stop vpn  button
+        self.status = Gtk.Button("Status DockerBox")
+        self.status.set_border_width(4)
+        self.status.connect("clicked", self.open_window)
+        self.button_box.pack_start(self.status,True, True, 0)
+        self.status.show()
 
         #Create HBox for status label
         self.label_box = Gtk.HBox()
