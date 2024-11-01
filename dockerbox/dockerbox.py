@@ -7,8 +7,8 @@ from gi.repository import Gtk
 import os
 import getpass
 
-start_docker = ""
-stop_docker = " "
+start_docker = "doas service dockerbox onestart"
+stop_docker =  "doas service dockerbox onestop"
 
 class bl_exit:
    
