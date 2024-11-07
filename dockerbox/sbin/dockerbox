@@ -42,7 +42,7 @@ CONF_DIR=/usr/local/etc/dockerbox
 : "${PF_CONF:=/etc/pf.conf}"
 
 DOCKERBOX_IF=dockerbox0
-DOCKERBOX_VM=dockerbox
+DOCKERBOX_VM=bridge0
 DOCKERBOX_LOG=/var/log/dockerbox.log
 DISK_IMAGE="${GUEST_ROOT}/disk.img"
 DOCKER_IMAGE="${GUEST_ROOT}/docker.img"
@@ -241,7 +241,7 @@ check_nat() {
         ${SYSCTL} net.inet.ip.forwarding=1 | capture_output debug sysctl
     fi
  #   create_bridge
- #   create_tap
+     create_tap
  #   check_pf
 }
 
@@ -297,9 +297,9 @@ echo start
 		exit 1
 	fi
 
-#    _tap="$(get_tap_interface)"
+    _tap="$(get_tap_interface)"
 #    _grub_args="-m ${DEVICE_MAP} -r hd0,msdos1 -M ${memory}"
-    _bhyve_args="-A -H -P -s 0:0,hostbridge -s 1:0,lpc -s 10:0,virtio-net,tap0  -s 3:0,ahci-hd,${DISK_IMAGE} -l bootrom,$UEFI -c ${cpu} -m ${memory}"
+    _bhyve_args="-A -H -P -s 0:0,hostbridge -s 1:0,lpc -s 10:0,virtio-net,${_tap}  -s 3:0,ahci-hd,${DISK_IMAGE} -l bootrom,$UEFI -c ${cpu} -m ${memory}"
     
     if [ "$1" == "console" ]; then
         _bhyve_args="${_bhyve_args} -l com1,stdio"
@@ -342,7 +342,7 @@ dockerbox_stop() {
     log info "Stopping guest ${DOCKERBOX_VM}, managed by PID ${_pid}"
     ${KILL} -SIGTERM "${_pid}" 2>&1 | capture_output debug kill
     bhyvectl --destroy --vm=${DOCKERBOX_VM}
-#    destroy_tap
+     destroy_tap
 #    destroy_bridge
     ${KILL} -SIGTERM $PPID
     log info "Dockerbox stopped: killed pid=${_pid} and ppid=${PPID}"
