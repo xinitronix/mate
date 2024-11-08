@@ -1,6 +1,6 @@
 #!/bin/sh
 
-GUEST_ROOT=/home/definitly/2TB/vm/debian
+GUEST_ROOT=/home/definitly/2TB/vm/dockerbox
 CONF_DIR=/usr/local/etc/dockerbox
 
 : "${IFCONFIG:=/sbin/ifconfig}"
