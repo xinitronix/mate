@@ -73,7 +73,7 @@ yt-dlp
 tint2
 telegram-desktop
 tor
-virtualbox-ose
+#virtualbox-ose
 unrar
 unzip
 xauth
@@ -91,9 +91,9 @@ xxkb
 xboxdrv
 xfce4-taskmanager
 winetricks
-wine-proton
+#wine-proton
 #wine-devel
-wine8
+#wine8
 #webcamd
 zip
 p5-App-cpanminus
