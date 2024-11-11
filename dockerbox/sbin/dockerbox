@@ -34,7 +34,8 @@ CONF_DIR=/usr/local/etc/dockerbox
 : "${FETCH:=/usr/bin/fetch}"
 : "${INSTALL:=/usr/bin/install}"
 
-
+: "${TAP_ID:=/var/run/dockerbox_tap_id}"
+: "${CAT:=/bin/cat}"
 
 
 : "${VMM_KO:=/boot/kernel/vmm.ko}"
@@ -111,6 +112,14 @@ get_tap_interface() {
         ${ECHO} ""
     fi
 }
+
+
+get_tap_id() {
+
+       ${CAT}   ${TAP_ID} 
+}
+
+
 
 check_ext_if() {
     . ${CONFIG}
@@ -214,19 +223,21 @@ destroy_bridge() {
 }
 
 create_tap() {
-    local _tap="$(get_tap_interface)"
+ #   local _tap="$(get_tap_interface)"
 
     if [ -z "${_tap}" ]; then
         _tap="$(${IFCONFIG} tap create up)"
         log info "Linking tap interface to ${DOCKERBOX_IF}: ${_tap}"
         ${IFCONFIG} ${DOCKERBOX_IF} addm "${_tap}" 2>&1 | capture_output debug ifconfig
+        ${ECHO} "${_tap}"  >     ${TAP_ID}
     else
         log warn "Linked tap interface already exists: ${_tap}, skipping creation"
     fi
 }
 
 destroy_tap() {
-    local _tap="$(get_tap_interface)"
+    local _tap="$(get_tap_id)" 
+   # local _tap="$(get_tap_interface)"
 
     if [ -n "${_tap}" ]; then
         log info "Destroying linked tap interface: ${_tap}"
@@ -287,7 +298,7 @@ vm_manager() {
     . ${CONFIG}
 
 #    check_vmm
-#    check_nat 
+     check_nat 
 
 echo start
 
@@ -297,7 +308,8 @@ echo start
 		exit 1
 	fi
 
-    _tap="$(get_tap_interface)"
+#    _tap="$(get_tap_interface)"
+     _tap="$(get_tap_id)"
 #    _grub_args="-m ${DEVICE_MAP} -r hd0,msdos1 -M ${memory}"
     _bhyve_args="-A -H -P -s 0:0,hostbridge -s 1:0,lpc -s 10:0,virtio-net,${_tap}  -s 3:0,ahci-hd,${DISK_IMAGE} -l bootrom,$UEFI -c ${cpu} -m ${memory}"
     
@@ -342,7 +354,7 @@ dockerbox_stop() {
     log info "Stopping guest ${DOCKERBOX_VM}, managed by PID ${_pid}"
     ${KILL} -SIGTERM "${_pid}" 2>&1 | capture_output debug kill
     bhyvectl --destroy --vm=${DOCKERBOX_VM}
-#     destroy_tap
+     destroy_tap
 #    destroy_bridge
     ${KILL} -SIGTERM $PPID
     log info "Dockerbox stopped: killed pid=${_pid} and ppid=${PPID}"
