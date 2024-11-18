@@ -88,9 +88,9 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
          
-          cd $CURRENTDIRECTORY/ciadpi
-          ./install.sh 
-          cd .. 
+   #       cd $CURRENTDIRECTORY/ciadpi
+   #       ./install.sh 
+   #       cd .. 
 
           cd $CURRENTDIRECTORY/dwm
           ./install.sh 
