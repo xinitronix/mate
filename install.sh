@@ -11,7 +11,7 @@ CURRENTDIRECTORY=$(pwd)
 
           ./accounts.sh
           ./config.sh
-          ./flash.sh
+         # ./flash.sh
           ./userfolder.sh
           #./yandexdisk.sh
           
@@ -84,9 +84,9 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd ..
           
-          cd $CURRENTDIRECTORY/xboxdrv
-          ./install.sh 
-          cd .. 
+  #        cd $CURRENTDIRECTORY/xboxdrv
+  #        ./install.sh 
+  #        cd .. 
          
    #       cd $CURRENTDIRECTORY/ciadpi
    #       ./install.sh 
