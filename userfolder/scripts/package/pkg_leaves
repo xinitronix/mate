@@ -25,6 +25,9 @@ screen
 sbxkb
 setxkbmap
 sshpass
+seatd
+sfwbar
+labwc
 tigervnc-viewer
 tint2
 xterm
