@@ -25,7 +25,7 @@
                      echo 'powerd_flags="-a adp -p 100 -r 90"'   >>           /etc/rc.conf
                      echo 'nginx_enable="YES"'           >>                   /etc/rc.conf
                      echo 'php_fpm_enable="YES"'         >>                   /etc/rc.conf
-                     echo 'kld_list="nvidia-modeset linux64 nullfs "'         >>                   /etc/rc.conf
+                     echo 'kld_list="nvidia-drm linux64 nullfs "'         >>                   /etc/rc.conf
  #                   echo 'KLD_LIST="linux linsysfs linprocfs"'  >>           /etc/rc.conf
                      echo 'allscreens_flags=" MODE_283"'         >>           /etc/rc.conf
                      echo 'sendmail_enable="NONE"'               >>           /etc/rc.conf
@@ -37,6 +37,7 @@
                      echo 'vm_dir="/ntfs-2TB/vm"'  >> /etc/rc.conf
                      echo 'cloned_interfaces="bridge0 tap0"' >> /etc/rc.conf
                      echo 'ifconfig_bridge0="addm re0  addm tap0"'  >> /etc/rc.conf
+                     echo 'seatd_enable="YES"'                   >>           /etc/rc.conf  
                      
 
 #/boot/defaults/loader.conf 
@@ -48,6 +49,7 @@
                      echo  'vfs.zfs.prefetch_disable="0"' >>                   /boot/defaults/loader.conf
                      echo  'machdep.disable_mtrrs=1'      >>                   /boot/defaults/loader.conf
                      echo  'kern.vty=vt'                  >>                   /boot/defaults/loader.conf
+                     echo  'hw.nvidiadrm.modeset=1'       >>                   /boot/defaults/loader.conf
 #/boot/loader.conf
 
                     echo  'if_urtwn_load="YES"'           >>                   /boot/loader.conf
