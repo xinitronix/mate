@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dockerbox
+Exec=dockerbox.py
+Icon=/home/definitly/.config/icons/docker.png
+Type=Application
+Terminal=false
+Categories=System;
+Name[ru_RU]=dockerbox
