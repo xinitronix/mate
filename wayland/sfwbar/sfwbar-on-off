@@ -1,0 +1,15 @@
+#!/bin/sh
+proc=sfwbar
+
+  
+          
+   
+       if ! [ -z $(pgrep $proc) ]
+                then
+                   killall -9 sfwbar
+
+                else
+                    sfwbar -f /home/definitly/.config/sfwbar/w10.config   &
+
+        fi
+           
