@@ -16,6 +16,7 @@ icewm
 noto-emoji
 openbox
 nvidia-driver
+nvidia-drm-kmod
 ncftp
 pcmanfm
 portsnap
