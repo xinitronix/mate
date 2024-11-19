@@ -83,6 +83,15 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/obmenu-generator
           ./install.sh 
           cd ..
+      
+          cd $CURRENTDIRECTORY/wayland/dtaoconky
+          ./install.sh 
+          cd ..
+ 
+          cd $CURRENTDIRECTORY/wayland/sfwbar
+          ./install.sh 
+          cd ..
+
           
   #        cd $CURRENTDIRECTORY/xboxdrv
   #        ./install.sh 

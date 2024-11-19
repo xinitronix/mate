@@ -1,0 +1,5 @@
+#!/bin/sh
+fg="white"
+bg="black"
+fn="-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*"
+conky -d -c ~/.dtaoconkyrc | dtao  -h 26  -fn  $fn
