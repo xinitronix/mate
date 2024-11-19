@@ -8,5 +8,6 @@ xset m 0 &
 xxkb &
 firefox &
 #~/scripts/x2.sh &
-sfwbar &
+sfwbar -f /home/definitly/.config/sfwbar/w10.config  &
 alacritty -e screen_check.sh &
+#xterm  -e screen_check.sh &
