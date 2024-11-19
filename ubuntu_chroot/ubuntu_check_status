@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ID=`mount | grep ubuntu | head -n1 `
+
+echo $ID
