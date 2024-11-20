@@ -16,11 +16,15 @@ if [ ! -d "/ntfs-2TB" ]; then
                     mkdir /ntfs-2TB
                     chown  -R     $login:wheel        /ntfs-2TB
                     chmod 0777  /ntfs-2TB
+
+
+
+fi
                     ln -s  /ntfs-2TB                  /home/$login/2TB
                     chown  -R     $login:wheel        /home/$login/2TB
                     chmod 0777     /home/$login/2TB
 
-  fi
+  
 
 
 
