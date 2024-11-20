@@ -10,6 +10,8 @@ login2=rtorrent
                     
  #/ntfs-2TB  
  
+if [ ! -d "/ntfs-2TB" ]; then
+    echo "Папка $FILE  не существует"
  
                     mkdir /ntfs-2TB
                     chown  -R     $login:wheel        /ntfs-2TB
@@ -17,6 +19,10 @@ login2=rtorrent
                     ln -s  /ntfs-2TB                  /home/$login/2TB
                     chown  -R     $login:wheel        /home/$login/2TB
                     chmod 0777     /home/$login/2TB
+
+  fi
+
+
 
 #create user space
                      cp -rf $CURRENTDIRECTORY/userfolder/.[a-zA-Z0-9]*   /home/$login  
