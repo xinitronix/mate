@@ -78,8 +78,8 @@ unrar
 unzip
 xauth
 xbindkeys
-#xf86-input-keyboard
-#xf86-input-mouse
+xf86-input-keyboard
+xf86-input-mouse
 xf86-video-vesa
 xhost
 xinit
