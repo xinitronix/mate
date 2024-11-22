@@ -54,7 +54,7 @@ py311-qt5
 py311-gobject3
 py311-pip
 py311-qt5-widgets
-py311-streamlink
+#py311-streamlink
 rpm2cpio
 rrdtool
 ruby
