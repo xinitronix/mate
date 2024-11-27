@@ -9,7 +9,12 @@ CURRENTDIRECTORY=$(pwd)
            ./install.sh
            cd $CURRENTDIRECTORY
 
-          ./accounts.sh
+ #         ./accounts.sh
+          cd $CURRENTDIRECTORY/accounts
+          ./create_user.sh
+          cd .. 
+
+
           ./config.sh
          # ./flash.sh
           ./userfolder.sh
