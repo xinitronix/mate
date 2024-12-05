@@ -10,6 +10,7 @@
 /etc/wpa_supplicant.conf
 /etc/X11
 /etc/X11/xorg.conf
+/usr/local/bin/ubuntu_chroot_change
 /usr/local/bin/binance-on-off
 /usr/local/bin/binance-on-off.sh
 /usr/local/bin/binanceconky

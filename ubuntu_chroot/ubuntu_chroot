@@ -9,7 +9,7 @@ import getpass
 import subprocess
 start_ubuntu = "doas service ubuntu onestart"
 stop_ubuntu = "doas  service ubuntu onestop "
-
+change_ubuntu = "ubuntu_chroot_change"
 
 
 class AnotherWindow(Gtk.Window):
@@ -53,15 +53,26 @@ class bl_exit:
         os.system(stop_ubuntu.format("Reboot"))
         Gtk.main_quit()
 
+    def change_action(self,btn):
+
+        self.status.set_label("Rebooting, please standby...")
+        os.system(change_ubuntu.format("Reboot"))
+        Gtk.main_quit()
+
+    
+
+
 
     def status_action(self,btn):
     
         self.status.set_label("Rebooting, please standby...")
-        os.system(stop_docker.format("Reboot"))
         Gtk.main_quit()
 
     def open_window(self, win):
         subw = AnotherWindow()
+    
+
+
 
 
 
@@ -99,12 +110,21 @@ class bl_exit:
         self.button_box.pack_start(self.reboot,True, True, 0)
         self.reboot.show()
 
-        #stop vpn  button
+        #status  button
         self.status = Gtk.Button("Status Ubuntu")
         self.status.set_border_width(4)
         self.status.connect("clicked", self.open_window)
         self.button_box.pack_start(self.status,True, True, 0)
         self.status.show()
+
+
+        #change  button
+        self.change = Gtk.Button("Change version Ubuntu")
+        self.change.set_border_width(4)
+        self.change.connect("clicked", self.change_action)
+        self.button_box.pack_start(self.change,True, True, 0)
+        self.change.show()
+
 
 
 
