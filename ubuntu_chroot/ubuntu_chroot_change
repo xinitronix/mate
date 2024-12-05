@@ -1,0 +1,25 @@
+#!/bin/sh
+ID=24.10
+PATH_CHROOT=/ntfs-2TB/compat
+CHROOT=ubuntu
+VERSION=`cat /compat/ubuntu/etc/os-release | grep "VERSION_ID=" |  cut -d\" -f2`
+echo $VERSION
+
+if [ "$VERSION" == "$ID" ]
+
+then
+    
+    mv $PATH_CHROOT/$CHROOT $PATH_CHROOT/ubuntu_$VERSION
+    mv $PATH_CHROOT/ubuntu_20.04 $PATH_CHROOT/ubuntu
+    echo "Both strings are equal"
+
+else
+
+    echo "Both strings are not equal"
+    mv $PATH_CHROOT/$CHROOT  $PATH_CHROOT/ubuntu_$VERSION
+    mv $PATH_CHROOT/ubuntu_$ID  $PATH_CHROOT/ubuntu
+
+fi
+
+
+#mv $PATH_CHROOT/$CHROOT  $PATH_CHROOT/ubuntu_$VERSION
