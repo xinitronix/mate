@@ -57,7 +57,7 @@ class bl_exit:
 
         self.status.set_label("Rebooting, please standby...")
         os.system(change_ubuntu.format("Reboot"))
-        Gtk.main_quit()
+
 
     
 
