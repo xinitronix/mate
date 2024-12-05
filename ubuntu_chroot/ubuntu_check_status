@@ -1,5 +1,6 @@
 #!/bin/sh
 
 ID=`mount | grep ubuntu | head -n1 `
-
+VERSION=`cat /compat/ubuntu/etc/os-release | awk 'NR==2'`
 echo $ID
+echo $VERSION
