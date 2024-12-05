@@ -1,9 +1,16 @@
 #!/bin/sh
+
+ID_UBUNTU=`mount | grep ubuntu | head -n1 `
 ID=24.10
 PATH_CHROOT=/ntfs-2TB/compat
 CHROOT=ubuntu
 VERSION=`cat /compat/ubuntu/etc/os-release | grep "VERSION_ID=" |  cut -d\" -f2`
 echo $VERSION
+
+
+
+ubuntu_change()
+{
 
 if [ "$VERSION" == "$ID" ]
 
@@ -21,5 +28,13 @@ else
 
 fi
 
+}
 
-#mv $PATH_CHROOT/$CHROOT  $PATH_CHROOT/ubuntu_$VERSION
+if [ -z "$ID_UBUNTU" ]
+then
+     echo "\$var Пустая"
+     ubuntu_change
+else
+     echo "\$var не пустая"
+zenity --info --text="First,umount a ubuntu chroot." --width=500
+fi
