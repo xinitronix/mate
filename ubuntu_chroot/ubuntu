@@ -60,6 +60,7 @@ ubuntu_start()
 	unmounted "${_emul_path}/dev" && (mount -t devfs devfs "${_emul_path}/dev" || exit 1)
 	unmounted "${_emul_path}/dev/fd" && (mount -o linrdlnk -t fdescfs fdescfs "${_emul_path}/dev/fd" || exit 1)
 	unmounted "${_emul_path}/dev/shm" && (mount -o mode=1777 -t tmpfs tmpfs "${_emul_path}/dev/shm" || exit 1)
+        unmounted "${_emul_path}/home" && (mount -t nullfs  /home "${_emul_path}/home" || exit 1)
 	unmounted "${_emul_path}/tmp" && (mount -t nullfs /tmp "${_emul_path}/tmp" || exit 1)
 	unmounted /dev/fd && (mount -t fdescfs null /dev/fd || exit 1)
 	unmounted /proc && (mount -t procfs procfs /proc || exit 1)
@@ -76,8 +77,10 @@ ubuntu_stop ()
     umount -f ${_emul_path}/dev/fd
     umount -f ${_emul_path}/dev/shm
     umount -f ${_emul_path}/tmp
+    umount -f ${_emul_path}/home
     umount -f ${_real_emul_path}/dev/shm
     umount -f ${_real_emul_path}/dev/fd
+
     sysctl compat.linux.emul_path=/compat/linux
     
  }
