@@ -22,10 +22,11 @@ ln -s /home/definitly/2TB/i386-wine-pkg  /home/definitly/.i386-wine-pkg
 
 cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519" ~/.ssh
 cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519.pub" ~/.ssh
-cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" ~/.ssh 
+cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" ~/.ssh
+cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" ~/.ssh
 mkdir ~/.mozilla
 cp -R "/home/definitly/2TB/freebsd config/firefox" ~/.mozilla
 cp -R "/home/definitly/2TB/freebsd config/TelegramDesktop" ~/.local/share
-
+cp -R "/home/definitly/2TB/freebsd config/google-chrome" ~/.config
 doas cp "/ntfs-2TB/freebsd config/proton/pass.txt"  /usr/local/etc/proton
 doas cp "/ntfs-2TB/freebsd config/proton/us-free-08.protonvpn.com.tcp.ovpn"  /usr/local/etc/proton
