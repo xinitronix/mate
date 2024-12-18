@@ -91,9 +91,8 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/youtube.sh    /usr/local/bin/youtu
 cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
 
 #firefox-nightly
-
 cp  $CURRENTDIRECTORY/etc/firefox-nightly  /usr/local/bin
-              
+cp  $CURRENTDIRECTORY/userfolder/.config/icons/firefox-nightly.png   /usr/local/share/icons/hicolor/256x256/apps     
  zpool import zada2
  zpool import media1
  zpool import media2
