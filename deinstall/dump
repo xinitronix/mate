@@ -10,6 +10,7 @@
 /etc/wpa_supplicant.conf
 /etc/X11
 /etc/X11/xorg.conf
+ /usr/local/share/icons/hicolor/256x256/apps/firefox-nightly.png
 /usr/local/bin/N_m3u8DL-RE
 /usr/local/bin/firefox-nightly
 /usr/local/bin/ubuntu_chroot_change
