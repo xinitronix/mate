@@ -28,5 +28,6 @@ mkdir ~/.mozilla
 cp -R "/home/definitly/2TB/freebsd config/firefox" ~/.mozilla
 cp -R "/home/definitly/2TB/freebsd config/TelegramDesktop" ~/.local/share
 cp -R "/home/definitly/2TB/freebsd config/google-chrome" ~/.config
-doas cp "/ntfs-2TB/freebsd config/proton/pass.txt"  /usr/local/etc/proton
-doas cp "/ntfs-2TB/freebsd config/proton/us-free-08.protonvpn.com.tcp.ovpn"  /usr/local/etc/proton
+#doas cp "/ntfs-2TB/freebsd config/proton/pass.txt"  /usr/local/etc/proton
+#doas cp "/ntfs-2TB/freebsd config/proton/us-free-08.protonvpn.com.tcp.ovpn"  /usr/local/etc/proton
+doas cp "/home/definitly/2TB/freebsd config/DRM/N_m3u8DL-RE" /usr/local/bin
