@@ -92,7 +92,7 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
 
 #firefox-nightly
 cp  $CURRENTDIRECTORY/etc/firefox-nightly  /usr/local/bin
-cp  $CURRENTDIRECTORY/userfolder/.config/icons/firefox-nightly.png   /usr/local/share/icons/hicolor/256x256/apps     
+cp  $CURRENTDIRECTORY/userfolder/.config/icons/firefox-nightly.png     /usr/local/share/pixmaps  
  zpool import zada2
  zpool import media1
  zpool import media2
