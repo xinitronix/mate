@@ -1,4 +1,4 @@
 #!/bin/sh
 
 xhost +local:ff
-doas su -l ff -c  firefox
+doas su -l ff -c  firefox-nightly
