@@ -23,7 +23,7 @@ fi
 
 mdconfig -a -t vnode -f $1 -u 0
 
-mount  /dev/md0a /mnt
+mount  /dev/md0s2a /mnt
 echo 'autoboot_delay="-1"' >> /mnt/boot/defaults/loader.conf
 rm /mnt/etc/resolv.conf 
 cp resolv.conf /mnt/etc
