@@ -1,9 +1,9 @@
 #!/bin/sh
 # Vars
 mount -rw /
-dhclient ale0
-dev=ada0
-pool_name=rpool
+dhclient re0
+dev=ada3
+pool_name=zroot
 swap_size=4G
 umount /dev/md1
 mdmfs -s 512M md1 /tmp
@@ -35,7 +35,7 @@ mkdir /mnt/var/tmp
 chmod 1777 /mnt/var/tmp
 cd /usr/freebsd-dist
 export DESTDIR=/mnt
-for file in base.txz lib32.txz kernel.txz pkg.txz  ;
+for file in base.txz lib32.txz kernel.txz  ;
 do (cat $file | tar --unlink -xpJf - -C ${DESTDIR:-/}); done
 cp /tmp/zpool.cache /mnt/boot/zfs/zpool.cache
 echo 'zfs_enable="YES"' >> /mnt/etc/rc.conf
@@ -48,9 +48,10 @@ echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
 
 echo "# enable networking"
 echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
-echo 'ifconfig_ale0="DHCP"' >> /mnt/etc/rc.conf
+echo 'ifconfig_re0="inet 192.168.8.101 netmask 255.255.255.0"' >> /mnt/etc/rc.conf
 echo 'sshd_enable="YES"' >> /mnt/etc/rc.conf
-echo 'dumpdev="NO"' >> /mnt/etc/rc.conf
+echo 'dumpdev="AUTO"' >> /mnt/etc/rc.conf
+echo 'moused_enable="YES"' >> /mnt/etc/rc.conf
 #sed -i "" "/ttyv0/s/Pc/autologin/" /mnt/etc/ttys
 
 #touch /mnt/root/1
