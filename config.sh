@@ -3,6 +3,14 @@
 
 
 
+
+
+if [  -f "/usr/local/etc/mate.pid/config.sh.pid" ]; then
+    echo "Файл $FILE  существует"
+    exit 
+fi
+
+
 #/etc/rc.conf
 
  
@@ -185,5 +193,7 @@ ln -s /usr/lib/libpam.so.6 /usr/lib/libpam.so.5
 
 
 
+mkdir -p /usr/local/etc/mate.pid
+touch /usr/local/etc/mate.pid/config.sh.pid
 
 

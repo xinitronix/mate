@@ -10,6 +10,8 @@
 /etc/wpa_supplicant.conf
 /etc/X11
 /etc/X11/xorg.conf
+/usr/local/etc/mate.pid/config.sh.pid
+/usr/local/etc/mate.pid/
 /usr/local/share/icons/hicolor/256x256/apps/firefox-nightly.png
 /usr/local/bin/N_m3u8DL-RE
 /usr/local/bin/firefox-nightly
