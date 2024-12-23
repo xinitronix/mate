@@ -85,10 +85,6 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
 
-          cd $CURRENTDIRECTORY/obmenu-generator
-          ./install.sh 
-          cd ..
-      
           cd $CURRENTDIRECTORY/wayland/dtaoconky
           ./install.sh 
           cd ..
@@ -125,5 +121,9 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/protonvpn
           ./install.sh 
           cd .. 
-          
-          reboot
+         
+          cd $CURRENTDIRECTORY/obmenu-generator
+          ./install.sh 
+          cd ..
+
+ reboot
