@@ -11,6 +11,8 @@ grep -vf defaults/loader.conf.d  /boot/defaults/loader.conf > defaults/loader.co
 rm   /boot/defaults/loader.conf
 rm   /boot/loader.conf
 rm   /etc/rc.conf
+rm   /etc/fstab
+cp   fstab    /etc/fstab
 cp   rc.conf /etc/rc.conf
 cp   loader.conf /boot/loader.conf 
 cp   defaults/loader.conf   /boot/defaults/loader.conf
