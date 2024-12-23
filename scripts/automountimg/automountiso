@@ -35,7 +35,7 @@ echo "" 1>&2
 
 
 mdconfig -a -t vnode -u0 -f $1  
-mount /dev/md0a /mnt
+mount /dev/md0s2a /mnt
 echo 'autoboot_delay="-1"' >> /mnt/boot/defaults/loader.conf
 rm /mnt/etc/resolv.conf 
 cp resolv.conf /mnt/etc

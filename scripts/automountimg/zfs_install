@@ -1,9 +1,9 @@
 #!/bin/sh
 # Vars
 mount -rw /
-dhclient ale0
-dev=ada0
-pool_name=rpool
+dhclient re0
+dev=ada3
+pool_name=zroot
 swap_size=4G
 umount /dev/md1
 mdmfs -s 512M md1 /tmp
@@ -48,58 +48,22 @@ echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
 
 echo "# enable networking"
 echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
-echo 'ifconfig_ale0="DHCP"' >> /mnt/etc/rc.conf
+echo 'ifconfig_re0="inet 192.168.8.101 netmask 255.255.255.0"' >> /mnt/etc/rc.conf
 echo 'sshd_enable="YES"' >> /mnt/etc/rc.conf
-echo 'dumpdev="NO"' >> /mnt/etc/rc.conf
-sed -i "" "/ttyv0/s/Pc/autologin/" /mnt/etc/ttys
+echo 'dumpdev="AUTO"' >> /mnt/etc/rc.conf
+echo 'moused_enable="YES"' >> /mnt/etc/rc.conf
+#sed -i "" "/ttyv0/s/Pc/autologin/" /mnt/etc/ttys
 
-touch /mnt/root/1
-echo './1' >> /mnt/root/.login
-echo 'cd pkg' >> /mnt/root/1
-echo 'git clone git://github.com/definitly/mate.git' >> /mnt/root/1
-echo 'cd mate' >> /mnt/root/1
-echo './start.sh' >> /mnt/root/1
-chmod +x /mnt/root/1
-
-
-cd /mnt/root
+#touch /mnt/root/1
+#echo './1' >> /mnt/root/.login
+#echo 'cd pkg' >> /mnt/root/1
+#echo 'git clone git://github.com/definitly/mate.git' >> /mnt/root/1
+#echo 'cd mate' >> /mnt/root/1
+#echo './start.sh' >> /mnt/root/1
+#chmod +x /mnt/root/1
 
 
 
-
-
-MAC=`ifconfig -a | grep ether | awk '{print $2}'| sed s/://g | sed 's/.\{1\}/& /g'`
-
-a=`echo $MAC | awk '{print $9}'`
-b=`echo $MAC | awk '{print $6}'`
-c=`echo $MAC | awk '{print $3}'`
-d=$(($c+4))
-e=`echo $MAC | awk '{print $11}'`
-f=$(($e-4))
-g=`echo $MAC | awk '{print $1}'`
-h=`echo $MAC | awk '{print $7}'`
-i=`echo $MAC | awk '{print $2}'`
-j=$(($i+1))
-k=`echo $MAC | awk '{print $5}'`
-l=$a$b$d$f$g$h$j$k
-echo $l
-
-
-
-
-a=$(cat /pid | grep  nvidia)
-
-
-    if ! [ -z $a ] ; 
-       then  
-fetch --no-verify-peer http://dl.dropbox.com/u/$l/pkg.tar.gz ;
-tar -zxvf  pkg.tar.gz -C /;   
-      
-       else 
-fetch --no-verify-peer  http://dl.dropbox.com/u/$l/pkg_ati.tar.gz ;
-tar -zxvf  pkg_ati.tar.gz -C /;         
-    
-               fi
 
 
 cp /pid  /mnt/root/pid
@@ -107,8 +71,6 @@ cp /etc/resolv.conf /mnt/etc/
 
 chroot /mnt  /pkg/pkg
 
-#cd pkg
-#./pkg
 
 
 
