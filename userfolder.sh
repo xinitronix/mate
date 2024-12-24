@@ -90,9 +90,6 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/echoplaylist  /usr/local/bin
 cp       $CURRENTDIRECTORY/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
 cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
 
-#firefox-nightly
-#cp  $CURRENTDIRECTORY/etc/firefox-nightly  /usr/local/bin
-#cp  $CURRENTDIRECTORY/userfolder/.config/icons/firefox-nightly.png     /usr/local/share/pixmaps  
  zpool import zada2
  zpool import media1
  zpool import media2
