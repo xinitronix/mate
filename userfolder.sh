@@ -104,6 +104,7 @@ cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
  ln -s /ntfs-2TB/var/db/portsnap  /var/db/portsnap
  ln -s /ntfs-2TB/ports /usr/ports
  zfs destroy zroot/usr/src
+ rm -R /usr/src
  ln -s /ntfs-2TB/src /usr/src
 
 #firefox emoji 
