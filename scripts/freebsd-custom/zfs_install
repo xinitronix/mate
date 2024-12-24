@@ -49,6 +49,7 @@ echo "vfs.root.mountfrom=\"zfs:$pool_name\"" >> /mnt/boot/loader.conf
 echo "# enable networking"
 echo 'hostname="freebsd"' >> /mnt/etc/rc.conf
 echo 'ifconfig_re0="inet 192.168.8.101 netmask 255.255.255.0"' >> /mnt/etc/rc.conf
+echo 'defaultrouter="192.168.8.1"' >> /mnt/etc/rc.conf
 echo 'sshd_enable="YES"' >> /mnt/etc/rc.conf
 echo 'dumpdev="AUTO"' >> /mnt/etc/rc.conf
 echo 'moused_enable="YES"' >> /mnt/etc/rc.conf
@@ -63,21 +64,7 @@ echo 'moused_enable="YES"' >> /mnt/etc/rc.conf
 #chmod +x /mnt/root/1
 
 
-
-
-
-cp /pid  /mnt/root/pid
-cp /etc/resolv.conf /mnt/etc/
-
-chroot /mnt  /pkg/pkg
-
-
-
-
-
 # Device Mountpoint FStype Options Dump Pass#
-echo '/dev/gpt/swap0 none swap sw 0 0'  >>  /mnt/etc/fstab
-
 zfs set readonly=on $pool_name/var/empty
 zfs umount -a
 zfs set mountpoint=legacy $pool_name
