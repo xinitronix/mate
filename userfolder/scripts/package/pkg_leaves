@@ -39,7 +39,7 @@ xinit
 xf86-input-keyboard
 xf86-input-mouse
 xfce4-terminal
-xfe
+#xfe
 xdg-utils
 xorg-minimal
 jq
