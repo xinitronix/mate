@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=djview
-Exec=djview  %f
-Categories=Other;
-NoDisplay=true
-MimeType=image/vnd.djvu

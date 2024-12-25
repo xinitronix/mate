@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=mplayer
-Exec=mplayer %f
-Icon=mplayer
-Categories=Other;
-NoDisplay=true
-MimeType=video/x-flv
