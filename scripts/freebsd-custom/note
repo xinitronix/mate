@@ -2,7 +2,8 @@ cd /usr/src/release
 make memstick NODOC=YES NOPORTS=YES NOSRC=YES
 svnlite co svn://svn.freebsd.org/base/head /usr/src
 git clone -b stable/13 --depth 1 https://git.freebsd.org/src.git /usr/src
-cd /usr/src && make -j4 buildworld && make -j4 buildkernel && cd release && make memstick NODOC=YES NOPORTS=YES NOSRC=YES 
+cd /usr/src && make -j4 buildworld && make -j4 buildkernel && cd release && make memstick NODOC=YES NOPORTS=YES NOSRC=YES
+doas make installkernel installworld distribution DESTDIR=/ntfs-2TB/release/disc1
 make install DESTDIR=/usr/freebsd-snapshot clean
 cp /mnt/usr/freebsd-dist/pkg.txz ~/
 
