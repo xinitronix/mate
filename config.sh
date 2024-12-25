@@ -112,7 +112,7 @@ fi
                     echo -e "permit nopass keepenv dwm\n"                  >>    /usr/local/etc/doas.conf
 
 #/usr/local/etc/sudoers
-                  
+                    echo -e "root ALL=(ALL:ALL) ALL"            >>    /usr/local/etc/sudoers
                     echo -e "%wheel ALL=(ALL:ALL) ALL"            >>    /usr/local/etc/sudoers
                     echo -e "%wheel ALL=(ALL:ALL) NOPASSWD: ALL"                  >>    /usr/local/etc/sudoers
 
