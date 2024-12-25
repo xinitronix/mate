@@ -47,6 +47,7 @@ fi
                      echo 'ifconfig_bridge0="addm re0  addm tap0"'  >> /etc/rc.conf
                      echo 'seatd_enable="YES"'                   >>           /etc/rc.conf  
                      echo 'ifconfig_re0="inet 192.168.8.101 netmask 255.255.255.0"' >> /etc/rc.conf
+                     echo 'defaultrouter="192.168.8.1"' >> /etc/rc.conf
 
 #/boot/defaults/loader.conf 
    #                  echo  'nvidia_load="YES" '           >>                   /boot/defaults/loader.conf
