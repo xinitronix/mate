@@ -42,7 +42,7 @@ if ($?prompt) then
 	endif
 
 endif
-set prompt="%{^[[40;33;1m%}[%T] %{^[[40;33;1m%} %/ %"
+set prompt="%{^[[0;32;1m%}[%T] %{^[[0;32;1m%} %/ %"
 alias kn        killall -9  npviewer.bin
 alias ks        killall -9  sp-sc-auth
 alias kw        killall -9  wine
