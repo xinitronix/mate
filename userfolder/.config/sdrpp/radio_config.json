@@ -1,0 +1,31 @@
+{
+    "Radio": {
+        "FM": {
+            "FMIFNREnabled": false,
+            "bandwidth": 12500.0,
+            "deempMode": "50us",
+            "fmifnrPreset": "Voice",
+            "noiseBlankerEnabled": false,
+            "noiseBlankerLevel": 1.0,
+            "snapInterval": 2500.0,
+            "squelchEnabled": false,
+            "squelchLevel": -100.0
+        },
+        "WFM": {
+            "FMIFNREnabled": false,
+            "bandwidth": 150004.0,
+            "deempMode": "50us",
+            "lowPass": true,
+            "noiseBlankerEnabled": false,
+            "noiseBlankerLevel": 1.0,
+            "rds": true,
+            "rdsInfo": true,
+            "rdsRegion": "eu",
+            "snapInterval": 100000,
+            "squelchEnabled": false,
+            "squelchLevel": -100.0,
+            "stereo": true
+        },
+        "selectedDemodId": 0
+    }
+}
