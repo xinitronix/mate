@@ -13,6 +13,11 @@
                     "frequency": 451535000.0,
                     "mode": 0
                 },
+                "dsd   ": {
+                    "bandwidth": 12500.0,
+                    "frequency": 451610000.0,
+                    "mode": 0
+                },
                 "dsd 1412": {
                     "bandwidth": 12500.0,
                     "frequency": 451922500.0,
@@ -33,6 +38,11 @@
                     "frequency": 451835000.0,
                     "mode": 0
                 },
+                "dsd 1453": {
+                    "bandwidth": 12500.0,
+                    "frequency": 454010000.0,
+                    "mode": 0
+                },
                 "dsd 1462": {
                     "bandwidth": 12500.0,
                     "frequency": 452285000.0,
@@ -41,6 +51,11 @@
                 "dsd 1463": {
                     "bandwidth": 12500.0,
                     "frequency": 452622500.0,
+                    "mode": 0
+                },
+                "dsd 2": {
+                    "bandwidth": 12500.0,
+                    "frequency": 452397500.0,
                     "mode": 0
                 }
             },
