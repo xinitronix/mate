@@ -21,7 +21,7 @@
     "fftSmoothing": false,
     "fftSmoothingSpeed": 100,
     "fftWindow": 2,
-    "frequency": 451331250.0,
+    "frequency": 451201250.0,
     "fullWaterfallUpdate": false,
     "fullscreen": false,
     "invertIQ": false,
@@ -60,7 +60,7 @@
         },
         {
             "name": "Sinks",
-            "open": false
+            "open": true
         },
         {
             "name": "Theme",
@@ -210,7 +210,7 @@
         "Radio": "#FFFFFF"
     },
     "vfoOffsets": {
-        "Radio": 1101250.0
+        "Radio": -191250.0
     },
     "windowSize": {
         "h": 714,
