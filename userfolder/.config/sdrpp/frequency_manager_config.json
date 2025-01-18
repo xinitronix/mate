@@ -1,6 +1,26 @@
 {
     "bookmarkDisplayMode": 1,
     "lists": {
+        "DMR": {
+            "bookmarks": {
+                "DMR 1": {
+                    "bandwidth": 12500.0,
+                    "frequency": 439760000.0,
+                    "mode": 0
+                },
+                "DMR 2": {
+                    "bandwidth": 12500.0,
+                    "frequency": 440997500.0,
+                    "mode": 0
+                },
+                "DMR 3 кама 3": {
+                    "bandwidth": 12500.0,
+                    "frequency": 441285000.0,
+                    "mode": 0
+                }
+            },
+            "showOnWaterfall": true
+        },
         "General": {
             "bookmarks": {
                 "dsd": {
@@ -21,6 +41,11 @@
                 "dsd 1412": {
                     "bandwidth": 12500.0,
                     "frequency": 451922500.0,
+                    "mode": 0
+                },
+                "dsd 1433": {
+                    "bandwidth": 12500.0,
+                    "frequency": 452560000.0,
                     "mode": 0
                 },
                 "dsd 1442": {
@@ -72,5 +97,5 @@
             "showOnWaterfall": true
         }
     },
-    "selectedList": "General"
+    "selectedList": "DMR"
 }

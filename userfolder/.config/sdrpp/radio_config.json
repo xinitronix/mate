@@ -8,8 +8,8 @@
             "noiseBlankerEnabled": false,
             "noiseBlankerLevel": 1.0,
             "snapInterval": 2500.0,
-            "squelchEnabled": false,
-            "squelchLevel": -100.0
+            "squelchEnabled": true,
+            "squelchLevel": -22.58099937438965
         },
         "WFM": {
             "FMIFNREnabled": false,
