@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Icon=/home/definitly/sdrpp.png
+Name=sdrpp
+
+Name[ru]=sdrpp
+
+
+
+Categories=System;FileTools;FileManager;Utility;Core;GTK;
+Exec=sudo pcmanfm
+StartupNotify=true
+Terminal=false
+MimeType=inode/directory;
