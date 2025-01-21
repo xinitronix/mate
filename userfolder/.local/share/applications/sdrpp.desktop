@@ -8,7 +8,7 @@ Name[ru]=sdrpp
 
 
 Categories=System;FileTools;FileManager;Utility;Core;GTK;
-Exec=sudo pcmanfm
+Exec=sdrpp
 StartupNotify=true
 Terminal=false
 MimeType=inode/directory;
