@@ -88,6 +88,11 @@
                     "frequency": 452397500.0,
                     "mode": 0
                 },
+                "dsd 5": {
+                    "bandwidth": 12500.0,
+                    "frequency": 453410000.0,
+                    "mode": 0
+                },
                 "dsd 513": {
                     "bandwidth": 12500.0,
                     "frequency": 451010000.0,
