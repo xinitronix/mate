@@ -114,3 +114,7 @@ cp /usr/local/lib/firefox/fonts/TwemojiMozilla.ttf /home/$login/.fonts/mozilla/
 cd /home/$login/.fonts/mozilla/
 mkfontdir mozilla/
 mkfontscale mozilla/
+
+#dsd p25 
+
+cp  $CURRENTDIRECTORY/userfolder/scripts/socat-dsd.sh /usr/local/bin 

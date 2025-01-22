@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+#Icon=/usr/local/share/sdrpp/icons/sdrpp.png
+Name=dsd-fme
+
+Name[ru]=dsd-fme
+
+
+
+Categories=System;FileTools;FileManager;Utility;Core;GTK;
+Exec=socat-dsd.sh
+StartupNotify=true
+Terminal=false
+MimeType=inode/directory;
