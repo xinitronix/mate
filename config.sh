@@ -150,6 +150,7 @@ fi
 
 #wine-proton
                    ln -s /usr/local/wine-proton/bin/wine  /usr/local/bin/proton
+                   ln -s /usr/local/wine-proton/bin/winecfg  /usr/local/bin/protoncfg
 
                    
  
