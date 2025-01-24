@@ -18,7 +18,7 @@ fi
  #                   echo 'hald_enable="yes"'            >>                   /etc/rc.conf
                      echo 'dbus_enable="yes"'            >>                   /etc/rc.conf
                      echo 'apache22_enable="YES"'        >>                   /etc/rc.conf
-                     echo 'linux_enable="NO"'           >>                   /etc/rc.conf
+                     echo 'linux_enable="YES"'           >>                   /etc/rc.conf
                      
                      echo 'dahdi_enable="YES"'           >>                   /etc/rc.conf
                      echo 'wlans_urtwn0="wlan0"'         >>                   /etc/rc.conf
@@ -96,10 +96,10 @@ fi
                      echo 'devfs      /compat/linux/dev      devfs      rw,late    0  0' >>    /etc/fstab
                      echo 'fdescfs    /compat/linux/dev/fd   fdescfs    rw,late,linrdlnk  0  0'  >>    /etc/fstab
                      echo 'linsysfs  /compat/linux/sys linsysfs rw  0 0' >> /etc/fstab
-                     echo 'tmpfs    /compat/linux/dev/shm  tmpfs rw,mode=1777 0 0' >> /etc/fstab
                      echo 'fdesc   /dev/fd            fdescfs   rw  0 0' >>       /etc/fstab
                      echo 'proc    /proc               procfs   rw  0 0' >>       /etc/fstab
                      echo '/dev/da0 /mnt             ufs      rw,noauto 0 0' >>   /etc/fstab
+                     echo 'tmpfs    /compat/linux/dev/shm  tmpfs rw,mode=1777 0 0' >> /etc/fstab
  #                   echo '/dev/ada0p2 /ntfs-2TB   ntfs   mountprog=/usr/local/bin/ntfs-3g,late,rw,uid=1002    0   0' >> /etc/fstab
 
 #/etc/sysctl.conf

@@ -10,3 +10,4 @@ firefox &
 #~/scripts/x2.sh &
 
 alacritty -e screen_check.sh &
+doas mount  /compat/linux/dev/shm
