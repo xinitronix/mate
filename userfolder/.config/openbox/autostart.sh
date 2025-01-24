@@ -6,7 +6,7 @@ setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" -variant "
 #xcompmgr -cfCF &
 xset m 0 & 
 xxkb &
-firefox &
+ firefox-nightly &
 #~/scripts/x2.sh &
 
 alacritty -e screen_check.sh &
