@@ -19,4 +19,5 @@ git config --global user.name "Ваше Имя"
 git add --all
 git add .
 git commit -n
-git push ssh://git@github.com/xinitronix/gnucash.git
+#git push ssh://git@github.com/xinitronix/gnucash.git
+git push both
