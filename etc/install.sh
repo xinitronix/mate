@@ -35,18 +35,14 @@ login=definitly
 #                    ln -s  /home/$login/mlbviewer2015/mlbviewer.py  /usr/local/bin/mlb 
 
 
-#sp-cs-auth
-#                    tar -xf $CURRENTDIRECTORY/sp-sc-auth.tar.gz -C        /usr/local/bin
 
-#copy sopcast
-                   cp $CURRENTDIRECTORY/sopcast                          /usr/local/bin
+
 
 #copy winetricks
 #                    cp $CURRENTDIRECTORY/winetricks /usr/local/bin
 
 
-#copy  pkg-pubkey.cert
-                    cp $CURRENTDIRECTORY/pkg-pubkey.cert                   /usr/local/etc
+
 
 #copy youtube 
 #                     cp $CURRENTDIRECTORY/youtube                         /usr/local/bin
@@ -87,8 +83,7 @@ ln -s   /home/$login/.scripts/umountiso.sh  /usr/local/bin/umountiso
 cp   screen_check.sh   /usr/local/bin
                         
 
-#create  aliases.db
- make -C /etc/mail aliases
+
 
 #set_wallpaper.sh
 
