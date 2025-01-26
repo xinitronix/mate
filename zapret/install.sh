@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cp  dvtws /usr/local/bin 
+
 
 echo 'ipdivert_load="YES"' >> /boot/loader.conf
 echo 'net.inet.ip.fw.default_to_accept=1' >> /boot/loader.conf
