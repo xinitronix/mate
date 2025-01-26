@@ -16,9 +16,8 @@ CURRENTDIRECTORY=$(pwd)
 
 
           ./config.sh
-         # ./flash.sh
           ./userfolder.sh
-          #./yandexdisk.sh
+          
           
           cd $CURRENTDIRECTORY/dzenconky
           ./install.sh
@@ -55,10 +54,7 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/monitoring
           ./install.sh
           cd ..
-          cd $CURRENTDIRECTORY/mpvd
-          ./install.sh
-          cd ..
-          cd $CURRENTDIRECTORY/tor
+           cd $CURRENTDIRECTORY/tor
           ./install.sh 
           cd .. 
           cd $CURRENTDIRECTORY/worldtime
@@ -76,11 +72,6 @@ CURRENTDIRECTORY=$(pwd)
           cd $CURRENTDIRECTORY/webcamd
           ./install.sh 
           cd .. 
-         
-   #       cd $CURRENTDIRECTORY/xscreensaver
-   #       ./install.sh 
-   #       cd .. 
-          
           cd $CURRENTDIRECTORY/binance
           ./install.sh 
           cd .. 
