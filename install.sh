@@ -77,9 +77,9 @@ CURRENTDIRECTORY=$(pwd)
   #        ./install.sh 
   #        cd .. 
          
-          cd $CURRENTDIRECTORY/dwm
-          ./install.sh 
-          cd .. 
+  #        cd $CURRENTDIRECTORY/dwm
+  #        ./install.sh 
+  #        cd .. 
   
           cd $CURRENTDIRECTORY/power
           ./install.sh 
