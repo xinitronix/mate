@@ -96,4 +96,4 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
          cd ..
 
- reboot
+# reboot
