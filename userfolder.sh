@@ -52,8 +52,8 @@ fi
 #                       chown  -R      $login:wheel                      /home/$login/pic
 
 #create share folder for virtualbox
-                       mkdir  /home/$login/share
-                       chown  -R      $login:wheel                      /home/$login/share
+#                       mkdir  /home/$login/share
+#                       chown  -R      $login:wheel                      /home/$login/share
                    
 
 
