@@ -12,10 +12,7 @@ CURRENTDIRECTORY=$(pwd)
            ./create_user.sh
            cd .. 
 
-
           ./config.sh
-          ./userfolder.sh
-          
           
           cd $CURRENTDIRECTORY/dzenconky
           ./install.sh
@@ -95,6 +92,6 @@ CURRENTDIRECTORY=$(pwd)
          cd $CURRENTDIRECTORY/obmenu-generator
           ./install.sh 
          cd ..
-         ./f.sh
+         ./userfolder.sh
 
 # reboot
