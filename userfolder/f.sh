@@ -25,7 +25,7 @@ doas cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519.pub" ~/.ssh
 doas cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" ~/.ssh
 doas cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" ~/.ssh
 doas cp "/ntfs-2TB/freebsd config/dwm/ssh/config" ~/.ssh
-doas 
+doas chown -R $login:wheel /home/$login/.ssh
 mkdir ~/.mozilla
 cp -R "/ntfs-2TB/freebsd config/firefox" ~/.mozilla
 cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" ~/.local/share
