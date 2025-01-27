@@ -1,7 +1,7 @@
 #!/bin/sh
 # rc.conf loader.conf make.conf pkg.conf profile csh.login fstab sysctl.conf
 
-
+login=$(cat  accounts/user | awk '{print $1}' |  head -n1)
 
 
 
@@ -109,7 +109,7 @@ fi
 
 #/usr/local/etc/doas.conf
 
-                    echo -e "permit nopass keepenv definitly\n"            >>    /usr/local/etc/doas.conf
+                    echo -e "permit nopass keepenv $login\n"            >>    /usr/local/etc/doas.conf
                     echo -e "permit nopass keepenv dwm\n"                  >>    /usr/local/etc/doas.conf
 
 #/usr/local/etc/sudoers
