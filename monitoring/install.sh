@@ -1,6 +1,6 @@
 #!/bin/sh
 CURRENTDIRECTORY=$(pwd)
-login=definitly
+login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
 cp $CURRENTDIRECTORY/mon       /home/$login/.scripts
 chown  -R      $login:wheel    /home/$login/.scripts/mon

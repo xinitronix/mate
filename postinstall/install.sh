@@ -1,5 +1,5 @@
 #!/bin/sh
-login=definitly
+login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
 sed -i "" "/ttyv0/s/autologin/Pc/"           /etc/ttys
 
