@@ -28,6 +28,8 @@ doas cp "/ntfs-2TB/freebsd config/dwm/ssh/config" ~/.ssh
 doas chown -R $login:wheel /home/$login/.ssh
 mkdir ~/.mozilla
 cp -R "/ntfs-2TB/freebsd config/firefox" ~/.mozilla
-cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" ~/.local/share
-cp -R "/ntfs-2TB/freebsd config/google-chrome" ~/.config
+doas cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" ~/.local/share
+doas chown -R $login:wheel ~/.local/share/TelegramDesktop
+doas cp -R "/ntfs-2TB/freebsd config/google-chrome" ~/.config
+doas chown -R $login:wheel  ~/.config/google-chrome
 
