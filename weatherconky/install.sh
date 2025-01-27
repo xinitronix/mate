@@ -7,7 +7,7 @@ CURRENTDIRECTORY=$(pwd)
 
 cp  /usr/local/bin/conky                           /usr/local/bin/conkyweather 
 cp $CURRENTDIRECTORY/weather-on-off.sh      /usr/local/bin
-#ln -s  /usr/local/lib/libxcb.so.1.1.0       /usr/local/lib/libxcb.so.2
+
 
 cp $CURRENTDIRECTORY/weatherconkyrc         /home/$login/.weatherconkyrc
 chown  -R      $login:wheel                 /home/$login/.weatherconkyrc
