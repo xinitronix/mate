@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+killall -9 wine.bin
+killall -9 wine64.bin
 var=$(pkg info | grep proton)
 
 echo $var
