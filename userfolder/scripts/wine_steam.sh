@@ -1,6 +1,6 @@
 #!/bin/sh
 
-var=$('pkg info | grep proton')
+var=$(pkg info | grep proton)
 
 echo $var
 
