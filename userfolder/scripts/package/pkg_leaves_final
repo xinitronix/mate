@@ -30,6 +30,7 @@ lutris-freebsd-g20210927
 leafpad
 liberation-fonts-ttf
 lxappearance
+libc6-shim
 #linux-steam-utils
 #linux-nvidia-libs
 #linux_base-c7

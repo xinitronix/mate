@@ -9,7 +9,7 @@ echo $var
 
 if [ -z "$var" ]
 then
-     doas pkg install -r myrepo  -y wine-proton
+     doas pkg install -r myrepo  -y wine-proton mesa-dri
 else
      echo "\$var не пустая"
 fi
