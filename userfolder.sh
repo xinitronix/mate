@@ -3,10 +3,7 @@ CURRENTDIRECTORY=$(pwd)
 login=definitly
 login2=rtorrent
 
-#rtorrent user
 
-                    cp      $CURRENTDIRECTORY/userfolder/.Xdefaults             /home/$login2
-                    echo    'defflow off'            >>                         /home/$login2/.screenrc
                     
  #/ntfs-2TB  
  
