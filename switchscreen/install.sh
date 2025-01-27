@@ -1,5 +1,5 @@
 #!/bin/sh
-login=definitly
+login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 CURRENTDIRECTORY=$(pwd)
         cp $CURRENTDIRECTORY/switchscreen     /usr/local/bin
         cp $CURRENTDIRECTORY/togglescreen.sh  /usr/local/bin
