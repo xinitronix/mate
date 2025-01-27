@@ -86,9 +86,7 @@ Mod4 + w
 "/usr/local/bin/timeconky-on-off.sh"
 m:0xe + c:28
 Control+Alt + t
-"/usr/local/bin/conkyscroll-on-off"
-m:0xc + c:39
-Control+Alt + s
+
 "/usr/local/bin/screensavon.sh"
 m:0x40 + c:39
 Mod4 + s
@@ -115,9 +113,7 @@ Mod4 + w
 "/usr/local/bin/timeconky-on-off.sh"
 m:0xe + c:28
 Control+Alt + t
-"/usr/local/bin/conkyscroll-on-off"
-m:0xc + c:39
-Control+Alt + s
+
 "/usr/local/bin/binance-on-off"
 m:0x40 + c:56
 Mod4 + b
