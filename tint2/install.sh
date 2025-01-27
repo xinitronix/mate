@@ -11,7 +11,7 @@ CURRENTDIRECTORY=$(pwd)
             echo   'Mod4 + t'                             >> /home/$login/.xbindkeysrc
 
 
-mkdir /home/$login/.config/tint2
+mkdir -p  /home/$login/.config/tint2
 
 sh ./tint2rc.sh
 
