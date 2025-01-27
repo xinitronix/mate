@@ -17,7 +17,7 @@ fi
                      
  #                   echo 'hald_enable="yes"'            >>                   /etc/rc.conf
                      echo 'dbus_enable="yes"'            >>                   /etc/rc.conf
-                     echo 'apache22_enable="YES"'        >>                   /etc/rc.conf
+ #                   echo 'apache22_enable="YES"'        >>                   /etc/rc.conf
                      echo 'linux_enable="YES"'           >>                   /etc/rc.conf
                      
                      echo 'dahdi_enable="YES"'           >>                   /etc/rc.conf
@@ -26,9 +26,9 @@ fi
 #                    echo 'font8x16=cp866b-8x16'         >>                   /etc/rc.conf
 #                    echo 'font8x14=cp866-8x14'          >>                   /etc/rc.conf
 #                    echo 'font8x8=cp866-8x8'            >>                   /etc/rc.conf
-                     echo 'asterisk_enable="YES"'        >>                   /etc/rc.conf
+#                    echo 'asterisk_enable="YES"'        >>                   /etc/rc.conf
                      echo 'devfs_system_ruleset="localrules"'          >>                   /etc/rc.conf
-                     echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
+#                     echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
                      echo 'powerd_enable="yes"'          >>                   /etc/rc.conf
                      echo 'powerd_flags="-a adp -p 100 -r 90"'   >>           /etc/rc.conf
                      echo 'nginx_enable="YES"'           >>                   /etc/rc.conf
@@ -36,7 +36,7 @@ fi
                      echo 'kld_list="nvidia-drm linux64 nullfs "'         >>                   /etc/rc.conf
  #                   echo 'KLD_LIST="linux linsysfs linprocfs"'  >>           /etc/rc.conf
                      echo 'allscreens_flags=" MODE_283"'         >>           /etc/rc.conf
-                     echo 'sendmail_enable="NONE"'               >>           /etc/rc.conf
+                     echo 'sendmail_enable="NO"'               >>           /etc/rc.conf
                      echo 'sendmail_msp_queue_enable="NO"'       >>           /etc/rc.conf
                      echo 'sendmail_outbound_enable="NO"'        >>           /etc/rc.conf
                      echo 'sendmail_submit_enable="NO"'          >>           /etc/rc.conf
@@ -70,7 +70,7 @@ fi
 
 
 #/etc/make.conf
-                      echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
+#                      echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
                       echo 'BATCH=y'                       >>                   /etc/make.conf
 #                     echo 'WITH_PKGNG=yes'                >>                   /etc/make.conf
 #                     echo 'OVERRIDE_LINUX_BASE_PORT=c6'          >>            /etc/make.conf 
@@ -110,7 +110,7 @@ fi
 #/usr/local/etc/doas.conf
 
                     echo -e "permit nopass keepenv $login\n"            >>    /usr/local/etc/doas.conf
-                    echo -e "permit nopass keepenv dwm\n"                  >>    /usr/local/etc/doas.conf
+
 
 #/usr/local/etc/sudoers
                     echo -e "root ALL=(ALL:ALL) ALL"            >>    /usr/local/etc/sudoers
@@ -174,12 +174,12 @@ cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 ##rtorrent settings for rtorrent user
 
 
-                      echo 'setenv DISPLAY :0'       >> /home/rtorrent/.cshrc
+#                      echo 'setenv DISPLAY :0'       >> /home/rtorrent/.cshrc
 
 ##vpntor settings for vpn user
 
 
-                      echo 'setenv DISPLAY :0'       >> /home/vpn/.cshrc
+#                      echo 'setenv DISPLAY :0'       >> /home/vpn/.cshrc
 
 
 #wpa_supplicant.conf
