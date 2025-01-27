@@ -176,7 +176,7 @@ login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
  echo '#-------------------------------------' >> /home/$login/.config/tint2/tint2rc
  echo '# Button 1' >> /home/$login/.config/tint2/tint2rc
  echo 'button = new' >> /home/$login/.config/tint2/tint2rc
- echo 'button_icon = /home/definitly/.config/icons/docker.png' >> /home/$login/.config/tint2/tint2rc
+ echo 'button_icon = /home/$login/.config/icons/docker.png' >> /home/$login/.config/tint2/tint2rc
  echo 'button_text =' >> /home/$login/.config/tint2/tint2rc
  echo 'button_tooltip = Start/Stop VPN' >> /home/$login/.config/tint2/tint2rc
  echo 'button_lclick_command = dockerbox.py' >> /home/$login/.config/tint2/tint2rc
@@ -193,7 +193,7 @@ login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
  echo '#-------------------------------------' >> /home/$login/.config/tint2/tint2rc
  echo '# Button 2' >> /home/$login/.config/tint2/tint2rc
  echo 'button = new' >> /home/$login/.config/tint2/tint2rc
- echo 'button_icon = /home/definitly/.config/icons/shutdown.png' >> /home/$login/.config/tint2/tint2rc
+ echo 'button_icon = /home/$login/.config/icons/shutdown.png' >> /home/$login/.config/tint2/tint2rc
  echo 'button_text =' >> /home/$login/.config/tint2/tint2rc
  echo 'button_tooltip = shutdown' >> /home/$login/.config/tint2/tint2rc
  echo 'button_lclick_command = powerpy' >> /home/$login/.config/tint2/tint2rc
@@ -210,7 +210,7 @@ login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
  echo '#-------------------------------------' >> /home/$login/.config/tint2/tint2rc
  echo '# Button 3' >> /home/$login/.config/tint2/tint2rc
  echo 'button = new' >> /home/$login/.config/tint2/tint2rc
- echo 'button_icon = /home/definitly/.config/icons/ubuntu.png' >> /home/$login/.config/tint2/tint2rc
+ echo 'button_icon = /home/$login/.config/icons/ubuntu.png' >> /home/$login/.config/tint2/tint2rc
  echo 'button_text =' >> /home/$login/.config/tint2/tint2rc
  echo 'button_tooltip = ubuntu_chroot' >> /home/$login/.config/tint2/tint2rc
  echo 'button_lclick_command = ubuntu_chroot' >> /home/$login/.config/tint2/tint2rc
