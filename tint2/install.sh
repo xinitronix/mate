@@ -9,3 +9,10 @@ CURRENTDIRECTORY=$(pwd)
             echo   '"/usr/local/bin/tint2-on-off"'        >> /home/$login/.xbindkeysrc
             echo   'm:0x40 + c:28'                        >> /home/$login/.xbindkeysrc
             echo   'Mod4 + t'                             >> /home/$login/.xbindkeysrc
+
+
+mkdir /home/$login/.config/tint2
+
+sh ./tint2rc.sh
+
+chown  -R     $login:wheel  /home/$login/.config/tint2
