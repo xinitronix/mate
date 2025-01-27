@@ -7,8 +7,8 @@ Name[ru]=dsd-fme
 
 
 
-Categories=System;FileTools;FileManager;Utility;Core;GTK;
+Categories=System;Utility;Core;GTK;
 Exec=socat-dsd.sh
 StartupNotify=true
 Terminal=false
-MimeType=inode/directory;
+

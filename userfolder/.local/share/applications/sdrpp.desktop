@@ -7,8 +7,8 @@ Name[ru]=sdrpp
 
 
 
-Categories=System;FileTools;FileManager;Utility;Core;GTK;
+Categories=System;Utility;Core;GTK;
 Exec=sdrpp
 StartupNotify=true
 Terminal=false
-MimeType=inode/directory;
+
