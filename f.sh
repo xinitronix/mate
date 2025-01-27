@@ -29,8 +29,8 @@ rm -R /home/$login/.mozilla/
 # ln -s /home/definitly/2TB/var/db/portsnap  /var/db/portsnap
 # ln -s /home/definitly/2TB/ports /usr/ports
 
-ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
-
+ ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
+ mkdir -p  /home/$login/.ssh
  cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519" /home/$login/.ssh
  cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519.pub" /home/$login/.ssh
  cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" /home/$login/.ssh
