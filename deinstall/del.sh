@@ -13,6 +13,7 @@ rm   /boot/loader.conf
 rm   /etc/rc.conf
 rm   /etc/fstab
 rm   -r  /var/run/xdg/$login
+rm   -r  /tmp/S-$login
 cp   rc.conf /etc/rc.conf
 cp   loader.conf /boot/loader.conf 
 cp   defaults/loader.conf   /boot/defaults/loader.conf
