@@ -95,5 +95,6 @@ CURRENTDIRECTORY=$(pwd)
          cd $CURRENTDIRECTORY/obmenu-generator
           ./install.sh 
          cd ..
+         ./f.sh
 
 # reboot
