@@ -10,7 +10,7 @@ else
 fi
 
 
-rm -R ~/.mozilla/firefox
+rm -R /home/$login/.mozilla/firefox
 #sshpass -p  639639 scp -r  pi@192.168.8.45:/home/pi/tinder/3/firefox ~/.mozilla
 #sshpass -p  639639 scp -r  pi@192.168.8.45:/home/pi/TelegramDesktop ~/.local/share
 #fetch https://addons.mozilla.org/firefox/downloads/file/3816867/ublock_origin-1.37.2-an+fx.xpi
@@ -37,11 +37,11 @@ doas cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" /home/$login/.ssh
 doas cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" /home/$login/.ssh
 doas cp "/ntfs-2TB/freebsd config/dwm/ssh/config" /home/$login/.ssh
 doas chown -R $login:wheel /home/$login/.ssh
-mkdir ~/.mozilla
+
 doas cp -R "/ntfs-2TB/freebsd config/firefox" /home/$login/.mozilla
 doas chown -R $login:wheel /home/$login/.mozilla
 doas cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" /home/$login/.local/share
 doas chown -R $login:wheel /home/$login/.local/share/TelegramDesktop
 doas cp -R "/ntfs-2TB/freebsd config/google-chrome" /home/$login/.config
 doas chown -R $login:wheel  /home/$login/.config/google-chrome
-
+doas chown -R $login:wheel /ntfs-2TB/mate
