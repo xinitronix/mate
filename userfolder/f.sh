@@ -20,11 +20,12 @@ doas zpool import media2
 
 ln -s /home/definitly/2TB/i386-wine-pkg  /home/definitly/.i386-wine-pkg
 
-cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519" ~/.ssh
-cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519.pub" ~/.ssh
-cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" ~/.ssh
-cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" ~/.ssh
-cp "/ntfs-2TB/freebsd config/dwm/ssh/config" ~/.ssh
+doas cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519" ~/.ssh
+doas cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519.pub" ~/.ssh
+doas cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" ~/.ssh
+doas cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" ~/.ssh
+doas cp "/ntfs-2TB/freebsd config/dwm/ssh/config" ~/.ssh
+doas 
 mkdir ~/.mozilla
 cp -R "/ntfs-2TB/freebsd config/firefox" ~/.mozilla
 cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" ~/.local/share
