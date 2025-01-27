@@ -37,7 +37,7 @@ ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" /home/$login/.ssh
  cp "/ntfs-2TB/freebsd config/dwm/ssh/config" /home/$login/.ssh
  chown -R $login:wheel /home/$login/.ssh
-
+ mkdir -p /home/$login/.mozilla
  cp -R "/ntfs-2TB/freebsd config/firefox" /home/$login/.mozilla
  chown -R $login:wheel /home/$login/.mozilla
  cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" /home/$login/.local/share
