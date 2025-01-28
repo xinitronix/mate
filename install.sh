@@ -46,9 +46,6 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
           
-          cd $CURRENTDIRECTORY/scrollconky
-          ./install.sh 
-          cd .. 
          
           cd $CURRENTDIRECTORY/ubuntu_chroot
           ./install.sh
@@ -93,5 +90,9 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
          cd ..
          ./userfolder.sh
+
+        cd $CURRENTDIRECTORY/scrollconky
+          ./install.sh 
+          cd .. 
 
 # reboot
