@@ -5,7 +5,7 @@ pkg  update -y
 export IGNORE_OSVERSION=yes
 #pkg install -y git-lite
 #git clone --depth=1  https://github.com/xinitronix/mate
-fetch "https://github.com/xinitronix/mate/archive/refs/heads/master.zip"
-tar zxf master.zip
+fetch "https://github.com/xinitronix/mate/archive/master.tar.gz"
+tar -xf master.tar.gz
 cd mate-master
 ./install.sh 
