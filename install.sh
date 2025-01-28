@@ -1,5 +1,15 @@
 #!/bin/sh
 
+
+if [ -z "$1" ]
+then
+     echo "не введен пароль для ssh"
+     exit
+else
+     echo "\$var не пустая"
+fi
+
+
 mkdir -p /usr/local/etc/pkg/repos
 cp  etc/freebsd.conf  /usr/local/etc/pkg/repos
 
