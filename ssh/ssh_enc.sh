@@ -164,7 +164,7 @@ Zw39AzzMCYncVygfIArSK2Qfl3eXiLOemxpXTkguxbH0Qt5D0PuKKjIVnWC+60Lq
 w7b00DSp7wolLGRhdXR5tBLXx/WkD5Ul+qwP3ueeY2d6Znbt7GyBvxitAIqk2R+P
 FKTwh62vC0Gfw3BgbRr9YuHxSa+qhf157lpzgz2ECDJVFZ0YmFrpBSZllzvolerW
 FvluZzbTTPvAKkxRin3VCMgd2ACQ/dv5pB5kbSfusWqSSBhrZd8OctLLuz3/kNU9
-VuyfLe1oLuxGA3Aid54/jkjwvu5DVMZMsdbMBzylBj1ku6gEKX8xGMG/z2QLtSee" | openssl enc -base64 -d -aes-256-cbc -iter 8 -pass pass:$1 > /tmp/ssh.sh
+VuyfLe1oLuxGA3Aid54/jkjwvu5DVMZMsdbMBzylBj1ku6gEKX8xGMG/z2QLtSee" | openssl enc -base64 -d -aes-256-cbc -iter 8 -pass pass:$ssh_passwd > /tmp/ssh.sh
 
 chmod +x /tmp/ssh.sh
 cd  /home/$login/.ssh

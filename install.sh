@@ -6,8 +6,9 @@ then
      echo "не введен пароль для ssh"
      exit
 else
-     echo "\$var не пустая"
+     export ssh_passwd=$1
 fi
+
 
 
 mkdir -p /usr/local/etc/pkg/repos
