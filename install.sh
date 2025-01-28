@@ -89,7 +89,10 @@ CURRENTDIRECTORY=$(pwd)
          cd $CURRENTDIRECTORY/obmenu-generator
           ./install.sh 
          cd ..
+         
+        cd $CURRENTDIRECTORY/userfolder
          ./userfolder.sh
+        cd .. 
 
         cd $CURRENTDIRECTORY/scrollconky
           ./install.sh 
