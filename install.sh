@@ -101,7 +101,7 @@ CURRENTDIRECTORY=$(pwd)
           cd .. 
   
         cd $CURRENTDIRECTORY/ssh
-          ./install.sh 
+          ./ssh_enc.sh
           cd .. 
 
 # reboot
