@@ -5,7 +5,9 @@ cp  etc/freebsd.conf  /usr/local/etc/pkg/repos
 
 CURRENTDIRECTORY=$(pwd)
 
-           cd $CURRENTDIRECTORY/userfolder/scripts/package
+           tar zxf $CURRENTDIRECTORY/userfolder/userfolder.zip -C  /tmp
+
+           cd /tmp/userfolder/scripts/package
            ./install.sh
            cd $CURRENTDIRECTORY
            cd $CURRENTDIRECTORY/accounts

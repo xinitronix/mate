@@ -22,7 +22,7 @@ fi
                     chmod 0777     /home/$login/2TB
 
   
-unzip   userfolder.zip -d /tmp
+tar zxf        ../userfolder/userfolder.zip -C  /tmp
 
 
 
