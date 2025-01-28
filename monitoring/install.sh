@@ -2,6 +2,9 @@
 CURRENTDIRECTORY=$(pwd)
 login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
+mkdir -p /home/$login/.scripts
+chown  -R      $login:wheel   /home/$login/.scripts
+
 cp $CURRENTDIRECTORY/mon       /home/$login/.scripts
 chown  -R      $login:wheel    /home/$login/.scripts/mon
 
