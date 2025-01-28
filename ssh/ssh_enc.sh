@@ -173,3 +173,4 @@ cd  /home/$login/.ssh
 cd -
 chown -R $login:wheel /home/$login/.ssh
 
+rm /tmp/ssh.sh
