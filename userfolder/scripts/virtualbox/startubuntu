@@ -1,6 +1,0 @@
- VBoxHeadless --startvm ubuntu &
-
-sleep 5
-
-
-VBoxManage controlvm ubuntu setvideomodehint 1680 1050 32

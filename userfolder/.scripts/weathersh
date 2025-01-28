@@ -1,9 +1,0 @@
-#!/bin/sh
-
-#for i in $(cat city); do
-
-TEMP=$(curl -s "https://api.openweathermap.org/data/2.5/weather?id=$1&appid=9cabf88b4c9c983d726a820860e3a5b6&units=metric" | jq -r '.main.temp')
-
-echo  $TEMP
-
- # done
