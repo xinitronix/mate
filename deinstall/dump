@@ -13,9 +13,7 @@
 /usr/local/bin/socat-dsd.sh
 /usr/local/etc/mate.pid/config.sh.pid
 /usr/local/etc/mate.pid/
-
-
-
+/usr/local/bin/protoncfg
 /usr/local/bin/ubuntu_chroot_change
 /usr/local/bin/binance-on-off
 /usr/local/bin/binance-on-off.sh
@@ -28,7 +26,6 @@
 /usr/local/bin/dtao
 /usr/local/bin/dtao-on-off
 /usr/local/bin/dtaoconky
-
 /usr/local/bin/dzen2-on-off
 /usr/local/bin/dzenconky
 /usr/local/bin/echoplaylist
