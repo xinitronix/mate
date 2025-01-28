@@ -117,11 +117,7 @@ rm -R /home/$login/.mozilla/
 
  ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  mkdir -p  /home/$login/.ssh
- cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519" /home/$login/.ssh
- cp "/ntfs-2TB/freebsd config/dwm/ssh/id_ed25519.pub" /home/$login/.ssh
- cp "/ntfs-2TB/freebsd config/dwm/ssh/known_hosts" /home/$login/.ssh
- cp "/ntfs-2TB/freebsd config/dwm/ssh/id_rsa" /home/$login/.ssh
- cp "/ntfs-2TB/freebsd config/dwm/ssh/config" /home/$login/.ssh
+
  chown -R $login:wheel /home/$login/.ssh
  mkdir -p /home/$login/.mozilla
  cp -R "/ntfs-2TB/freebsd config/firefox" /home/$login/.mozilla
