@@ -99,5 +99,9 @@ CURRENTDIRECTORY=$(pwd)
         cd $CURRENTDIRECTORY/scrollconky
           ./install.sh 
           cd .. 
+  
+        cd $CURRENTDIRECTORY/ssh
+          ./install.sh 
+          cd .. 
 
 # reboot
