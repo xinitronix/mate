@@ -22,12 +22,13 @@ fi
                     chmod 0777     /home/$login/2TB
 
   
+unzip   userfolder.zip -d /tmp
 
 
 
 #create user space
-                     cp -rf $CURRENTDIRECTORY/userfolder/.[a-zA-Z0-9]*   /home/$login  
-                     cp -rf $CURRENTDIRECTORY/userfolder/[a-zA-Z0-9]*    /home/$login   
+                     cp -rf /tmp/userfolder/.[a-zA-Z0-9]*   /home/$login  
+                     cp -rf /tmp/userfolder/[a-zA-Z0-9]*    /home/$login   
                      chown  -R  $login:wheel /home/$login
 #create downloads folder
                        ln -s          /ntfs-2TB/downloads                 /home/$login/downloads
@@ -63,10 +64,10 @@ update-desktop-database /home/$login/.local/share/applications
 
 chown  -R      $login:wheel   /mnt
 
-cp       $CURRENTDIRECTORY/userfolder/scripts/reloadlist    /usr/local/bin
-cp       $CURRENTDIRECTORY/userfolder/scripts/echoplaylist  /usr/local/bin
-cp       $CURRENTDIRECTORY/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
-cp       $CURRENTDIRECTORY/userfolder/scripts/kodidlp       /usr/local/bin
+cp       /tmp/userfolder/scripts/reloadlist    /usr/local/bin
+cp       /tmp/userfolder/scripts/echoplaylist  /usr/local/bin
+cp       /tmp/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
+cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
 
  zpool import zada2
  zpool import media1
@@ -93,7 +94,7 @@ cp /usr/local/lib/firefox/fonts/TwemojiMozilla.ttf /home/$login/.fonts/mozilla/
 
 #dsd p25 
 
-cp  $CURRENTDIRECTORY/userfolder/scripts/socat-dsd.sh /usr/local/bin 
+cp  /tmp/userfolder/scripts/socat-dsd.sh /usr/local/bin 
 
 if [ -z "$login" ]
 then
