@@ -22,9 +22,6 @@ fi
                     chmod 0777     /home/$login/2TB
 
   
-tar zxf        ../userfolder/userfolder.zip -C  /tmp
-
-
 
 #create user space
                      cp -rf /tmp/userfolder/.[a-zA-Z0-9]*   /home/$login  

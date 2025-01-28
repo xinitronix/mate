@@ -16,7 +16,7 @@ cp  etc/freebsd.conf  /usr/local/etc/pkg/repos
 
 CURRENTDIRECTORY=$(pwd)
 
-           tar zxf $CURRENTDIRECTORY/userfolder/userfolder.zip -C  /tmp
+           tar -xf $CURRENTDIRECTORY/userfolder/userfolder.tar.xz -C  /tmp
 
            cd /tmp/userfolder/scripts/package
            ./install.sh
