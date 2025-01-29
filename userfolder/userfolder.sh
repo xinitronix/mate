@@ -116,3 +116,5 @@ ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  cp -R "/ntfs-2TB/freebsd config/google-chrome" /home/$login/.config
  chown -R $login:wheel  /home/$login/.config/google-chrome
  chown -R $login:wheel /ntfs-2TB/mate
+
+rm -r /tmp/userfolder
