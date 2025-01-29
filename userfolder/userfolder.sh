@@ -66,11 +66,11 @@ cp       /tmp/userfolder/scripts/echoplaylist  /usr/local/bin
 cp       /tmp/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
 cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
 
- zpool import zada2
- zpool import media1
- zpool import media2
- zpool import -f  ntfs-2TB
- zpool import -f  bhyve
+ zpool import -f zada2
+ zpool import -f media1
+ zpool import -f media2
+ zpool import -f ntfs-2TB
+ zpool import -f bhyve
  rm -R /usr/obj
  ln -s /ntfs-2TB/obj /usr/obj
  rm -R /var/cache/pkg
@@ -104,12 +104,8 @@ fi
 
 rm -R /home/$login/.mozilla/
 
- zpool import zada2
- zpool import media1
- zpool import media2
 
-
- ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
+ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  
 
  mkdir -p /home/$login/.mozilla
