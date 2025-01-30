@@ -57,7 +57,7 @@ fi
 
 #update-desktop-database
 
-update-desktop-database /home/$login/.local/share/applications
+/usr/local/bin/update-desktop-database /home/$login/.local/share/applications
 
 chown  -R      $login:wheel   /mnt
 
