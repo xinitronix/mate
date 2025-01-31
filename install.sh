@@ -111,6 +111,10 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh 
           cd .. 
   
+         cd $CURRENTDIRECTORY/proxy
+          ./install.sh 
+          cd ..
+
         cd $CURRENTDIRECTORY/ssh
           ./ssh_enc.sh
           cd .. 
