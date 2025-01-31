@@ -4,7 +4,7 @@ CURRENTDIRECTORY=$(pwd)
 
 
 cp             obmenu-generator    /usr/local/bin
-mkdir                              /home/$login/.config/obmenu-generator
+mkdir  -p                          /home/$login/.config/obmenu-generator
 chown  -R      $login:wheel        /home/$login/.config/obmenu-generator
 cp             schema.pl           /home/$login/.config/obmenu-generator
 /usr/local/bin/cpanm Linux::DesktopFiles
