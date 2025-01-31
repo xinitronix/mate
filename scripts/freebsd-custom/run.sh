@@ -1,4 +1,12 @@
 #!/bin/sh
+if [ -z "$1" ]
+then
+     echo "не введен пароль для ssh"
+     exit
+else
+     export ssh_passwd=$1
+fi
+
 echo 'FreeBSD: { url: "http://pkg0.sjb.freebsd.org/${ABI}/latest", mirror_type: "NONE" }' \
         > /usr/local/etc/pkg/repos/FreeBSD.conf
 pkg  update -y
