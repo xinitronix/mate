@@ -89,6 +89,10 @@ mkdir -p /home/$login/.fonts/mozilla/
 cp /usr/local/lib/firefox/fonts/TwemojiMozilla.ttf /home/$login/.fonts/mozilla/
 
 
+# copy  system-file-manager-root.svg to /usr/local/share/pixmaps
+
+cp /home/$login/.config/icons/system-file-manager-root.svg  /usr/local/share/pixmaps
+
 #dsd p25 
 
 cp  /tmp/userfolder/scripts/socat-dsd.sh /usr/local/bin 
