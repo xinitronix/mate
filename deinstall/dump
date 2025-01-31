@@ -10,6 +10,9 @@
 /etc/wpa_supplicant.conf
 /etc/X11
 /etc/X11/xorg.conf
+/usr/local/share/applications/opera-proxy.desktop
+/usr/local/share/pixmaps/opera-proxy.jpg
+/usr/local/bin/opera-proxy.py
 /usr/local/share/applications/hola-proxy.desktop
 /usr/local/share/pixmaps/hola-proxy.svg
 /usr/local/bin/hola-proxy.py
