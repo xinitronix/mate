@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Icon=/usr/local/share/pixmaps/system-file-manager.svg
+Name=Open as Root File Manager PCManFM
+
+Name[ru]=Open as Root Файловый менеджер PCManFM
+
+
+
+Categories=System;FileTools;FileManager;Utility;Core;GTK;
+Exec=sudo pcmanfm
+StartupNotify=true
+Terminal=false
+MimeType=inode/directory;
