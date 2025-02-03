@@ -67,8 +67,6 @@ cp       /tmp/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
 cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
 
  zpool import -f zada2
- zpool import -f media1
- zpool import -f media2
  zpool import -f ntfs-2TB
  zpool import -f bhyve
  rm -R /usr/obj
@@ -86,8 +84,6 @@ cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
 
 #firefox emoji 
 mkdir -p /home/$login/.fonts/mozilla/
-cp /usr/local/lib/firefox/fonts/TwemojiMozilla.ttf /home/$login/.fonts/mozilla/
-
 
 # copy  system-file-manager-root.svg to /usr/local/share/pixmaps
 
