@@ -28,7 +28,7 @@ fi
 #                    echo 'font8x8=cp866-8x8'            >>                   /etc/rc.conf
 #                    echo 'asterisk_enable="YES"'        >>                   /etc/rc.conf
                      echo 'devfs_system_ruleset="localrules"'          >>                   /etc/rc.conf
-#                     echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
+#                    echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
                      echo 'powerd_enable="yes"'          >>                   /etc/rc.conf
                      echo 'powerd_flags="-a adp -p 100 -r 90"'   >>           /etc/rc.conf
                      echo 'nginx_enable="YES"'           >>                   /etc/rc.conf
@@ -41,8 +41,8 @@ fi
                      echo 'sendmail_outbound_enable="NO"'        >>           /etc/rc.conf
                      echo 'sendmail_submit_enable="NO"'          >>           /etc/rc.conf
                      echo 'dsbmd_enable="YES"'                   >>           /etc/rc.conf   
-                     echo 'vm_enable="YES"' >> /etc/rc.conf
-                     echo 'vm_dir="/ntfs-2TB/vm"'  >> /etc/rc.conf
+#                    echo 'vm_enable="YES"' >> /etc/rc.conf
+#                    echo 'vm_dir="/ntfs-2TB/vm"'  >> /etc/rc.conf
                      echo 'cloned_interfaces="bridge0 tap0"' >> /etc/rc.conf
                      echo 'ifconfig_bridge0="addm re0  addm tap0"'  >> /etc/rc.conf
                      echo 'seatd_enable="YES"'                   >>           /etc/rc.conf  
@@ -65,7 +65,7 @@ fi
                     echo  'legal.realtek.license_ack=1'   >>                   /boot/loader.conf
   #               echo  'nvidia-modeset_load="YES"'   >>                   /boot/loader.conf
                     echo  'fusefs_load="YES"'   >>                   /boot/loader.conf
-                    echo  'vmm_load="YES"'   >>                   /boot/loader.conf
+ #                   echo  'vmm_load="YES"'   >>                   /boot/loader.conf
 
 
 
