@@ -6,7 +6,7 @@ if [ $(id -u) -ne 0 ]
 fi
 
 
-cat  ../accounts/user  | while read line
+ls /home  | while read line
    do
       
 login=$(echo $line | awk '{print $1}' )
