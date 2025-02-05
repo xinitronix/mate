@@ -107,11 +107,6 @@ fi
                      echo "vfs.usermount=1" >> /etc/sysctl.conf
                      echo "security.bsd.unprivileged_chroot=1"    >> /etc/sysctl.conf
 
-#/usr/local/etc/doas.conf
-
-                    echo -e "permit nopass keepenv $login\n"            >>    /usr/local/etc/doas.conf
-
-
 #/usr/local/etc/sudoers
                     echo -e "root ALL=(ALL:ALL) ALL"            >>    /usr/local/etc/sudoers
                     echo -e "%wheel ALL=(ALL:ALL) ALL"            >>    /usr/local/etc/sudoers
