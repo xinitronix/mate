@@ -6,9 +6,12 @@ if [ $(id -u) -ne 0 ]
 fi
 
 
-  for i in $(cat user); do
+cat  ../accounts/user  | while read line
+   do
+      
+login=$(echo $line | awk '{print $1}' )
 
-   pw userdel -r -n  $i 
+   pw userdel -r -n  $login
 
 
    done
