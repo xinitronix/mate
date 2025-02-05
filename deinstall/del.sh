@@ -1,9 +1,16 @@
 #!/bin/sh
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
+
+
+cat  ../accounts/user  | while read line
+   do
+      
+login=$(echo $line | awk '{print $1}' )
 if [ $(id -u) -ne 0 ]
   then echo Please run this script as root or using sudo!
   exit
 fi
+
+
 
 grep -vf rc.conf.d /etc/rc.conf > rc.conf
 grep -vf loader.conf.d  /boot/loader.conf >  loader.conf 
@@ -18,3 +25,5 @@ rm   -r  /tmp/screens/S-$login
 cp   rc.conf /etc/rc.conf
 cp   loader.conf /boot/loader.conf 
 cp   defaults/loader.conf   /boot/defaults/loader.conf
+
+done
