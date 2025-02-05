@@ -1,7 +1,7 @@
 #!/bin/sh
 CURRENTDIRECTORY=$(pwd)
 login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
-login2=rtorrent
+
 
 
                     
