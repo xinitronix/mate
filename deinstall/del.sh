@@ -14,6 +14,7 @@ rm   /etc/rc.conf
 rm   /etc/fstab
 rm   -r  /var/run/xdg/$login
 rm   -r  /tmp/S-$login
+rm   -r  /tmp/screens/S-$login
 cp   rc.conf /etc/rc.conf
 cp   loader.conf /boot/loader.conf 
 cp   defaults/loader.conf   /boot/defaults/loader.conf

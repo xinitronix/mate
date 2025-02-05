@@ -15,9 +15,9 @@
 /usr/local/share/applications/opera-proxy.desktop
 /usr/local/share/pixmaps/opera-proxy.jpg
 /usr/local/bin/opera-proxy.py
-/usr/local/share/applications/hola-proxy.desktop
-/usr/local/share/pixmaps/hola-proxy.svg
-/usr/local/bin/hola-proxy.py
+#/usr/local/share/applications/hola-proxy.desktop
+#/usr/local/share/pixmaps/hola-proxy.svg
+#/usr/local/bin/hola-proxy.py
 /usr/local/bin/socat-dsd.sh
 /usr/local/etc/mate.pid/config.sh.pid
 /usr/local/etc/mate.pid/
