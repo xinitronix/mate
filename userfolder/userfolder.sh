@@ -90,6 +90,11 @@ mkdir -p /home/$login/.fonts/mozilla/
 cp /home/$login/.config/icons/system-file-manager-root.svg  /usr/local/share/pixmaps
 cp  ../etc/rootpcmanfm.desktop               /usr/local/share/applications
 
+#fix pacmanfm icon 
+
+cp ../etc/system-file-manager.svg /usr/local/share/icons/hicolor/scalable/apps
+
+
 #dsd p25 
 
 cp  /tmp/userfolder/scripts/socat-dsd.sh /usr/local/bin 
