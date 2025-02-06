@@ -8,4 +8,4 @@ cat  ../accounts/user  | while read line
    done
 
 
- sed  '$d'  -i  /usr/local/etc/doas.conf
+ gsed   -i '$d'    /usr/local/etc/doas.conf
