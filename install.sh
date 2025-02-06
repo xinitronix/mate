@@ -18,7 +18,7 @@ CURRENTDIRECTORY=$(pwd)
 
            tar -xf $CURRENTDIRECTORY/userfolder/userfolder.tar.xz -C  /tmp
 
-           cd /tmp/userfolder/scripts/package
+           cd scripts/
            ./install.sh
            cd $CURRENTDIRECTORY
            cd $CURRENTDIRECTORY/accounts
