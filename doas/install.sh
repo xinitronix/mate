@@ -7,5 +7,5 @@ cat  ../accounts/user  | while read line
       echo -e "permit nopass keepenv $login\n"            >>    /usr/local/etc/doas.conf
    done
 
-
- gsed   -i '$d'    /usr/local/etc/doas.conf
+ gsed   -i '/^[[:space:]]*$/d' /usr/local/etc/doas.conf
+ gsed   -i '$d'                /usr/local/etc/doas.conf
