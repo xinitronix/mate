@@ -9,7 +9,7 @@ file2=/home/$login/.config/openbox/rc.xml_new
                 mv $file2 $file
                 openbox --reconfigure
           
-          if ! [ -z $(pgrep $proc) ]
+          if ! [ -z $(pgrep -u $(whoami) $proc) ]
                 then
                    killall -9 dzen2
                    cat $file | sed 's/<top>14<\/top>/<top>0<\/top>/' > $file2
