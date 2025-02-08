@@ -23,8 +23,8 @@ cat  ../accounts/user  | while read line
 
 install_tint2 ()  {
 
-echo "start"
-echo $login
+
+
              cp $CURRENTDIRECTORY/tint2-on-off   /usr/local/bin
 
 # edit xbindkeysrc
