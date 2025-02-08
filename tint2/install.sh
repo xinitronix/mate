@@ -35,3 +35,8 @@ sh ./tint2rc.sh
 
 chown  -R     $login:wheel  /home/$login/.config/tint2
 }
+
+
+
+install_first_user 
+

@@ -6,7 +6,7 @@ proc=tint2
    
          
           
-          if ! [ -z $(pgrep $proc) ]
+          if ! [ -z $(pgrep -u $(whoami) $proc) ]
                 then
                    killall -9 tint2
                    killall -9 xxkb
