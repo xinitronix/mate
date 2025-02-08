@@ -37,7 +37,7 @@ echo $login
 mkdir -p  /home/$login/.config/tint2
 rm /home/$login/.config/tint2/tint2rc
 sh ./tint2rc.sh
-
+chown  -R     $login:wheel  /home/$login/.config/
 chown  -R     $login:wheel  /home/$login/.config/tint2
 }
 

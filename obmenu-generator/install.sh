@@ -24,6 +24,7 @@ cat  ../accounts/user  | while read line
 install_obmenu () {
 cp             obmenu-generator    /usr/local/bin
 mkdir  -p                          /home/$login/.config/obmenu-generator
+chown  -R      $login:wheel        /home/$login/.config/
 chown  -R      $login:wheel        /home/$login/.config/obmenu-generator
 cp             schema.pl           /home/$login/.config/obmenu-generator
 /usr/local/bin/cpanm Linux::DesktopFiles
