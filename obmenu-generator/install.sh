@@ -32,4 +32,4 @@ su $login -c 'obmenu-generator -p -i'
 }
 
 
-install_first_user
+install_all_user
