@@ -13,10 +13,23 @@ install_all_user () {
 
 cat  ../accounts/user  | while read line
 
-   do
+ 
+
+  do
+
+     if [ -z "$line" ]
+then
+     echo "\$var Пустая"
+else
+     echo "\$var не пустая"
+ 
     login=$(echo $line | awk '{print $1}' )
     echo $login
     install 
+
+fi
+
+   
    done
 
 }
