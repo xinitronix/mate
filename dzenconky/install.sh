@@ -14,10 +14,21 @@ install_all_user () {
 cat  ../accounts/user  | while read line
 
    do
-    login=$(echo $line | awk '{print $1}' )
-    echo $login
-    install_dzen2
-   done
+
+
+if [ -z "$line" ]
+then
+     echo "\$var Пустая"
+else
+     echo "\$var не пустая"
+ 
+     login=$(echo $line | awk '{print $1}' )
+     echo $login
+     install_dzen2
+     
+
+      fi
+       done
 
 }
 
