@@ -1,5 +1,5 @@
 #!/bin/sh
-login=$(ps -aux | grep conkyscroll-on-off | head -n1 | awk '{print $1}')
+login=$(whoami)
 proc=dzen2
 file=/home/$login/.config/openbox/rc.xml
 file2=/home/$login/.config/openbox/rc.xml_new
