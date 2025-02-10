@@ -140,6 +140,7 @@ ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  chown -R $login:wheel /home/$login/.mozilla
  mkdir -p /home/$login/.local/share
  cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" /home/$login/.local/share
+chown -R $login:wheel /home/$login/.local/share/
  chown -R $login:wheel /home/$login/.local/share/TelegramDesktop
  cp -R "/ntfs-2TB/freebsd config/google-chrome" /home/$login/.config
  chown -R $login:wheel  /home/$login/.config/google-chrome

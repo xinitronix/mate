@@ -693,82 +693,8 @@
  echo '</menu>' >> rc.xml
  echo '<applications>' >> rc.xml
  echo '<!--' >> rc.xml
- echo '# this is an example with comments through out. use these to make your' >> rc.xml
- echo '# own rules, but without the comments of course.' >> rc.xml
- echo '' >> rc.xml
- echo '<application name="the window's _OB_APP_NAME property (see obxprop)"' >> rc.xml
- echo 'class="the window's _OB_APP_CLASS property (see obxprop)"' >> rc.xml
- echo 'role="the window's _OB_APP_ROLE property (see obxprop)"' >> rc.xml
- echo 'type="the window's _OB_APP_TYPE property (see obxprob)..' >> rc.xml
- echo '(if unspecified, then it is 'dialog' for child windows)">' >> rc.xml
- echo '# you may set only one of name/class/role/type, or you may use more than one' >> rc.xml
- echo '# together to restrict your matches.' >> rc.xml
- echo '' >> rc.xml
- echo '# the name, class, and role use simple wildcard matching such as those' >> rc.xml
- echo '# used by a shell. you can use 2TB downloads Downloads echo_file_create.sh rc.xml rc.xml.sh to match any characters and ? to match' >> rc.xml
- echo '# any single character.' >> rc.xml
- echo '' >> rc.xml
- echo '# the type is one of: normal, dialog, splash, utility, menu, toolbar, dock,' >> rc.xml
- echo '# or desktop' >> rc.xml
- echo '' >> rc.xml
- echo '# when multiple rules match a window, they will all be applied, in the' >> rc.xml
- echo '# order that they appear in this list' >> rc.xml
- echo '' >> rc.xml
- echo '' >> rc.xml
- echo '# each rule element can be left out or set to 'default' to specify to not' >> rc.xml
- echo '# change that attribute of the window' >> rc.xml
- echo '' >> rc.xml
- echo '<decor>yes</decor>' >> rc.xml
- echo '# enable or disable window decorations' >> rc.xml
- echo '' >> rc.xml
- echo '<shade>no</shade>' >> rc.xml
- echo '# make the window shaded when it appears, or not' >> rc.xml
- echo '' >> rc.xml
- echo '<position force="no">' >> rc.xml
- echo '# the position is only used if both an x and y coordinate are provided' >> rc.xml
- echo '# (and not set to 'default')' >> rc.xml
- echo '# when force is "yes", then the window will be placed here even if it' >> rc.xml
- echo '# says you want it placed elsewhere. this is to override buggy' >> rc.xml
- echo '# applications who refuse to behave' >> rc.xml
- echo '<x>center</x>' >> rc.xml
- echo '# a number like 50, or 'center' to center on screen. use a negative number' >> rc.xml
- echo '# to start from the right (or bottom for <y>), ie -50 is 50 pixels from the' >> rc.xml
- echo '# right edge (or bottom).' >> rc.xml
- echo '<y>200</y>' >> rc.xml
- echo '<monitor>1</monitor>' >> rc.xml
- echo '# specifies the monitor in a xinerama setup.' >> rc.xml
- echo '# 1 is the first head, or 'mouse' for wherever the mouse is' >> rc.xml
- echo '</position>' >> rc.xml
- echo '' >> rc.xml
- echo '<focus>yes</focus>' >> rc.xml
- echo '# if the window should try be given focus when it appears. if this is set' >> rc.xml
- echo '# to yes it doesn't guarantee the window will be given focus. some' >> rc.xml
- echo '# restrictions may apply, but Openbox will try to' >> rc.xml
- echo '' >> rc.xml
- echo '<desktop>1</desktop>' >> rc.xml
- echo '# 1 is the first desktop, 'all' for all desktops' >> rc.xml
- echo '' >> rc.xml
- echo '<layer>normal</layer>' >> rc.xml
- echo '# 'above', 'normal', or 'below'' >> rc.xml
- echo '' >> rc.xml
- echo '<iconic>no</iconic>' >> rc.xml
- echo '# make the window iconified when it appears, or not' >> rc.xml
- echo '' >> rc.xml
- echo '<skip_pager>no</skip_pager>' >> rc.xml
- echo '# asks to not be shown in pagers' >> rc.xml
- echo '' >> rc.xml
- echo '<skip_taskbar>no</skip_taskbar>' >> rc.xml
- echo '# asks to not be shown in taskbars. window cycling actions will also' >> rc.xml
- echo '# skip past such windows' >> rc.xml
- echo '' >> rc.xml
- echo '<fullscreen>yes</fullscreen>' >> rc.xml
- echo '# make the window in fullscreen mode when it appears' >> rc.xml
- echo '' >> rc.xml
- echo '<maximized>true</maximized>' >> rc.xml
- echo '# 'Horizontal', 'Vertical' or boolean (yes/no)' >> rc.xml
- echo '</application>' >> rc.xml
- echo '' >> rc.xml
- echo '# end of the example' >> rc.xml
- echo '-->' >> rc.xml
- echo '</applications>' >> rc.xml
- echo '</openbox_config>' >> rc.xml
+echo "-->" >> rc.xml
+  echo " </applications>" >> rc.xml
+ echo "</openbox_config>" >>  rc.xml
+
+
