@@ -77,8 +77,9 @@ chown  -R  $login:wheel /home/$login
 
 
 #update-desktop-database
-
-/usr/local/bin/update-desktop-database /home/$login/.local/share/applications
+cp  -R    /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
+/usr/local/bin/update-desktop-database                 /home/$login/.local/share/applications
+chown  -R      $login:wheel   /home/$login/.local/share/      
 
 chown  -R      $login:wheel   /mnt
 
