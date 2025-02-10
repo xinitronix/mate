@@ -35,6 +35,7 @@ sh  $CURRENTDIRECTORY/cshrc.sh
 sh  $CURRENTDIRECTORY/Xdefaults.sh
 sh  $CURRENTDIRECTORY/xinitrc.sh
 sh  $CURRENTDIRECTORY/xxkbrc.sh
+sh  $CURRENTDIRECTORY/gtkrc-2.0.sh
 cd -
 mkdir -p /home/$login/.config/fbpanel
 cd   /home/$login/.config/fbpanel
@@ -137,6 +138,7 @@ ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  mkdir -p /home/$login/.mozilla
  cp -R "/ntfs-2TB/freebsd config/firefox" /home/$login/.mozilla
  chown -R $login:wheel /home/$login/.mozilla
+ mkdir -p /home/$login/.local/share
  cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" /home/$login/.local/share
  chown -R $login:wheel /home/$login/.local/share/TelegramDesktop
  cp -R "/ntfs-2TB/freebsd config/google-chrome" /home/$login/.config

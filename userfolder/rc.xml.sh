@@ -705,7 +705,7 @@
  echo '# together to restrict your matches.' >> rc.xml
  echo '' >> rc.xml
  echo '# the name, class, and role use simple wildcard matching such as those' >> rc.xml
- echo '# used by a shell. you can use autostart.sh echo_file_create.sh menu.xml openbox.autostart.sh openbox.menu.xml.sh rc.xml rc.xml.sh wallpaper to match any characters and ? to match' >> rc.xml
+ echo '# used by a shell. you can use 2TB downloads Downloads echo_file_create.sh rc.xml rc.xml.sh to match any characters and ? to match' >> rc.xml
  echo '# any single character.' >> rc.xml
  echo '' >> rc.xml
  echo '# the type is one of: normal, dialog, splash, utility, menu, toolbar, dock,' >> rc.xml
