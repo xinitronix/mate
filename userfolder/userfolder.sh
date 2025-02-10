@@ -40,6 +40,12 @@ mkdir -p /home/$login/.config/fbpanel
 cd   /home/$login/.config/fbpanel
 sh  $CURRENTDIRECTORY/fbpanel.sh
 cd -
+mkdir -p  /home/$login/.config/openbox
+cd   /home/$login/.config/openbox
+sh  $CURRENTDIRECTORY/rc.xml.sh
+sh  $CURRENTDIRECTORY/openbox.autostart.sh
+sh  $CURRENTDIRECTORY/openbox.menu.xml.sh
+cd -
 chown  -R  $login:wheel /home/$login
 #create downloads folder
                        ln -s          /ntfs-2TB/downloads                 /home/$login/downloads
