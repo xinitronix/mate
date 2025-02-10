@@ -107,13 +107,12 @@ cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
 mkdir -p /home/$login/.fonts/mozilla/
 
 # copy  system-file-manager-root.svg to /usr/local/share/pixmaps
-
-cp /home/$login/.config/icons/system-file-manager-root.svg  /usr/local/share/pixmaps
-cp  ../etc/rootpcmanfm.desktop               /usr/local/share/applications
+cp  ../etc/icons/system-file-manager-root.svg    /usr/local/share/pixmaps
+cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
 
 #fix pacmanfm icon 
 
-cp ../etc/system-file-manager.svg /usr/local/share/icons/hicolor/scalable/apps
+cp ../etc/icons/system-file-manager.svg /usr/local/share/icons/hicolor/scalable/apps
 
 
 #dsd p25 
