@@ -72,11 +72,12 @@ chown  -R  $login:wheel /home/$login
                    
 
 #.scripts folder                  
-cp  -R  /tmp/userfolder/.scripts        /home/$login/
+cp  -R  /tmp/userfolder/.scripts                  /home/$login/
  chown  -R      $login:wheel                      /home/$login/.scripts          
 
 #update-desktop-database
-cp  -R    /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
+mkdir -p  /home/$login/.local/share/
+cp    -R  /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
 /usr/local/bin/update-desktop-database                 /home/$login/.local/share/applications
 chown  -R      $login:wheel   /home/$login/.local/share/      
 
