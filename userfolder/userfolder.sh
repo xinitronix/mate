@@ -71,10 +71,10 @@ chown  -R  $login:wheel /home/$login
 #                       mkdir  /home/$login/share
 #                       chown  -R      $login:wheel                      /home/$login/share
                    
-#/home/$login/.login  
-                  
-#                     echo './f.sh'                                                  >>            /home/$login/.login 
 
+#.scripts folder                  
+cp  -R  /tmp/userfolder/.scripts        /home/$login/
+ chown  -R      $login:wheel                      /home/$login/.scripts          
 
 #update-desktop-database
 cp  -R    /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
