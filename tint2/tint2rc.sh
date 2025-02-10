@@ -178,7 +178,7 @@
  echo '#-------------------------------------' >>   tint2rc
  echo '# Button 1' >>   tint2rc
  echo 'button = new' >>   tint2rc
- echo 'button_icon = /home/'$login'/.config/icons/docker.png' >>   tint2rc
+ echo 'button_icon = ~/.config/icons/docker.png' >>   tint2rc
  echo 'button_text =' >>   tint2rc
  echo 'button_tooltip = Start/Stop VPN' >>   tint2rc
  echo 'button_lclick_command = dockerbox.py' >>   tint2rc
@@ -195,7 +195,7 @@
  echo '#-------------------------------------' >>   tint2rc
  echo '# Button 2' >>   tint2rc
  echo 'button = new' >>   tint2rc
- echo 'button_icon = /home/'$login'/.config/icons/shutdown.png' >>   tint2rc
+ echo 'button_icon = ~/.config/icons/shutdown.png' >>   tint2rc
  echo 'button_text =' >>   tint2rc
  echo 'button_tooltip = shutdown' >>   tint2rc
  echo 'button_lclick_command = powerpy' >>   tint2rc
@@ -212,7 +212,7 @@
  echo '#-------------------------------------' >>   tint2rc
  echo '# Button 3' >>   tint2rc
  echo 'button = new' >>   tint2rc
- echo 'button_icon = /home/'$login'/.config/icons/ubuntu.png' >>   tint2rc
+ echo 'button_icon = ~/.config/icons/ubuntu.png' >>   tint2rc
  echo 'button_text =' >>   tint2rc
  echo 'button_tooltip = ubuntu_chroot' >>   tint2rc
  echo 'button_lclick_command = ubuntu_chroot' >>   tint2rc
