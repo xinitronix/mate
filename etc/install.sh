@@ -93,3 +93,5 @@ cp  $CURRENTDIRECTORY/set_wallpaper.sh  /usr/local/bin/
 
 cp    $CURRENTDIRECTORY/feh_browser.sh  /usr/local/bin/
                       
+#bsdconfig 
+cp $CURRENTDIRECTORY/bsdconfig.desktop   /usr/local/share/applications
