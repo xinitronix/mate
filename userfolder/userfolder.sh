@@ -4,6 +4,14 @@ login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
 
 
+unpack () {
+
+#create user space
+                     cp -rf /tmp/userfolder/.[a-zA-Z0-9]*   /home/$login  
+                     cp -rf /tmp/userfolder/[a-zA-Z0-9]*    /home/$login   
+                     chown  -R  $login:wheel /home/$login
+}
+
                     
  #/ntfs-2TB  
  
@@ -21,12 +29,14 @@ fi
                     chown  -R     $login:wheel        /home/$login/2TB
                     chmod 0777     /home/$login/2TB
 
-  
+ 
+cd  /home/$login/
+sh  $CURRENTDIRECTORY/cshrc.sh
+sh  $CURRENTDIRECTORY/Xdefaults.sh
+sh  $CURRENTDIRECTORY/xinitrc.sh
+sh  $CURRENTDIRECTORY/xxkbrc.sh
+cd -
 
-#create user space
-                     cp -rf /tmp/userfolder/.[a-zA-Z0-9]*   /home/$login  
-                     cp -rf /tmp/userfolder/[a-zA-Z0-9]*    /home/$login   
-                     chown  -R  $login:wheel /home/$login
 #create downloads folder
                        ln -s          /ntfs-2TB/downloads                 /home/$login/downloads
                        chown  -R      $login:wheel                        /home/$login/downloads
