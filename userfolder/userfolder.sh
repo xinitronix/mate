@@ -57,15 +57,14 @@ chown  -R  $login:wheel /home/$login
 #                       chown  -R      $login:wheel                         /home/$login/VirtualBox\ VMs 
 
 #create .icons and themes .folder
-                       mkdir  /home/$login/.icons
+                       mkdir  -p  /home/$login/.config/icons
                        chown  -R      $login:wheel                        /home/$login/.icons
+                       cp    ../etc/icons/docker.png                      /home/$login/.config/icons
+                       cp    ../etc/icons/shutdown.png                    /home/$login/.config/icons
+                       cp    ../etc/icons/ubuntu.png                      /home/$login/.config/icons
 #                      mkdir  /home/$login/.themes
 #                      chown  -R      $login:wheel                       /home/$login/.themes    
 
-
-#create pic folder      
-#                       mkdir  /home/$login/pic
-#                       chown  -R      $login:wheel                      /home/$login/pic
 
 #create share folder for virtualbox
 #                       mkdir  /home/$login/share
