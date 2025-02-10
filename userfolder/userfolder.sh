@@ -36,6 +36,10 @@ sh  $CURRENTDIRECTORY/Xdefaults.sh
 sh  $CURRENTDIRECTORY/xinitrc.sh
 sh  $CURRENTDIRECTORY/xxkbrc.sh
 cd -
+mkdir -p /home/$login/.config/fbpanel
+cd   /home/$login/.config/fbpanel
+sh  $CURRENTDIRECTORY/fbpanel.sh
+cd -
 chown  -R  $login:wheel /home/$login
 #create downloads folder
                        ln -s          /ntfs-2TB/downloads                 /home/$login/downloads

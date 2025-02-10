@@ -54,7 +54,7 @@
  echo 'alias krtmp killall -9 rtmpsrv' >> .cshrc
  echo 'alias m3u8 ~/scripts/tcpdump_m3u8.sh' >> .cshrc
  echo 'alias extract ~/.scripts/extractd' >> .cshrc
- echo 'alias myrepo doas pkg install -r myrepo !:1' >> .cshrc
+ echo 'alias myrepo doas pkg install -r myrepo \!:1' >> .cshrc
  echo 'setenv TERM xterm-256color' >> .cshrc
  echo 'setenv SDL_JOYSTICK_DEVICE /dev/input/event10' >> .cshrc
  echo 'setenv DOCKER_HOST tcp://192.168.8.106:2375' >> .cshrc
