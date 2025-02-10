@@ -36,7 +36,7 @@ sh  $CURRENTDIRECTORY/Xdefaults.sh
 sh  $CURRENTDIRECTORY/xinitrc.sh
 sh  $CURRENTDIRECTORY/xxkbrc.sh
 cd -
-
+chown  -R  $login:wheel /home/$login
 #create downloads folder
                        ln -s          /ntfs-2TB/downloads                 /home/$login/downloads
                        chown  -R      $login:wheel                        /home/$login/downloads

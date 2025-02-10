@@ -37,6 +37,7 @@ tint2
 xterm
 xxkb
 xinit
+xdialog
 xf86-input-keyboard
 xf86-input-mouse
 xfce4-terminal
