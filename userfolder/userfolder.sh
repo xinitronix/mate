@@ -4,6 +4,27 @@ login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
 
 
+create_dir () {
+
+dir="
+/home/$login/.config/
+/home/$login/.config/fbpanel
+/home/$login/.config/openbox
+/home/$login/.local/share
+/home/$login/.config/icons
+/home/$login/.config/tint2
+/home/$login/.mozilla
+/home/$login/.themes
+/home/$login/.icons
+"
+              for i in ${dir};do  
+                    mkdir -p   ${dir}
+                    chown -R   $login:wheel  ${dir}
+              done 
+}
+
+
+
 unpack () {
 
 #create user space
@@ -12,7 +33,10 @@ unpack () {
                      chown  -R  $login:wheel /home/$login
 }
 
-                    
+ 
+
+create_dir
+                   
  #/ntfs-2TB  
  
 if [ ! -d "/ntfs-2TB" ]; then
@@ -37,34 +61,25 @@ sh  $CURRENTDIRECTORY/xinitrc.sh
 sh  $CURRENTDIRECTORY/xxkbrc.sh
 sh  $CURRENTDIRECTORY/gtkrc-2.0.sh
 cd -
-mkdir -p /home/$login/.config/fbpanel
 cd   /home/$login/.config/fbpanel
 sh  $CURRENTDIRECTORY/fbpanel.sh
 cd -
-mkdir -p  /home/$login/.config/openbox
 cd   /home/$login/.config/openbox
 sh  $CURRENTDIRECTORY/rc.xml.sh
 sh  $CURRENTDIRECTORY/openbox.autostart.sh
 sh  $CURRENTDIRECTORY/openbox.menu.xml.sh
 cd -
-chown  -R  $login:wheel /home/$login
+
 #create downloads folder
                        ln -s          /ntfs-2TB/downloads                 /home/$login/downloads
                        chown  -R      $login:wheel                        /home/$login/downloads
-#create VirtualBox VMs folder
-
-#                       mkdir  /home/$login/VirtualBox\ VMs 
-#                       chown  -R      $login:wheel                         /home/$login/VirtualBox\ VMs 
 
 #create .icons and themes .folder
-                       mkdir  -p  /home/$login/.config/icons
-                       chown  -R      $login:wheel                        /home/$login/.icons
+
                        cp    ../etc/icons/docker.png                      /home/$login/.config/icons
                        cp    ../etc/icons/shutdown.png                    /home/$login/.config/icons
                        cp    ../etc/icons/ubuntu.png                      /home/$login/.config/icons
-#                      mkdir  /home/$login/.themes
-#                      chown  -R      $login:wheel                       /home/$login/.themes    
-
+ 
 
 #create share folder for virtualbox
 #                       mkdir  /home/$login/share
@@ -73,14 +88,13 @@ chown  -R  $login:wheel /home/$login
 
 #.scripts folder                  
 cp  -R  /tmp/userfolder/.scripts                  /home/$login/
- chown  -R      $login:wheel                      /home/$login/.scripts          
+
 
 #update-desktop-database
-mkdir -p  /home/$login/.local/share/
 cp    -R  /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
 /usr/local/bin/update-desktop-database                 /home/$login/.local/share/applications
-chown  -R      $login:wheel   /home/$login/.local/share/      
-chown  -R      $login:wheel   /home/$login/.local/      
+
+
 chown  -R      $login:wheel   /mnt
 
 cp       /tmp/userfolder/scripts/reloadlist    /usr/local/bin
@@ -104,9 +118,6 @@ cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
  rm -R /usr/src
  ln -s /ntfs-2TB/src /usr/src
 
-#firefox emoji 
-mkdir -p /home/$login/.fonts/mozilla/
-
 # copy  system-file-manager-root.svg to /usr/local/share/pixmaps
 cp  ../etc/icons/system-file-manager-root.svg    /usr/local/share/pixmaps
 cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
@@ -114,7 +125,6 @@ cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
 #fix pacmanfm icon 
 
 cp ../etc/icons/system-file-manager.svg /usr/local/share/icons/hicolor/scalable/apps
-
 
 #dsd p25 
 
@@ -128,23 +138,14 @@ else
      echo "\$var не пустая"
 fi
 
-
-rm -R /home/$login/.mozilla/
-
-
 ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  
+cp -R "/ntfs-2TB/freebsd config/firefox" /home/$login/.mozilla
+cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" /home/$login/.local/share
+cp -R "/ntfs-2TB/freebsd config/google-chrome" /home/$login/.config
 
- mkdir -p /home/$login/.mozilla
- cp -R "/ntfs-2TB/freebsd config/firefox" /home/$login/.mozilla
- chown -R $login:wheel /home/$login/.mozilla
- mkdir -p /home/$login/.local/share
- cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" /home/$login/.local/share
-chown -R $login:wheel /home/$login/.local/share/
- chown -R $login:wheel /home/$login/.local/share/TelegramDesktop
- cp -R "/ntfs-2TB/freebsd config/google-chrome" /home/$login/.config
- chown -R $login:wheel  /home/$login/.config/google-chrome
- chown -R $login:wheel /ntfs-2TB/mate
+chown -R $login:wheel /ntfs-2TB/mate
 #fix run "explorer ie" from  xfce-wintc
 echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1' >> /home/$login/.cshrc
+chown  -R $login:wheel /home/$login
 rm -r /tmp/userfolder
