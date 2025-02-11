@@ -80,7 +80,7 @@ mkdir -p  /home/$login/.local/share/
 cp    -R  /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
 /usr/local/bin/update-desktop-database                 /home/$login/.local/share/applications
 chown  -R      $login:wheel   /home/$login/.local/share/      
-
+chown  -R      $login:wheel   /home/$login/.local/      
 chown  -R      $login:wheel   /mnt
 
 cp       /tmp/userfolder/scripts/reloadlist    /usr/local/bin
