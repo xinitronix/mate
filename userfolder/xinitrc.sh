@@ -6,6 +6,6 @@
  echo 'tint2 &' >> .xinitrc
  echo 'fbpanel &' >> .xinitrc
  echo 'xbindkeys' >> .xinitrc
- echo 'idesk' >> .xinitrc
+ echo 'idesk &' >> .xinitrc
  echo 'openbox-session' >> .xinitrc
 
