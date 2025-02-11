@@ -1,0 +1,10 @@
+table Icon
+  Caption: Home
+  Command: pcmanfm /home/definitly
+  Icon: /usr/local/share/icons/Adwaita/48x48/places/user-home.png
+  Width: 48
+  Height: 48
+  X: 29
+  Y: 20
+end
+

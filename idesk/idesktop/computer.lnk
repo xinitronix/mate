@@ -1,0 +1,10 @@
+table Icon
+  Caption: Компьютер 
+  Command: pcmanfm /
+  Icon: /usr/local/share/icons/Adwaita/48x48/devices/computer.png
+  Width: 48
+  Height: 48
+  X: 29
+  Y: 229
+end
+

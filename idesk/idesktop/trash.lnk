@@ -1,0 +1,10 @@
+table Icon
+  Caption: Корзина
+  Command: pcmanfm ~/.local/share/Trash/files
+  Icon: /usr/local/share/icons/Adwaita/48x48/places/user-trash.png
+  Width: 48
+  Height: 48
+  X: 29
+  Y: 120
+end
+
