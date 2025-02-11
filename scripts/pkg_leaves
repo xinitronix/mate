@@ -15,7 +15,7 @@ linux_base-rl9
 mc
 xhost
 icewm
-idesk
+idesk-0.7.8
 noto-emoji
 openbox
 nvidia-driver
