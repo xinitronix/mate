@@ -101,10 +101,13 @@ cp       /tmp/userfolder/scripts/reloadlist    /usr/local/bin
 cp       /tmp/userfolder/scripts/echoplaylist  /usr/local/bin
 cp       /tmp/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
 cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
+cp       /tmp/userfolder/scripts/socat-dsd.sh  /usr/local/bin 
+
 
  zpool import -f zada2
  zpool import -f ntfs-2TB
  zpool import -f bhyve
+ zpool import -f media2
  rm -R /usr/obj
  ln -s /ntfs-2TB/obj /usr/obj
  rm -R /var/cache/pkg
@@ -118,7 +121,7 @@ cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
  rm -R /usr/src
  ln -s /ntfs-2TB/src /usr/src
 
-# copy  system-file-manager-root.svg to /usr/local/share/pixmaps
+# copy  system-file-manager-root.svg to  /usr/local/share/pixmaps
 cp  ../etc/icons/system-file-manager-root.svg    /usr/local/share/pixmaps
 cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
 
@@ -126,23 +129,11 @@ cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
 
 cp ../etc/icons/system-file-manager.svg /usr/local/share/icons/hicolor/scalable/apps
 
-#dsd p25 
-
-cp  /tmp/userfolder/scripts/socat-dsd.sh /usr/local/bin 
-
-if [ -z "$login" ]
-then
-    echo "введите логин" 
-    exit
-else
-     echo "\$var не пустая"
-fi
-
 ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
  
-cp -R "/ntfs-2TB/freebsd config/firefox" /home/$login/.mozilla
-cp -R "/ntfs-2TB/freebsd config/TelegramDesktop" /home/$login/.local/share
-cp -R "/ntfs-2TB/freebsd config/google-chrome" /home/$login/.config
+cp -R "/ntfs-2TB/freebsd config/firefox"          /home/$login/.mozilla
+cp -R "/ntfs-2TB/freebsd config/TelegramDesktop"  /home/$login/.local/share
+cp -R "/ntfs-2TB/freebsd config/google-chrome"    /home/$login/.config
 
 chown -R $login:wheel /ntfs-2TB/mate
 #fix run "explorer ie" from  xfce-wintc
