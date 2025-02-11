@@ -33,8 +33,10 @@ else
 
 
 install_idesk() {
-cp -R idesk   /home/$login/.idesk
-chown  -R      $login:wheel                /home/$login/.idesk
+cp -R idesktop    /home/$login/.idesktop
+chown  -R      $login:wheel                /home/$login/.idesktop
+cp ideskrc  /home/$login/.ideskrc
+chown -R $login:wheel   /home/$login/.ideskrc
 
 }
 
