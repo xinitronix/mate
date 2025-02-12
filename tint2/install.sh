@@ -12,7 +12,6 @@ install_all_user () {
 
 cat  ../accounts/user  | while read line
 
-
    do
    
      if [ -z "$line" ]
@@ -27,24 +26,19 @@ else
 
 fi
 
-
   done
 
 }
 
-
 install_tint2 ()  {
 
-
-
-             cp $CURRENTDIRECTORY/tint2-on-off   /usr/local/bin
+           cp $CURRENTDIRECTORY/tint2-on-off   /usr/local/bin
 
 # edit xbindkeysrc
 
             echo   '"/usr/local/bin/tint2-on-off"'        >> /home/$login/.xbindkeysrc
             echo   'm:0x40 + c:28'                        >> /home/$login/.xbindkeysrc
             echo   'Mod4 + t'                             >> /home/$login/.xbindkeysrc
-
 
 mkdir -p  /home/$login/.config/tint2
 rm /home/$login/.config/tint2/tint2rc
@@ -55,7 +49,4 @@ sh  $CURRENTDIRECTORY/tint2rc.sh
 cd -
 }
 
-
-
 install_all_user 
-

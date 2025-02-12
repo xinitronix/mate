@@ -7,13 +7,11 @@ install_idesk
 
 }
 
-
 install_all_user () {
 
 cat  ../accounts/user  | while read line
 
    do
-
 
 if [ -z "$line" ]
 then
@@ -25,12 +23,9 @@ else
      echo $login
      install_idesk
      
-
       fi
        done
-
 }
-
 
 install_idesk() {
 cp -R idesktop    /home/$login/.idesktop
@@ -39,7 +34,5 @@ cp ideskrc  /home/$login/.ideskrc
 chown -R $login:wheel   /home/$login/.ideskrc
 
 }
-
-
 
 install_first_user

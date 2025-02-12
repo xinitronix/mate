@@ -1,20 +1,16 @@
 #!/bin/sh
 
-
 login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 CURRENTDIRECTORY=$(pwd)
 
-
 cp  /usr/local/bin/conky                           /usr/local/bin/conkyweather 
 cp $CURRENTDIRECTORY/weather-on-off.sh      /usr/local/bin
-
 
 cp $CURRENTDIRECTORY/weatherconkyrc         /home/$login/.weatherconkyrc
 chown  -R      $login:wheel                 /home/$login/.weatherconkyrc
 mkdir                                       /home/$login/.weather
 cp      $CURRENTDIRECTORY/weathersh         /home/$login/.weather
 chown  -R      $login:wheel                 /home/$login/.weather
-
 
 # edit xbindkeysrc
 

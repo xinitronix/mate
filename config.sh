@@ -3,23 +3,16 @@
 
 login=$(cat  accounts/user | awk '{print $1}' |  head -n1)
 
-
-
 if [  -f "/usr/local/etc/mate.pid/config.sh.pid" ]; then
     echo "Файл $FILE  существует"
     exit 
 fi
 
-
 #/etc/rc.conf
-
- 
-                     
- #                   echo 'hald_enable="yes"'            >>                   /etc/rc.conf
+#                    echo 'hald_enable="yes"'            >>                   /etc/rc.conf
                      echo 'dbus_enable="yes"'            >>                   /etc/rc.conf
- #                   echo 'apache22_enable="YES"'        >>                   /etc/rc.conf
+#                    echo 'apache22_enable="YES"'        >>                   /etc/rc.conf
                      echo 'linux_enable="YES"'           >>                   /etc/rc.conf
-                     
                      echo 'dahdi_enable="YES"'           >>                   /etc/rc.conf
                      echo 'wlans_urtwn0="wlan0"'         >>                   /etc/rc.conf
                      echo 'ifconfig_wlan0="WPA DHCP"'    >>                   /etc/rc.conf
@@ -63,14 +56,14 @@ fi
 
                     echo  'if_urtwn_load="YES"'           >>                   /boot/loader.conf
                     echo  'legal.realtek.license_ack=1'   >>                   /boot/loader.conf
-  #               echo  'nvidia-modeset_load="YES"'   >>                   /boot/loader.conf
+#                   echo  'nvidia-modeset_load="YES"'   >>                   /boot/loader.conf
                     echo  'fusefs_load="YES"'   >>                   /boot/loader.conf
- #                   echo  'vmm_load="YES"'   >>                   /boot/loader.conf
+#                   echo  'vmm_load="YES"'   >>                   /boot/loader.conf
 
 
 
 #/etc/make.conf
-#                      echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
+#                     echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
                       echo 'BATCH=y'                       >>                   /etc/make.conf
 #                     echo 'WITH_PKGNG=yes'                >>                   /etc/make.conf
 #                     echo 'OVERRIDE_LINUX_BASE_PORT=c6'          >>            /etc/make.conf 
@@ -179,18 +172,11 @@ cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
 #wpa_supplicant.conf
 
-
                      echo 'network={'            >>   /etc/wpa_supplicant.conf
                      echo 'ssid="1ghfghf"'       >>   /etc/wpa_supplicant.conf
                      echo 'psk=3fb85bd2dec160ecba1cdf1004bec112938775d49f2b2666491410f76796377d'  >>   /etc/wpa_supplicant.conf
                      echo '}' >> /etc/wpa_supplicant.conf
-
-
                      mkdir -p  /usr/local/etc/pkg/repos
-
-
 
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/config.sh.pid
-
-
