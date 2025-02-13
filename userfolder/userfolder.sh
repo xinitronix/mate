@@ -2,8 +2,6 @@
 CURRENTDIRECTORY=$(pwd)
 login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
-
-
 create_dir () {
 
 dir="
@@ -23,8 +21,6 @@ dir="
               done 
 }
 
-
-
 unpack () {
 
 #create user space
@@ -33,9 +29,7 @@ unpack () {
                      chown  -R  $login:wheel /home/$login
 }
 
- 
-
-create_dir
+ create_dir
                    
  #/ntfs-2TB  
  
@@ -46,15 +40,12 @@ if [ ! -d "/ntfs-2TB" ]; then
                     chown  -R     $login:wheel        /ntfs-2TB
                     chmod 0777  /ntfs-2TB
 
-
-
 fi
                     ln -s  /ntfs-2TB                  /home/$login/2TB
                     chown  -R     $login:wheel        /home/$login/2TB
                     chmod 0777     /home/$login/2TB
 
- 
-cd  /home/$login/
+ cd  /home/$login/
 sh  $CURRENTDIRECTORY/cshrc.sh
 sh  $CURRENTDIRECTORY/Xdefaults.sh
 sh  $CURRENTDIRECTORY/xinitrc.sh
@@ -85,15 +76,13 @@ cd -
 #                       mkdir  /home/$login/share
 #                       chown  -R      $login:wheel                      /home/$login/share
                    
-
-#.scripts folder                  
+#scripts folder                  
 cp  -R  /tmp/userfolder/.scripts                  /home/$login/
-
+cp  -R  /tmp/userfolder/scripts                   /home/$login/
 
 #update-desktop-database
 cp    -R  /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
 /usr/local/bin/update-desktop-database                 /home/$login/.local/share/applications
-
 
 chown  -R      $login:wheel   /mnt
 
@@ -104,29 +93,30 @@ cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
 cp       /tmp/userfolder/scripts/socat-dsd.sh  /usr/local/bin 
 
 
- zpool import -f zada2
- zpool import -f ntfs-2TB
- zpool import -f bhyve
- zpool import -f media2
- rm -R /usr/obj
- ln -s /ntfs-2TB/obj /usr/obj
- rm -R /var/cache/pkg
- ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
- rm  -R /var/db/portsnap/
- zfs destroy zroot/usr/ports
- rm -r /usr/ports
- ln -s /ntfs-2TB/var/db/portsnap  /var/db/portsnap
- ln -s /ntfs-2TB/ports /usr/ports
- zfs destroy zroot/usr/src
- rm -R /usr/src
- ln -s /ntfs-2TB/src /usr/src
+zpool import -f zada2
+zpool import -f ntfs-2TB
+zpool import -f bhyve
+zpool import -f media2
+ 
+
+rm -R /usr/obj
+ln -s /ntfs-2TB/obj /usr/obj
+rm -R /var/cache/pkg
+ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
+rm  -R /var/db/portsnap/
+zfs destroy zroot/usr/ports
+rm -r /usr/ports
+ln -s /ntfs-2TB/var/db/portsnap  /var/db/portsnap
+ln -s /ntfs-2TB/ports /usr/ports
+zfs destroy zroot/usr/src
+rm -R /usr/src
+ln -s /ntfs-2TB/src /usr/src
 
 # copy  system-file-manager-root.svg to  /usr/local/share/pixmaps
 cp  ../etc/icons/system-file-manager-root.svg    /usr/local/share/pixmaps
 cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
 
 #fix pacmanfm icon 
-
 cp ../etc/icons/system-file-manager.svg /usr/local/share/icons/hicolor/scalable/apps
 
 ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg

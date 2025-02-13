@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 if [ -z "$1" ]
 then
      echo "не введен пароль для ssh"
@@ -8,8 +7,6 @@ then
 else
      export ssh_passwd=$1
 fi
-
-
 
 mkdir -p /usr/local/etc/pkg/repos
 cp  etc/freebsd.conf  /usr/local/etc/pkg/repos
@@ -24,16 +21,10 @@ CURRENTDIRECTORY=$(pwd)
            cd $CURRENTDIRECTORY/accounts
            ./create_user.sh
            cd .. 
-
           ./config.sh
 
-
-       for i in $(cat install_item); do
-
-    cd $CURRENTDIRECTORY/$i
-     ./install.sh
-     cd ..
-         done
-
-
-# reboot
+ for i in $(cat install_item); do
+          cd $CURRENTDIRECTORY/$i
+          ./install.sh
+          cd ..
+    done
