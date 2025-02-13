@@ -1,3 +1,0 @@
-#!/bin/sh
-export LD_LIBRARY_PATH="/home/definitly/2TB/freebsd config/firefox-nightly/firefox"
-/home/definitly/2TB/freebsd\ config/firefox-nightly/firefox/firefox -P default-release
