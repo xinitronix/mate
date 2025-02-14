@@ -29,7 +29,7 @@ fi
                      echo 'kld_list="nvidia-drm linux64 nullfs "'         >>                   /etc/rc.conf
  #                   echo 'KLD_LIST="linux linsysfs linprocfs"'  >>           /etc/rc.conf
                      echo 'allscreens_flags=" MODE_283"'         >>           /etc/rc.conf
-                     echo 'sendmail_enable="NO"'               >>           /etc/rc.conf
+                     echo 'sendmail_enable="NO"'                 >>           /etc/rc.conf
                      echo 'sendmail_msp_queue_enable="NO"'       >>           /etc/rc.conf
                      echo 'sendmail_outbound_enable="NO"'        >>           /etc/rc.conf
                      echo 'sendmail_submit_enable="NO"'          >>           /etc/rc.conf
@@ -43,24 +43,22 @@ fi
                      echo 'defaultrouter="192.168.8.1"' >> /etc/rc.conf
 
 #/boot/defaults/loader.conf 
-   #                  echo  'nvidia_load="YES" '           >>                   /boot/defaults/loader.conf
+   #                  echo  'nvidia_load="YES" '          >>                   /boot/defaults/loader.conf
                      echo  'vboxdrv_load="YES"'           >>                   /boot/defaults/loader.conf
                      echo  'coretemp_load="YES" '         >>                   /boot/defaults/loader.conf
-    #                 echo  'nvidia-modeset_load="YES" '         >>             /boot/defaults/loader.conf
+    #                 echo  'nvidia-modeset_load="YES" '  >>                   /boot/defaults/loader.conf
                      echo  'cpufreq_load="yes"'           >>                   /boot/defaults/loader.conf
                      echo  'vfs.zfs.prefetch_disable="0"' >>                   /boot/defaults/loader.conf
                      echo  'machdep.disable_mtrrs=1'      >>                   /boot/defaults/loader.conf
                      echo  'kern.vty=vt'                  >>                   /boot/defaults/loader.conf
                      echo  'hw.nvidiadrm.modeset=1'       >>                   /boot/defaults/loader.conf
 #/boot/loader.conf
-
                     echo  'if_urtwn_load="YES"'           >>                   /boot/loader.conf
                     echo  'legal.realtek.license_ack=1'   >>                   /boot/loader.conf
-#                   echo  'nvidia-modeset_load="YES"'   >>                   /boot/loader.conf
-                    echo  'fusefs_load="YES"'   >>                   /boot/loader.conf
-#                   echo  'vmm_load="YES"'   >>                   /boot/loader.conf
-
-
+#                   echo  'nvidia-modeset_load="YES"'     >>                   /boot/loader.conf
+                    echo  'fusefs_load="YES"'             >>                   /boot/loader.conf
+#                   echo  'vmm_load="YES"'                >>                   /boot/loader.conf
+                    echo  'hw.usb.no_boot_wait=1'                >>                   /boot/loader.conf
 
 #/etc/make.conf
 #                     echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
@@ -70,11 +68,9 @@ fi
 #                     echo 'OVERRIDE_LINUX_NONBASE_PORTS=c6'      >>            /etc/make.conf
 
 #/etc/src.conf 
-                     echo 'WITHOUT_LLVM_TARGET_ALL=YES'           >>                    /etc/src.conf  
-                     echo 'WITHOUT_TESTS=YES'           >>                    /etc/src.conf  
+                     echo 'WITHOUT_LLVM_TARGET_ALL=YES'           >>            /etc/src.conf  
+                     echo 'WITHOUT_TESTS=YES'                     >>            /etc/src.conf  
 
-
-                     
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
                      echo 'MM_CHARSET=UTF-8; export MM_CHARSET'  >>             /etc/profile
@@ -110,7 +106,6 @@ fi
                     echo  'set prompt="%{^[[40;31;1m%} %{^[[40;31;1m%} %N@%m:%~ %# "' >> /root/.cshrc
 
 #/etc/devfs.conf
-            
                     echo 'link /tmp shm'                             >>             /etc/devfs.conf
                     echo 'perm    da0     0666'                      >>             /etc/devfs.conf
                     echo 'own     da0     root:operator'             >>             /etc/devfs.conf
@@ -140,17 +135,13 @@ fi
                    ln -s /usr/local/wine-proton/bin/wine  /usr/local/bin/proton
                    ln -s /usr/local/wine-proton/bin/winecfg  /usr/local/bin/protoncfg
 
-                   
- 
 #link ssl certificate verify 
                    ln -sf /usr/local/share/certs/ca-root-nss.crt /etc/ssl/cert.pem
   
 cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime 
 
-
 #/etc/libmap32.conf
                    echo '/usr/local/lib  /usr/local/lib32' >> /etc/libmap32.conf
-
 
 #6-u6hbv-rys4v-7ci39-4x89x-s4y2m
 # en pass k..........3 pass.png
@@ -161,14 +152,11 @@ cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
 ##rtorrent settings for rtorrent user
 
-
 #                      echo 'setenv DISPLAY :0'       >> /home/rtorrent/.cshrc
 
 ##vpntor settings for vpn user
 
-
 #                      echo 'setenv DISPLAY :0'       >> /home/vpn/.cshrc
-
 
 #wpa_supplicant.conf
 
