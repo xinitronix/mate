@@ -11,7 +11,7 @@ else
 fi
 
 mkdir -p /usr/local/etc/pkg/repos
-cp  etc/freebsd.conf  /usr/local/etc/pkg/repos
+cp  $dir/etc/freebsd.conf  /usr/local/etc/pkg/repos
 
 CURRENTDIRECTORY=$(pwd)
 
