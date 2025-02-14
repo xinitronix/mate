@@ -11,9 +11,9 @@ if [ $(id -u) -ne 0 ]
   exit
 fi
 
-grep -vf $dir/rc.conf.d /etc/rc.conf > rc.conf
-grep -vf $dir/loader.conf.d  /boot/loader.conf >  loader.conf 
-grep -vf $dir/defaults/loader.conf.d  /boot/defaults/loader.conf > defaults/loader.conf
+grep -vf $dir/rc.conf.d /etc/rc.conf > $dir/rc.conf
+grep -vf $dir/loader.conf.d  /boot/loader.conf >  $dir/loader.conf 
+grep -vf $dir/defaults/loader.conf.d  /boot/defaults/loader.conf >  $dir/defaults/loader.conf
 rm   /boot/defaults/loader.conf
 rm   /boot/loader.conf
 rm   /etc/rc.conf
