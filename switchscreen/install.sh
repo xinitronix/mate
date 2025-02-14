@@ -1,8 +1,11 @@
 #!/bin/sh
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
-CURRENTDIRECTORY=$(pwd)
-        cp $CURRENTDIRECTORY/switchscreen     /usr/local/bin
-        cp $CURRENTDIRECTORY/togglescreen.sh  /usr/local/bin
+
+dir=$(dirname "$(realpath $0)")
+
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
+
+        cp $dir/switchscreen     /usr/local/bin
+        cp $dir/togglescreen.sh  /usr/local/bin
 
 
 # edit xbindkeysrc
