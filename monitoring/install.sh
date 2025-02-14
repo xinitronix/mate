@@ -1,11 +1,11 @@
 #!/bin/sh
-CURRENTDIRECTORY=$(pwd)
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
+dir=$(dirname "$(realpath $0)")
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
 mkdir -p /home/$login/.scripts
 chown  -R      $login:wheel   /home/$login/.scripts
 
-cp $CURRENTDIRECTORY/mon       /home/$login/.scripts
+cp $dir/mon       /home/$login/.scripts
 chown  -R      $login:wheel    /home/$login/.scripts/mon
 
 #create crontab file
@@ -18,6 +18,6 @@ chown  -R      $login:wheel    /home/$login/.scripts/mon
 
 #копирование cpuload
 
-cp $CURRENTDIRECTORY/cpuload             /usr/local/bin
-mkdir -p                                 /usr/local/www/nginx
-cp $CURRENTDIRECTORY/index.html          /usr/local/www/nginx
+cp $dir/cpuload             /usr/local/bin
+mkdir -p                    /usr/local/www/nginx
+cp $dir/index.html          /usr/local/www/nginx

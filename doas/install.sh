@@ -1,11 +1,13 @@
 #!/bin/sh
+
+dir=$(dirname "$(realpath $0)")
+
 add () {
       login=$(echo $line | awk '{print $1}' )
       echo -e "permit nopass keepenv $login\n"            >>    /usr/local/etc/doas.conf
 }
 
-
-cat  ../accounts/user  | while read line
+cat  $dir/../accounts/user  | while read line
 
    do
      if [ -z "$line" ]
@@ -13,10 +15,7 @@ then
      echo "\$var Пустая"
 else
      echo "\$var не пустая"
- 
      add
-     
-
 fi
    done
 
