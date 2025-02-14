@@ -71,7 +71,6 @@ cd -
                        cp    ../etc/icons/shutdown.png                    /home/$login/.config/icons
                        cp    ../etc/icons/ubuntu.png                      /home/$login/.config/icons
  
-
 #create share folder for virtualbox
 #                       mkdir  /home/$login/share
 #                       chown  -R      $login:wheel                      /home/$login/share
@@ -92,13 +91,11 @@ cp       /tmp/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
 cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
 cp       /tmp/userfolder/scripts/socat-dsd.sh  /usr/local/bin 
 
-
 zpool import -f zada2
 zpool import -f ntfs-2TB
 zpool import -f bhyve
 zpool import -f media2
  
-
 rm -R /usr/obj
 ln -s /ntfs-2TB/obj /usr/obj
 rm -R /var/cache/pkg
