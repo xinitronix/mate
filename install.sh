@@ -1,5 +1,7 @@
 #!/bin/sh
 
+dir=$(dirname "$(realpath $0)")
+
 if [ -z "$1" ]
 then
      echo "не введен пароль для ssh"
@@ -13,18 +15,13 @@ cp  etc/freebsd.conf  /usr/local/etc/pkg/repos
 
 CURRENTDIRECTORY=$(pwd)
 
-           tar -xf $CURRENTDIRECTORY/userfolder/userfolder.tar.xz -C  /tmp
+           tar -xf $dir/userfolder/userfolder.tar.xz -C  /tmp
+           $dir/install.sh
+           $dir/accounts/create_user.sh
+           $dir/config.sh
 
-           cd scripts/
-           ./install.sh
-           cd $CURRENTDIRECTORY
-           cd $CURRENTDIRECTORY/accounts
-           ./create_user.sh
-           cd .. 
-          ./config.sh
-
- for i in $(cat install_item); do
-          cd $CURRENTDIRECTORY/$i
+ for i in $(cat $dir/install_item); do
+          cd $dir/$i
           ./install.sh
           cd ..
     done

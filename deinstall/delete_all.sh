@@ -1,4 +1,7 @@
 #!/bin/sh
-./del.sh
-./del_files.sh
-./del_user.sh
+
+dir=$(dirname "$(realpath $0)")
+
+$dir/del.sh
+$dir/del_files.sh
+$dir/del_user.sh
