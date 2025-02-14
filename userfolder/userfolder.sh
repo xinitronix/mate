@@ -103,10 +103,8 @@ rm -R /usr/obj
 ln -s /ntfs-2TB/obj /usr/obj
 rm -R /var/cache/pkg
 ln -s /ntfs-2TB/var/cache/pkg   /var/cache/pkg
-rm  -R /var/db/portsnap/
 zfs destroy zroot/usr/ports
 rm -r /usr/ports
-ln -s /ntfs-2TB/var/db/portsnap  /var/db/portsnap
 ln -s /ntfs-2TB/ports /usr/ports
 zfs destroy zroot/usr/src
 rm -R /usr/src
