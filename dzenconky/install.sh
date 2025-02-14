@@ -1,16 +1,16 @@
 #!/bin/sh
 
-CURRENTDIRECTORY=$(pwd)
+dir=$(dirname "$(realpath $0)")
 
 install_first_user () {
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 install_dzen2
 
 }
 
 install_all_user () {
 
-cat  ../accounts/user  | while read line
+cat  $dir/../accounts/user  | while read line
 
    do
 
@@ -31,13 +31,13 @@ else
 
 install_dzen2 () {
 
-cp $CURRENTDIRECTORY/switchbackground      /usr/local/bin
-cp $CURRENTDIRECTORY/dzenconky             /usr/local/bin
-cp $CURRENTDIRECTORY/dzenconkyrc           /home/$login/.dzenconkyrc
+cp $dir/switchbackground      /usr/local/bin
+cp $dir/dzenconky             /usr/local/bin
+cp $dir/dzenconkyrc           /home/$login/.dzenconkyrc
 chown  -R      $login:wheel                /home/$login/.dzenconkyrc
 
 
-cp $CURRENTDIRECTORY/dzen2-on-off          /usr/local/bin
+cp $dir/dzen2-on-off          /usr/local/bin
 
 # edit xbindkeysrc
 

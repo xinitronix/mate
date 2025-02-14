@@ -1,15 +1,16 @@
 #!/bin/sh
-CURRENTDIRECTORY=$(pwd)
+
+dir=$(dirname "$(realpath $0)")
 
 install_first_user () {
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 install_idesk
 
 }
 
 install_all_user () {
 
-cat  ../accounts/user  | while read line
+cat  $dir/../accounts/user  | while read line
 
    do
 

@@ -5,7 +5,6 @@ if [ $(id -u) -ne 0 ]
   exit
 fi
 
-
 ls /home  | while read line
    do
       
@@ -13,8 +12,6 @@ login=$(echo $line | awk '{print $1}' )
 
    pw userdel -r -n  $login
 
-
-   done
-
+done
 
 rm -r /home/*
