@@ -1,12 +1,14 @@
 #!/bin/sh
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
-CURRENTDIRECTORY=$(pwd)
+
+dir=$(dirname "$(realpath $0)")
+
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
 cp  /usr/local/bin/conky                           /usr/local/bin/conkyscroll
 
-cp $CURRENTDIRECTORY/scrollconky                  /usr/local/bin
-cp $CURRENTDIRECTORY/scrollconkyrc                /home/$login/.scrollconkyrc
-cp $CURRENTDIRECTORY/conkyscroll-on-off           /usr/local/bin
+cp $dir/scrollconky                  /usr/local/bin
+cp $dir/scrollconkyrc                /home/$login/.scrollconkyrc
+cp $dir/conkyscroll-on-off           /usr/local/bin
 
 # edit xbindkeysrc
                        echo   '"/usr/local/bin/conkyscroll-on-off"'        >> /home/$login/.xbindkeysrc

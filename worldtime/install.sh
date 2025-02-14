@@ -1,16 +1,13 @@
 #!/bin/sh
 
+dir=$(dirname "$(realpath $0)")
 
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
-CURRENTDIRECTORY=$(pwd)
-
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
 cp  /usr/local/bin/conky                           /usr/local/bin/conkytime 
-cp $CURRENTDIRECTORY/timeconky-on-off.sh    /usr/local/bin
-
-
-cp $CURRENTDIRECTORY/timeconkyrc            /home/$login/.timeconkyrc
-chown  -R      $login:wheel                 /home/$login/.timeconkyrc
+cp $dir/timeconky-on-off.sh                        /usr/local/bin
+cp $dir/timeconkyrc                                /home/$login/.timeconkyrc
+chown  -R      $login:wheel                        /home/$login/.timeconkyrc
 
 # edit xbindkeysrc
 
