@@ -1,6 +1,8 @@
 #!/bin/sh
 
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
+dir=$(dirname "$(realpath $0)")
+
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
 mkdir -p  /home/$login/.ssh
 chown -R $login:wheel /home/$login/.ssh
