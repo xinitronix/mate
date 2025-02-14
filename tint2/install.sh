@@ -1,8 +1,10 @@
 #!/bin/sh
-CURRENTDIRECTORY=$(pwd)
+
+dir=$(dirname "$(realpath $0)")
+
 install_first_user () {
 
-login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 CURRENTDIRECTORY=$(pwd)
 install_tint2
 
@@ -10,7 +12,7 @@ install_tint2
  
 install_all_user () {
 
-cat  ../accounts/user  | while read line
+cat  $dir/../accounts/user  | while read line
 
    do
    
@@ -32,7 +34,7 @@ fi
 
 install_tint2 ()  {
 
-           cp $CURRENTDIRECTORY/tint2-on-off   /usr/local/bin
+           cp $dir/tint2-on-off   /usr/local/bin
 
 # edit xbindkeysrc
 
@@ -45,7 +47,7 @@ rm /home/$login/.config/tint2/tint2rc
 chown  -R     $login:wheel  /home/$login/.config/
 chown  -R     $login:wheel  /home/$login/.config/tint2
 cd /home/$login/.config/tint2
-sh  $CURRENTDIRECTORY/tint2rc.sh
+sh  $dir/tint2rc.sh
 cd -
 }
 
