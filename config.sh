@@ -10,7 +10,6 @@ dir=$(dirname "$(realpath $0)")
 
 login=$(cat  $dir/accounts/user | awk '{print $1}' |  head -n1)
 
-echo  $dir
 if [  -f "/usr/local/etc/mate.pid/config.sh.pid" ]; then
     echo "Файл  config.sh.pid   существует"
     exit 

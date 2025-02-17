@@ -7,8 +7,7 @@ if [  -f "/usr/local/etc/mate.pid/etc_install.sh ]; then
 fi
 
 dir=$(dirname "$(realpath $0)")
-l
-ogin=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
+login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
 #copy   xorg.conf
 # проверяем какая карта ati или nvidia  
