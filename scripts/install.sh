@@ -4,6 +4,7 @@ dir=$(dirname "$(realpath $0)")
 
 if [  -f "/usr/local/etc/mate.pid/pkg_install.pid" ]; then
     echo "Файл  pkg_install.pid   существует"
+    echo "Пропускаем установку пакетов"
     exit 
 fi
 
