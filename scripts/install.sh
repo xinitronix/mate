@@ -7,6 +7,7 @@ if [  -f "/usr/local/etc/mate.pid/pkg_install.pid" ]; then
     exit 
 fi
 
+kldload linux64
   for i in $(cat $dir/pkg_leaves); do
 
 pkg install  -r myrepo  -y  $i 
