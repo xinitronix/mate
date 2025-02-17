@@ -1,4 +1,5 @@
 #!/bin/sh
+rm .xxkbrc
  echo 'XXkb.image.path: /usr/local/share/xxkb/' >> .xxkbrc
  echo 'XXkb.mainwindow.type:tray' >> .xxkbrc
  echo 'XXkb.group.base: 1' >> .xxkbrc

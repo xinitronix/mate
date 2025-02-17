@@ -1,3 +1,5 @@
+#!/bin/sh
+rm .cshrc
  echo '# $FreeBSD: head/share/skel/dot.cshrc 278616 2015-02-12 05:35:00Z cperciva $' >> .cshrc
  echo '#' >> .cshrc
  echo '# .cshrc - csh resource script, read at beginning of execution by each shell' >> .cshrc

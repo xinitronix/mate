@@ -1,3 +1,5 @@
+#!/bin/sh
+rm .gtkrc-2.0
  echo '# DO NOT EDIT! This file will be overwritten by LXAppearance.' >> .gtkrc-2.0
  echo '# Any customization should be done in ~/.gtkrc-2.0.mine instead.' >> .gtkrc-2.0
  echo '' >> .gtkrc-2.0
