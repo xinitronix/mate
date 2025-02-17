@@ -2,6 +2,11 @@
 
 dir=$(dirname "$(realpath $0)")
 
+if [  -f "/usr/local/etc/mate.pid/weatherconky_install.pid" ]; then
+    echo "Файл   weatherconky_install.pid  существует"
+    exit 
+fi
+
 login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
 cp  /usr/local/bin/conky                           /usr/local/bin/conkyweather 
@@ -18,3 +23,6 @@ chown  -R      $login:wheel                 /home/$login/.weather
                       echo   '"/usr/local/bin/weather-on-off.sh"'        >> /home/$login/.xbindkeysrc
                       echo   'm:0x40 + c:25'                             >> /home/$login/.xbindkeysrc
                       echo   'Mod4 + w'                                  >> /home/$login/.xbindkeysrc
+
+mkdir -p /usr/local/etc/mate.pid
+touch /usr/local/etc/mate.pid/weatherconky_install.pid
