@@ -1,10 +1,18 @@
 #!/bin/sh
 # rc.conf loader.conf make.conf pkg.conf profile csh.login fstab sysctl.conf
 
-login=$(cat  accounts/user | awk '{print $1}' |  head -n1)
+if test "$(id -u)" -ne 0; then
+	printf "%s must be run as root\n" "${0##*/}"
+	exit 1
+fi
 
+dir=$(dirname "$(realpath $0)")
+
+login=$(cat  $dir/accounts/user | awk '{print $1}' |  head -n1)
+
+echo  $dir
 if [  -f "/usr/local/etc/mate.pid/config.sh.pid" ]; then
-    echo "Файл $FILE  существует"
+    echo "Файл  config.sh.pid   существует"
     exit 
 fi
 
