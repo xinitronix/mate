@@ -1,7 +1,7 @@
 #!/bin/sh
-. setup.config
-
 dir=$(dirname "$(realpath $0)")
+
+. $dir/setup.config
 
 if [ -z "$1" ]
 then
