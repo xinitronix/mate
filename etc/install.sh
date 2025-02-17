@@ -1,6 +1,11 @@
 #!/bin/sh
 # sopcast xorg 
 
+if [  -f "/usr/local/etc/mate.pid/etc_install.sh ]; then
+    echo "Файл  etc_install.sh   существует"
+    exit 
+fi
+
 dir=$(dirname "$(realpath $0)")
 l
 ogin=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
@@ -67,3 +72,6 @@ cp    $dir/feh_browser.sh  /usr/local/bin/
                       
 #bsdconfig 
 cp $dir/bsdconfig.desktop   /usr/local/share/applications
+
+mkdir -p /usr/local/etc/mate.pid
+touch /usr/local/etc/mate.pid/etc_install.sh.pid
