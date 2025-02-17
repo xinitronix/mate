@@ -2,6 +2,12 @@
 
 dir=$(dirname "$(realpath $0)")
 
+if [  -f "/usr/local/etc/mate.pid/obmenu_install.pid" ]; then
+    echo "Файл  obmenu_install.pid   существует"
+    exit 
+fi
+
+
 install_first_user () {
 
 login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
@@ -40,3 +46,6 @@ su $login -c '/usr/local/bin/obmenu-generator -p -i'
 }
 
 install_all_user
+
+mkdir -p /usr/local/etc/mate.pid
+touch /usr/local/etc/mate.pid/obmenu_install.pid
