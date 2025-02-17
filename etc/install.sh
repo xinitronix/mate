@@ -13,16 +13,6 @@ login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 # проверяем какая карта ati или nvidia  
 #и копируем нужный xorg.conf
 
-   if ! [ -z "$(dmesg | grep radeon)" ] ; then 
-             
-                       cp  $dir/xorg.conf.ati  /etc/X11/xorg.conf 
-             
-                   else
-
-                       cp  $dir/xorg.conf  /etc/X11/xorg.conf 
-
-                     fi 
-
 #tarxf             
                cp $dir/tarxf                           /usr/local/bin
 
