@@ -63,4 +63,4 @@ rm .cshrc
  echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1 #fix run explorer ie xfce-wintc' >> .cshrc
  echo '' >> .cshrc
  echo '' >> .cshrc
- echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1 ddd' >> .cshrc
+ echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1' >> .cshrc
