@@ -27,7 +27,7 @@ dir="
               done 
 }
 
-unpack () {
+copy_folder () {
 
 #create user space
                      cp -rf /tmp/userfolder/.[a-zA-Z0-9]*   /home/$login  
@@ -35,7 +35,16 @@ unpack () {
                      chown  -R  $login:wheel /home/$login
 }
 
- create_dir
+unpack () {
+tar -xf $dir/userfolder/userfolder.tar.xz -C  /tmp
+}
+
+if ! [ -d /tmp/userfolder ]; then
+echo ' No directory /tmp/userfolder'
+unpack
+fi
+
+create_dir
                    
  #/ntfs-2TB  
  
