@@ -1,0 +1,24 @@
+#!/bin/sh
+
+pkg=$@
+
+install_15 () {
+
+doas pkg install  -r myrepo15  -y  $pkg
+
+}
+
+install_14 () {
+
+doas pkg install  -r myrepo  -y  $pkg
+
+}
+
+if [ "14.2-STABLE" = "$(uname -r)"  ]; then
+    install_14
+    echo "install packages freebsd 14"
+else
+    install_15
+    echo "install packages freebsd 15"
+fi
+
