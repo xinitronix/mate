@@ -3,6 +3,8 @@ dir=$(dirname "$(realpath $0)")
 
 . $dir/setup.config
 
+echo "$(date +'%FT%H:%M:%S%z')" >> $dir/$LOG_FILE
+
 if [ -z "$1" ]
 then
      echo "не введен пароль для ssh"
@@ -26,3 +28,5 @@ CURRENTDIRECTORY=$(pwd)
           ./install.sh >>  $dir/$LOG_FILE
           cd ..
     done
+
+echo "$(date +'%FT%H:%M:%S%z')" >> $dir/$LOG_FILE
