@@ -16,10 +16,8 @@ cat  $dir/../accounts/user  | while read line
 
 if [ -z "$line" ]
 then
-     echo "\$var Пустая"
+     
 else
-     echo "\$var не пустая"
- 
      login=$(echo $line | awk '{print $1}' )
      echo $login
      install_dzen2
