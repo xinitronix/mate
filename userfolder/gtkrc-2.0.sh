@@ -2,7 +2,6 @@
 rm .gtkrc-2.0
  echo '# DO NOT EDIT! This file will be overwritten by LXAppearance.' >> .gtkrc-2.0
  echo '# Any customization should be done in ~/.gtkrc-2.0.mine instead.' >> .gtkrc-2.0
- echo '' >> .gtkrc-2.0
  echo 'include "/home/definitly/.gtkrc-2.0.mine"' >> .gtkrc-2.0
  echo 'gtk-theme-name="Raleigh"' >> .gtkrc-2.0
  echo 'gtk-icon-theme-name="Adwaita"' >> .gtkrc-2.0
@@ -17,4 +16,3 @@ rm .gtkrc-2.0
  echo 'gtk-xft-antialias=1' >> .gtkrc-2.0
  echo 'gtk-xft-hinting=1' >> .gtkrc-2.0
  echo 'gtk-xft-hintstyle="hintfull"' >> .gtkrc-2.0
- echo '' >> .gtkrc-2.0
