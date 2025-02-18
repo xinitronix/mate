@@ -22,9 +22,9 @@ if [ -z "$line" ]
 then
      echo "\$var Пустая"
 else
-     echo "\$var не пустая"
- 
-     add_user 
+    
+ add_user 
+
    fi
 done
 
