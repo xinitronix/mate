@@ -1,5 +1,5 @@
 #!/bin/sh
-dir=$(dirname "$(realpath $0)")
+CURRENTDIRECTORY=$(pwd)
 login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
 if [  -f "/usr/local/etc/mate.pid/userfolder_install.pid" ]; then
@@ -60,20 +60,20 @@ fi
                     chown  -R     $login:wheel        /home/$login/2TB
                     chmod 0777     /home/$login/2TB
 
- cd  /home/$login/
-sh  $dir/cshrc.sh
-sh  $dir/Xdefaults.sh
-sh  $dir/xinitrc.sh
-sh  $dir/xxkbrc.sh
-sh  $dir/gtkrc-2.0.sh
+cd  /home/$login/
+sh  $CURRENTDIRECTORY/cshrc.sh
+sh  $CURRENTDIRECTORY/Xdefaults.sh
+sh  $CURRENTDIRECTORY/xinitrc.sh
+sh  $CURRENTDIRECTORY/xxkbrc.sh
+sh  $CURRENTDIRECTORY/gtkrc-2.0.sh
 cd -
 cd   /home/$login/.config/fbpanel
-sh  $dir/fbpanel.sh
+sh  $CURRENTDIRECTORY/fbpanel.sh
 cd -
 cd   /home/$login/.config/openbox
-sh  $dir/rc.xml.sh
-sh  $dir/openbox.autostart.sh
-sh  $dir/openbox.menu.xml.sh
+sh  $CURRENTDIRECTORY/rc.xml.sh
+sh  $CURRENTDIRECTORY/openbox.autostart.sh
+sh  $CURRENTDIRECTORY/openbox.menu.xml.sh
 cd -
 
 #create downloads folder
