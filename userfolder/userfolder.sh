@@ -1,6 +1,12 @@
 #!/bin/sh
-CURRENTDIRECTORY=$(pwd)
+dir=$(dirname "$(realpath $0)")
 login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
+
+if [  -f "/usr/local/etc/mate.pid/userfolder_install.pid" ]; then
+    echo "Файл  userfolder_install.pid   существует"
+    echo "Пропускаем установку power"
+    exit 
+fi
 
 create_dir () {
 
@@ -46,19 +52,19 @@ fi
                     chmod 0777     /home/$login/2TB
 
  cd  /home/$login/
-sh  $CURRENTDIRECTORY/cshrc.sh
-sh  $CURRENTDIRECTORY/Xdefaults.sh
-sh  $CURRENTDIRECTORY/xinitrc.sh
-sh  $CURRENTDIRECTORY/xxkbrc.sh
-sh  $CURRENTDIRECTORY/gtkrc-2.0.sh
+sh  $dir/cshrc.sh
+sh  $dir/Xdefaults.sh
+sh  $dir/xinitrc.sh
+sh  $dir/xxkbrc.sh
+sh  $dir/gtkrc-2.0.sh
 cd -
 cd   /home/$login/.config/fbpanel
-sh  $CURRENTDIRECTORY/fbpanel.sh
+sh  $dir/fbpanel.sh
 cd -
 cd   /home/$login/.config/openbox
-sh  $CURRENTDIRECTORY/rc.xml.sh
-sh  $CURRENTDIRECTORY/openbox.autostart.sh
-sh  $CURRENTDIRECTORY/openbox.menu.xml.sh
+sh  $dir/rc.xml.sh
+sh  $dir/openbox.autostart.sh
+sh  $dir/openbox.menu.xml.sh
 cd -
 
 #create downloads folder
@@ -125,3 +131,6 @@ chown -R $login:wheel /ntfs-2TB/mate
 echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1' >> /home/$login/.cshrc
 chown  -R $login:wheel /home/$login
 rm -r /tmp/userfolder
+
+mkdir -p /usr/local/etc/mate.pid
+touch /usr/local/etc/mate.pid/userfolder_install.pid
