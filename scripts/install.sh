@@ -1,5 +1,5 @@
 #!/bin/sh
-
+kldload linux64
 dir=$(dirname "$(realpath $0)")
 
 if [  -f "/usr/local/etc/mate.pid/pkg_install.pid" ]; then
@@ -8,13 +8,31 @@ if [  -f "/usr/local/etc/mate.pid/pkg_install.pid" ]; then
     exit 
 fi
 
-kldload linux64
-  for i in $(cat $dir/pkg_leaves); do
+install_15 () {
+
+for i in $(cat $dir/pkg_leaves); do
+
+pkg install  -r myrepo15  -y  $i 
+
+done
+}
+
+install_14 () {
+
+for i in $(cat $dir/pkg_leaves); do
 
 pkg install  -r myrepo  -y  $i 
-#pkg install  -r FreeBSD  -y $i 
 
-   done
+done
+}
+
+if [ "14.2-STABLE" = "$(uname -r)"  ]; then
+    install_14
+    echo "install packages freebsd 14"
+else
+    install_15
+    echo "install packages freebsd 15"
+fi
 
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/pkg_install.pid
