@@ -8,6 +8,7 @@ passwd=$(echo $line | awk '{print $2}')
 
 if ! getent passwd $login  > /dev/null ; then
 echo "пользователь $login  не существует"
+echo "создаем пользователя $login"
 echo $passwd | pw useradd $login -m -g wheel -s /bin/csh -h 0
               pw groupmod video    -m $login
               pw groupmod operator -m $login
