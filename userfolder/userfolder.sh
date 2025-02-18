@@ -36,7 +36,7 @@ copy_folder () {
 }
 
 unpack () {
-tar -xf $dir/userfolder/userfolder.tar.xz -C  /tmp
+tar -xf $dir/userfolder.tar.xz -C  /tmp
 }
 
 if ! [ -d /tmp/userfolder ]; then
