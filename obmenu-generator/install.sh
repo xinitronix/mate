@@ -7,12 +7,11 @@ if test "$(id -u)" -ne 0; then
 	exit 1
 fi
 
-
 if [  -f "/usr/local/etc/mate.pid/obmenu_install.pid" ]; then
-    echo "Файл obmenu_install.pid    существует"
-    exit "Пропускаем установку obmenu'
+    echo "Файл  obmenu_install.pid  существует"
+    echo "Пропускаем установку obmenu"
+    exit 
 fi
-
 
 install_first_user () {
 
