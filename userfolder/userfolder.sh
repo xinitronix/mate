@@ -4,7 +4,7 @@ login=$(cat  ../accounts/user | awk '{print $1}' |  head -n1)
 
 if [  -f "/usr/local/etc/mate.pid/userfolder_install.pid" ]; then
     echo "Файл  userfolder_install.pid   существует"
-    echo "Пропускаем установку power"
+    echo "Пропускаем установку userfolder"
     exit 
 fi
 
