@@ -45,21 +45,10 @@ rm .cshrc
  echo '' >> .cshrc
  echo 'endif' >> .cshrc
  echo 'set prompt="%{^[[0;32;1m%}[%T] %{^[[0;32;1m%} %/ %"' >> .cshrc
- echo 'alias kn killall -9 npviewer.bin' >> .cshrc
- echo 'alias ks killall -9 sp-sc-auth' >> .cshrc
- echo 'alias kw killall -9 wine' >> .cshrc
- echo 'alias sm mpv http://localhost:8908/tv.asf' >> .cshrc
- echo 'alias kf killall -9 firefox' >> .cshrc
  echo 'alias cdd cd ~/downloads' >> .cshrc
  echo 'alias cds cd ~/scripts' >> .cshrc
- echo 'alias rtmp ~/scripts/rtmp.sh' >> .cshrc
- echo 'alias krtmp killall -9 rtmpsrv' >> .cshrc
- echo 'alias m3u8 ~/scripts/tcpdump_m3u8.sh' >> .cshrc
- echo 'alias extract ~/.scripts/extractd' >> .cshrc
  echo 'setenv TERM xterm-256color' >> .cshrc
  echo 'setenv SDL_JOYSTICK_DEVICE /dev/input/event10' >> .cshrc
  echo 'setenv DOCKER_HOST tcp://192.168.8.106:2375' >> .cshrc
  echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1 #fix run explorer ie xfce-wintc' >> .cshrc
- echo '' >> .cshrc
- echo '' >> .cshrc
  echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1' >> .cshrc
