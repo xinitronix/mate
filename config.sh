@@ -18,14 +18,10 @@ fi
 #/etc/rc.conf
 #                    echo 'hald_enable="yes"'            >>                   /etc/rc.conf
                      echo 'dbus_enable="yes"'            >>                   /etc/rc.conf
-#                    echo 'apache22_enable="YES"'        >>                   /etc/rc.conf
                      echo 'linux_enable="YES"'           >>                   /etc/rc.conf
                      echo 'dahdi_enable="YES"'           >>                   /etc/rc.conf
                      echo 'wlans_urtwn0="wlan0"'         >>                   /etc/rc.conf
                      echo 'ifconfig_wlan0="WPA DHCP"'    >>                   /etc/rc.conf
-#                    echo 'font8x16=cp866b-8x16'         >>                   /etc/rc.conf
-#                    echo 'font8x14=cp866-8x14'          >>                   /etc/rc.conf
-#                    echo 'font8x8=cp866-8x8'            >>                   /etc/rc.conf
 #                    echo 'asterisk_enable="YES"'        >>                   /etc/rc.conf
                      echo 'devfs_system_ruleset="localrules"'          >>                   /etc/rc.conf
 #                    echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
@@ -34,7 +30,6 @@ fi
                      echo 'nginx_enable="YES"'           >>                   /etc/rc.conf
                      echo 'php_fpm_enable="YES"'         >>                   /etc/rc.conf
                      echo 'kld_list="nvidia-drm linux64 nullfs "'         >>                   /etc/rc.conf
- #                   echo 'KLD_LIST="linux linsysfs linprocfs"'  >>           /etc/rc.conf
                      echo 'allscreens_flags=" MODE_283"'         >>           /etc/rc.conf
                      echo 'sendmail_enable="NO"'                 >>           /etc/rc.conf
                      echo 'sendmail_msp_queue_enable="NO"'       >>           /etc/rc.conf
