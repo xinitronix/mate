@@ -71,8 +71,9 @@ fi
 
 #/etc/src.conf 
                      echo 'WITHOUT_LLVM_TARGET_ALL=YES'           >>            /etc/src.conf  
-                     echo 'WITHOUT_TESTS=YES'                     >>            /etc/src.conf  
-
+                     echo 'WITHOUT_TESTS=YES'                     >>            /etc/src.conf
+                     echo 'WITHOUT_INET6=YES'                     >>            /etc/src.conf 
+                     echo 'WITHOUT_INET6_SUPPORT=YES'             >>            /etc/src.conf
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
                      echo 'MM_CHARSET=UTF-8; export MM_CHARSET'  >>             /etc/profile
