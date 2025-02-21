@@ -1,5 +1,9 @@
 #!/bin/sh
-rm .gtkrc-2.0
+file=".gtkrc-2.0"
+
+if [ -f "$file" ] ; then
+    rm "$file"
+fi
  echo '# DO NOT EDIT! This file will be overwritten by LXAppearance.' >> .gtkrc-2.0
  echo '# Any customization should be done in ~/.gtkrc-2.0.mine instead.' >> .gtkrc-2.0
  echo 'include "/home/definitly/.gtkrc-2.0.mine"' >> .gtkrc-2.0

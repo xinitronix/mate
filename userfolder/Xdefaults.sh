@@ -1,5 +1,9 @@
 #!/bin/sh 
-rm .Xdefaults
+file=".Xdefaults"
+
+if [ -f "$file" ] ; then
+    rm "$file"
+fi
  echo 'xterm*background: black' >> .Xdefaults
  echo 'xterm*foreground: white' >> .Xdefaults
  echo 'xterm*geometry: 90x30' >> .Xdefaults

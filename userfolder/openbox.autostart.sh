@@ -1,5 +1,9 @@
 #!/bin/sh
-rm autostart.sh
+file="autostart.sh"
+
+if [ -f "$file" ] ; then
+    rm "$file"
+fi
  echo 'feh --bg-scale /home/definitly/2TB/wallpaper/wallhaven-q6gj8d.jpg &' >> autostart.sh
  echo 'xxkb &' >> autostart.sh
  echo 'firefox-dev &' >> autostart.sh

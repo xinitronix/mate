@@ -1,6 +1,10 @@
 #!/bin/sh 
 
-rm  .xinitrc
+file=".xinitrc"
+
+if [ -f "$file" ] ; then
+    rm "$file"
+fi
 
  echo 'export LANG='ru_RU.UTF-8'' >> .xinitrc
  echo 'export LC_ALL='ru_RU.UTF-8'' >> .xinitrc

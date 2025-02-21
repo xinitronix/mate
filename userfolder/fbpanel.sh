@@ -1,3 +1,10 @@
+#!/bin/sh
+
+file="default"
+
+if [ -f "$file" ] ; then
+    rm "$file"
+fi
  echo 'Global {' >> default
  echo 'edge = top' >> default
  echo 'allign = right' >> default
