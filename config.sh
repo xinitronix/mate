@@ -24,7 +24,7 @@ fi
                      echo 'ifconfig_wlan0="WPA DHCP"'    >>                   /etc/rc.conf
 #                    echo 'asterisk_enable="YES"'        >>                   /etc/rc.conf
                      echo 'devfs_system_ruleset="localrules"'          >>                   /etc/rc.conf
-#                    echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
+                     echo 'vboxnet_enable="YES"'         >>                   /etc/rc.conf
                      echo 'powerd_enable="yes"'          >>                   /etc/rc.conf
                      echo 'powerd_flags="-a adp -p 100 -r 90"'   >>           /etc/rc.conf
                      echo 'nginx_enable="YES"'           >>                   /etc/rc.conf
@@ -43,6 +43,7 @@ fi
                      echo 'seatd_enable="YES"'                   >>           /etc/rc.conf  
                      echo 'ifconfig_re0="inet 192.168.8.101 netmask 255.255.255.0"' >> /etc/rc.conf
                      echo 'defaultrouter="192.168.8.1"' >> /etc/rc.conf
+                     echo 'xboxdrv_enable="YES"'                  >>                  /etc/rc.conf 
 
 #/boot/defaults/loader.conf 
    #                  echo  'nvidia_load="YES" '          >>                   /boot/defaults/loader.conf
