@@ -82,6 +82,8 @@ fi
                      echo 'WITHOUT_FLOPPY=YES'                    >>            /etc/src.conf
                      echo 'WITHOUT_GAMES=YES'                     >>            /etc/src.conf
                      echo 'WITHOUT_SHAREDOCS=YES'                 >>            /etc/src.conf
+                     echo 'WITHOUT_REPRODUCIBLE_BUILD=YES'        >>            /etc/src.conf
+                     echo 'WITHOUT_SENDMAIL=YES'                  >>            /etc/src.conf
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
                      echo 'MM_CHARSET=UTF-8; export MM_CHARSET'  >>             /etc/profile
@@ -135,10 +137,6 @@ fi
 
 #/etc/resolvconf.conf   
                    echo 'resolvconf=NO'       >>    /etc/resolvconf.conf
-
-#/etc/src.conf
-                  echo 'WITHOUT_REPRODUCIBLE_BUILD=YES' >> /etc/src.conf
-                  echo 'WITHOUT_SENDMAIL=YES'           >> /etc/src.conf
 
 #/etc/resolv.conf   
                  echo 'nameserver 8.8.8.8'  >     /etc/resolv.conf
