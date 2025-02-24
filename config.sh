@@ -73,6 +73,7 @@ fi
 #/etc/src.conf 
                      echo 'WITHOUT_LLVM_TARGET_ALL=YES'           >>            /etc/src.conf  
                      echo 'WITHOUT_TESTS=YES'                     >>            /etc/src.conf
+                     echo 'WITHOUT_TESTS_SUPPORT=YES'             >>            /etc/src.conf
                      echo 'WITHOUT_INET6=YES'                     >>            /etc/src.conf 
                      echo 'WITHOUT_INET6_SUPPORT=YES'             >>            /etc/src.conf
                      echo 'WITHOUT_MAN=YES'                       >>            /etc/src.conf
