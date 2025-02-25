@@ -113,9 +113,9 @@ fi
                      echo "security.bsd.unprivileged_chroot=1"    >> /etc/sysctl.conf
 
 #/usr/local/etc/sudoers
-                    echo -e "root ALL=(ALL:ALL) ALL"            >>    /usr/local/etc/sudoers
-                    echo -e "%wheel ALL=(ALL:ALL) ALL"            >>    /usr/local/etc/sudoers
-                    echo -e "%wheel ALL=(ALL:ALL) NOPASSWD: ALL"                  >>    /usr/local/etc/sudoers
+                    echo -e "root ALL=(ALL:ALL) ALL"              >>        /usr/local/etc/sudoers
+                    echo -e "%wheel ALL=(ALL:ALL) ALL"            >>        /usr/local/etc/sudoers
+                    echo -e "%wheel ALL=(ALL:ALL) NOPASSWD: ALL"  >>        /usr/local/etc/sudoers
 
 #root .cshrc
 
@@ -125,11 +125,13 @@ fi
                     echo 'link /tmp shm'                             >>             /etc/devfs.conf
                     echo 'perm    da0     0666'                      >>             /etc/devfs.conf
                     echo 'own     da0     root:operator'             >>             /etc/devfs.conf
+                    
 #/etc/devfs.rules
 
-                    echo '[localrules=10]'                            >>   /etc/devfs.rules
-                    echo 'add path 'usb/*' mode 0666 group operator'  >>   /etc/devfs.rules
-                    echo 'add path 'da*'   mode 0666 group operator'  >>   /etc/devfs.rules
+                    echo '[localrules=10]'                               >>   /etc/devfs.rules
+                    echo 'add path 'usb/*'    mode 0666 group operator'  >>   /etc/devfs.rules
+                    echo 'add path 'da*'      mode 0666 group operator'  >>   /etc/devfs.rules
+                    echo 'add path 'video*'   mode 0666 group operator'  >>   /etc/devfs.rules
 
 #/etc/sysctl.conf   
                    echo 'kern.coredump=0'                 >>           /etc/sysctl.conf 
