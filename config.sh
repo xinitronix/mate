@@ -84,6 +84,9 @@ fi
                      echo 'WITHOUT_SHAREDOCS=YES'                 >>            /etc/src.conf
                      echo 'WITHOUT_REPRODUCIBLE_BUILD=YES'        >>            /etc/src.conf
                      echo 'WITHOUT_SENDMAIL=YES'                  >>            /etc/src.conf
+                     echo 'WITHOUT_SOURCELESS=YES'                 >>            /etc/src.conf
+                     echo 'WITHOUT_SOURCELESS_HOST=YES'        >>            /etc/src.conf
+                     echo 'WITHOUT_SOURCELESS_UCODE=YES'                  >>            /etc/src.conf
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
                      echo 'MM_CHARSET=UTF-8; export MM_CHARSET'  >>             /etc/profile
