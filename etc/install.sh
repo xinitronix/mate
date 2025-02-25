@@ -40,7 +40,7 @@ login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
   #                  cp  $CURRENTDIRECTORY/freebsd.conf                      /usr/local/etc/pkg/repos
 # copy free
 
-                   cp  $CURRENTDIRECTORY/free  /usr/local/bin
+                   cp  $dir/free  /usr/local/bin
 
 #создание ссылки для mountiso.sh и umount.iso
 
