@@ -5,7 +5,7 @@ file="/etc/rc.conf"
 if [ -f "$file" ] ; then
     rm "$file"
 fi
-
+                     echo 'zfs_enable="yes"'                                          >>           /etc/rc.conf
                      echo 'dbus_enable="yes"'                                         >>           /etc/rc.conf
                      echo 'linux_enable="YES"'                                        >>           /etc/rc.conf
                      echo 'dahdi_enable="YES"'                                        >>           /etc/rc.conf
