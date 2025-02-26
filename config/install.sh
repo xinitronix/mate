@@ -6,9 +6,9 @@ if test "$(id -u)" -ne 0; then
 	exit 1
 fi
 
-sh rc.conf.sh
-sh make.conf.sh
-sh src.conf.sh
+sh $CURRENTDIRECTORY/rc.conf.sh
+sh $CURRENTDIRECTORY/make.conf.sh
+sh $CURRENTDIRECTORY/src.conf.sh
 
 #/boot/defaults/loader.conf 
    #                 echo  'nvidia_load="YES" '           >>                   /boot/defaults/loader.conf
