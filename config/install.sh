@@ -11,24 +11,9 @@ fi
 sh $dir/rc.conf.sh
 sh $dir/make.conf.sh
 sh $dir/src.conf.sh
-
-#/boot/defaults/loader.conf 
-   #                 echo  'nvidia_load="YES" '           >>                   /boot/defaults/loader.conf
-                     echo  'vboxdrv_load="YES"'           >>                   /boot/defaults/loader.conf
-                     echo  'coretemp_load="YES" '         >>                   /boot/defaults/loader.conf
-    #                echo  'nvidia-modeset_load="YES" '   >>                   /boot/defaults/loader.conf
-                     echo  'cpufreq_load="yes"'           >>                   /boot/defaults/loader.conf
-                     echo  'vfs.zfs.prefetch_disable="0"' >>                   /boot/defaults/loader.conf
-                     echo  'machdep.disable_mtrrs=1'      >>                   /boot/defaults/loader.conf
-                     echo  'kern.vty=vt'                  >>                   /boot/defaults/loader.conf
-                     echo  'hw.nvidiadrm.modeset=1'       >>                   /boot/defaults/loader.conf
-#/boot/loader.conf
-                    echo  'if_urtwn_load="YES"'           >>                   /boot/loader.conf
-                    echo  'legal.realtek.license_ack=1'   >>                   /boot/loader.conf
-#                   echo  'nvidia-modeset_load="YES"'     >>                   /boot/loader.conf
-                    echo  'fusefs_load="YES"'             >>                   /boot/loader.conf
-#                   echo  'vmm_load="YES"'                >>                   /boot/loader.conf
-                    echo  'hw.usb.no_boot_wait=1'                >>                   /boot/loader.conf
+sh $dir/sysctl.conf.sh
+sh $dir/devfs.rules.sh
+sh $dir/loader.conf.sh
 
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
@@ -51,20 +36,6 @@ sh $dir/src.conf.sh
                     echo 'link /tmp shm'                             >>             /etc/devfs.conf
                     echo 'perm    da0     0666'                      >>             /etc/devfs.conf
                     echo 'own     da0     root:operator'             >>             /etc/devfs.conf
-                    
-#/etc/devfs.rules
-
-                    echo '[localrules=10]'                               >>   /etc/devfs.rules
-                    echo 'add path 'usb/*'    mode 0666 group operator'  >>   /etc/devfs.rules
-                    echo 'add path 'da*'      mode 0666 group operator'  >>   /etc/devfs.rules
-                    echo 'add path 'video*'   mode 0666 group operator'  >>   /etc/devfs.rules
-
-#/etc/sysctl.conf   
-                   echo 'kern.coredump=0'                 >>           /etc/sysctl.conf 
-                   echo 'kern.ipc.shm_allow_removed=1'    >>           /etc/sysctl.conf
-                   echo "vfs.usermount=1"                                       >> /etc/sysctl.conf
-                   echo "security.bsd.unprivileged_chroot=1"                    >> /etc/sysctl.conf 
-
 #/boot/device.hints  
                    echo 'hint.pcm.3.vol="100"'         >>           /boot/device.hints
 
