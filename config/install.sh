@@ -14,6 +14,7 @@ sh $dir/src.conf.sh
 sh $dir/sysctl.conf.sh
 sh $dir/devfs.rules.sh
 sh $dir/loader.conf.sh
+sh $dir/sudoers.sh
 
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
@@ -22,15 +23,8 @@ sh $dir/loader.conf.sh
 #/etc/csh.login
                      echo 'setenv LANG ru_RU.UTF-8' >>                           /etc/csh.login
                      echo 'setenv MM_CHARSET UTF-8' >>                           /etc/csh.login
-
-#/usr/local/etc/sudoers
-                    echo -e "root ALL=(ALL:ALL) ALL"              >>        /usr/local/etc/sudoers
-                    echo -e "%wheel ALL=(ALL:ALL) ALL"            >>        /usr/local/etc/sudoers
-                    echo -e "%wheel ALL=(ALL:ALL) NOPASSWD: ALL"  >>        /usr/local/etc/sudoers
-
 #root .cshrc
-
-                    echo  'set prompt="%{^[[40;31;1m%} %{^[[40;31;1m%} %N@%m:%~ %# "' >> /root/.cshrc
+                     echo  'set prompt="%{^[[40;31;1m%} %{^[[40;31;1m%} %N@%m:%~ %# "' >> /root/.cshrc
 
 #/etc/devfs.conf
                     echo 'link /tmp shm'                             >>             /etc/devfs.conf
