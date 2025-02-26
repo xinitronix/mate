@@ -8,8 +8,11 @@ echo "$(date +'%FT%H:%M:%S%z')" >> $dir/$LOG_FILE
 mkdir -p /usr/local/bin
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 pkg fetch -y -r myrepo -o . indexinfo
+pkg fetch -y -r myrepo -o . desktop-file-utils
+tar xf ./desktop-file-utils-0.28.pkg  -s ",/.*/,,g" "*/update-desktop-database"
 tar xf ./indexinfo-0.3.1.pkg -s ",/.*/,,g" "*/indexinfo"
 cp  indexinfo /usr/local/bin
+cp  update-desktop-database  /usr/local/bin
 
 if [ -z "$1" ]
 then
