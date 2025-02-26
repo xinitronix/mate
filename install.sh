@@ -21,7 +21,7 @@ CURRENTDIRECTORY=$(pwd)
            tar -xf $dir/userfolder/userfolder.tar.xz -C  /tmp
            $dir/scripts/install.sh >> $dir/$LOG_FILE
            $dir/accounts/create_user.sh >> $dir/$LOG_FILE
-           $dir/config.sh >> $dir/$LOG_FILE
+           $dir/config/install.sh >> $dir/$LOG_FILE
 
  for i in $(cat $dir/install_item); do
           cd $dir/$i
