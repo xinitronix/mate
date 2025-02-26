@@ -15,6 +15,7 @@ sh $dir/sysctl.conf.sh
 sh $dir/devfs.rules.sh
 sh $dir/loader.conf.sh
 sh $dir/sudoers.sh
+sh $dir/fstab.sh
 
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
