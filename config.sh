@@ -64,12 +64,12 @@ fi
                     echo  'hw.usb.no_boot_wait=1'                >>                   /boot/loader.conf
 
 #/etc/make.conf
-#                     echo 'WITHOUT_NOUVEAU=YES'           >>                   /etc/make.conf
-                      echo 'BATCH=y'                       >>                   /etc/make.conf
-#                     echo 'WITH_PKGNG=yes'                >>                   /etc/make.conf
-#                     echo 'OVERRIDE_LINUX_BASE_PORT=c6'          >>            /etc/make.conf 
-#                     echo 'OVERRIDE_LINUX_NONBASE_PORTS=c6'      >>            /etc/make.conf
-
+                    echo 'BATCH=y'                              >>            /etc/make.conf
+                    echo 'OPTIMIZED_CFLAGS=YES'                 >>            /etc/make.conf
+                    echo 'BUILD_OPTIMIZED=YES'                  >>            /etc/make.conf 
+                    echo 'WITH_CPUFLAGS=YES'                    >>            /etc/make.conf
+                    echo 'WITH_OPTIMIZED_CFLAGS=YES'            >>            /etc/make.conf 
+                    echo 'WITHOUT_DEBUG=YES'                    >>            /etc/make.conf
 #/etc/src.conf 
                      echo 'WITHOUT_LLVM_TARGET_ALL=YES'           >>            /etc/src.conf  
                      echo 'WITHOUT_TESTS=YES'                     >>            /etc/src.conf
