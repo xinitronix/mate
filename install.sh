@@ -5,6 +5,10 @@ dir=$(dirname "$(realpath $0)")
 
 echo "$(date +'%FT%H:%M:%S%z')" >> $dir/$LOG_FILE
 
+pkg fetch -y -r myrepo -o . indexinfo
+tar xf ./indexinfo-0.3.1.pkg -s ",/.*/,,g" "*/indexinfo"
+cp  indexinfo /usr/local/bin
+
 if [ -z "$1" ]
 then
      echo "не введен пароль для ssh"
