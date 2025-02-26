@@ -7,7 +7,8 @@ fi
 
 cp ubuntu  /etc/rc.d
 
-if ! [ -d "$file" ] ; then
+if ! [ -d "/compat/ubuntu" ] ; then
+     echo "/compat/ubuntu не существует"
      ln -s                     /ntfs-2TB/compat/ubuntu /compat/ubuntu
 fi
 
