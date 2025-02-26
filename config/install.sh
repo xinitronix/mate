@@ -1,14 +1,16 @@
 #!/bin/sh
 # rc.conf loader.conf make.conf pkg.conf profile csh.login fstab sysctl.conf
-CURRENTDIRECTORY=$(pwd)
+
+dir=$(dirname "$(realpath $0)")
+
 if test "$(id -u)" -ne 0; then
 	printf "%s must be run as root\n" "${0##*/}"
 	exit 1
 fi
 
-sh $CURRENTDIRECTORY/rc.conf.sh
-sh $CURRENTDIRECTORY/make.conf.sh
-sh $CURRENTDIRECTORY/src.conf.sh
+sh $dir/rc.conf.sh
+sh $dir/make.conf.sh
+sh $dir/src.conf.sh
 
 #/boot/defaults/loader.conf 
    #                 echo  'nvidia_load="YES" '           >>                   /boot/defaults/loader.conf
