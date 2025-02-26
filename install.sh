@@ -5,6 +5,8 @@ dir=$(dirname "$(realpath $0)")
 
 echo "$(date +'%FT%H:%M:%S%z')" >> $dir/$LOG_FILE
 
+mkdir -p /usr/local/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 pkg fetch -y -r myrepo -o . indexinfo
 tar xf ./indexinfo-0.3.1.pkg -s ",/.*/,,g" "*/indexinfo"
 cp  indexinfo /usr/local/bin
