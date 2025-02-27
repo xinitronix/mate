@@ -42,8 +42,11 @@ install_tint2 ()  {
             echo   'm:0x40 + c:28'                        >> /home/$login/.xbindkeysrc
             echo   'Mod4 + t'                             >> /home/$login/.xbindkeysrc
 
-mkdir -p  /home/$login/.config/tint2
-rm /home/$login/.config/tint2/tint2rc
+if  [ -f "/home/$login/.config/tint2/tint2rc" ] ; then
+    echo "tint2rc существует,удаляем его"
+    rm /home/$login/.config/tint2/tint2rc
+fi
+
 chown  -R     $login:wheel  /home/$login/.config/
 chown  -R     $login:wheel  /home/$login/.config/tint2
 cd /home/$login/.config/tint2
