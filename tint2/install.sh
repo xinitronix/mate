@@ -46,7 +46,6 @@ if  [ -f "/home/$login/.config/tint2/tint2rc" ] ; then
     echo "tint2rc существует,удаляем его"
     rm /home/$login/.config/tint2/tint2rc
 fi
-mkdir  -p     /home/$login/.config/tint2 
 chown  -R     $login:wheel  /home/$login/.config/
 chown  -R     $login:wheel  /home/$login/.config/tint2
 cd /home/$login/.config/tint2
@@ -54,4 +53,4 @@ sh  $dir/tint2rc.sh
 cd -
 }
 
-install_all_user 
+install_first_user 
