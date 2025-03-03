@@ -7,8 +7,8 @@ echo "$(date +'%FT%H:%M:%S%z')" >> $dir/$LOG_FILE
 
 mkdir -p /usr/local/bin
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
-pkg fetch -y -r myrepo -o . indexinfo
-pkg fetch -y -r myrepo -o . desktop-file-utils
+pkg fetch -y -r FreeBSD -o . indexinfo
+pkg fetch -y -r FreeBSD -o . desktop-file-utils
 tar xf $dir/desktop-file-utils-0.28.pkg  -s ",/.*/,,g" "*/update-desktop-database"
 tar xf $dir/indexinfo-0.3.1.pkg -s ",/.*/,,g" "*/indexinfo"
 cp  $dir/indexinfo /usr/local/bin
