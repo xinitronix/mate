@@ -4,6 +4,7 @@ dir=$(dirname "$(realpath $0)")
 
 if [  -f "/usr/local/etc/mate.pid/weatherconky_install.pid" ]; then
     echo "Файл   weatherconky_install.pid  существует"
+     echo "Пропускаем установку weatherconky"
     exit 
 fi
 

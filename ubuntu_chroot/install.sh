@@ -2,6 +2,7 @@
 
 if [  -f "/usr/local/etc/mate.pid/ubuntu_chroot_install.pid" ]; then
     echo "Файл ubuntu_chroot_install.pid    существует"
+    echo "Пропускаем установку ubuntu_chroot"
     exit 
 fi
 
