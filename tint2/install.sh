@@ -54,4 +54,4 @@ cd -
 
 }
 
-install_first_user 
+install_all_user 
