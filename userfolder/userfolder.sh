@@ -21,7 +21,8 @@ dir="
 /home/$login/.themes
 /home/$login/.icons
 "
-              for i in ${dir};do  
+              for i in ${dir};do
+                    echo "create    ${dir} folder" 
                     mkdir -p   ${dir}
                     chown -R   $login:wheel  ${dir}
               done 
