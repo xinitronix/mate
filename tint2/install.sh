@@ -50,7 +50,6 @@ chown  -R     $login:wheel  /home/$login/.config/
 chown  -R     $login:wheel  /home/$login/.config/tint2
 cd /home/$login/.config/tint2
 sh  $dir/tint2rc.sh
-sh  $CURRENTDIRECTORY/tint2rc.sh
 cd -
 
 }

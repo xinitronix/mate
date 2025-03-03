@@ -1,6 +1,5 @@
 dzenconky
 etc
-tint2
 switchscreen
 noteconky
 micro_httpd
@@ -14,6 +13,7 @@ power
 zapret
 dockerbox
 userfolder
+tint2
 obmenu-generator
 scrollconky
 doas
