@@ -10,3 +10,5 @@ fi
                     echo 'add path 'usb/*'    mode 0666 group operator'  >>   /etc/devfs.rules
                     echo 'add path 'da*'      mode 0666 group operator'  >>   /etc/devfs.rules
                     echo 'add path 'video*'   mode 0666 group operator'  >>   /etc/devfs.rules
+                    echo 'add path 'input'   mode 0775 group wheel'      >>   /etc/devfs.rules
+                    echo 'add path 'input/*' mode 0660 group wheel'      >>   /etc/devfs.rules

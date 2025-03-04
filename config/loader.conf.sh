@@ -132,3 +132,4 @@ echo '# This is loader.conf - a file full of useful variables that you can' >> /
                      echo  'fusefs_load="YES"'             >>                   /boot/defaults/loader.conf
 #                    echo  'vmm_load="YES"'                >>                   /boot/defaults/loader.conf
                      echo  'hw.usb.no_boot_wait=1'         >>                   /boot/defaults/loader.conf
+                     echo  'hw.usb.usbhid.enable="1"'      >>                   /boot/defaults/loader.conf
