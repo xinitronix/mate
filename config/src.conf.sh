@@ -24,3 +24,7 @@ fi
                      echo 'WITHOUT_SOURCELESS_UCODE=YES'          >>            /etc/src.conf
                      echo 'WITHOUT_TALK=YES'                      >>            /etc/src.conf
                      echo 'WITHOUT_TELNET=YES'                    >>            /etc/src.conf
+                     echo 'WITHOUT_WIRELESS=YES'           >>            /etc/src.conf
+                     echo 'WITHOUT_WIRELESS_SUPPORT=YES'          >>            /etc/src.conf
+                     echo 'WITHOUT_TFTP=YES'                      >>            /etc/src.conf
+                     echo 'WITHOUT_BLUETOOTH=YES'                    >>            /etc/src.conf
