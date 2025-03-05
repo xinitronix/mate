@@ -31,6 +31,6 @@ fi
                      echo 'seatd_enable="YES"'                                        >>           /etc/rc.conf  
                      echo 'ifconfig_re0="inet 192.168.8.101 netmask 255.255.255.0"'   >>           /etc/rc.conf
                      echo 'defaultrouter="192.168.8.1"'                               >>           /etc/rc.conf
-#                    echo 'xboxdrv_enable="YES"'                                      >>           /etc/rc.conf 
+                     echo 'xboxdrv_enable="YES"'                                      >>           /etc/rc.conf 
                      echo 'inetd_enable=YES'                                          >>           /etc/rc.conf
-                     echo 'webcamd_enable=YES'                                        >>           /etc/rc.conf
+#                    echo 'webcamd_enable=YES'                                        >>           /etc/rc.conf

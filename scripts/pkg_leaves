@@ -44,13 +44,13 @@ xf86-input-keyboard
 xf86-input-mouse
 xfce4-terminal
 xbindkeys
+xboxdrv
 upower
 xdg-utils
 xorg-minimal
 jq
 xsetroot
 zapret
-webcamd 
 p5-App-cpanminus
 p5-Gtk2
 p5-GDBM
