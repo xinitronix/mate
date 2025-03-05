@@ -52,7 +52,5 @@ fi
  echo 'alias cdd cd ~/downloads' >> .cshrc
  echo 'alias cds cd ~/scripts' >> .cshrc
  echo 'setenv TERM xterm-256color' >> .cshrc
- echo 'setenv SDL_JOYSTICK_DEVICE /dev/input/event10' >> .cshrc
  echo 'setenv DOCKER_HOST tcp://192.168.8.106:2375' >> .cshrc
  echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1 #fix run explorer ie xfce-wintc' >> .cshrc
- echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1' >> .cshrc
