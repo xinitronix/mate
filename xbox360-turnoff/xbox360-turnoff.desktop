@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=xbox360 turn off
+Exec=/usr/local/bin/xbox360-turnoff
+StartupNotify=true
+Terminal=false
+Icon=/usr/local/share/pixmaps/Xbox360.png
+Type=Application
+Categories=Game
+Actions=new-window;new-private-window;
