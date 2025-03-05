@@ -137,10 +137,7 @@ cp -R "/ntfs-2TB/freebsd config/TelegramDesktop"  /home/$login/.local/share
 cp -R "/ntfs-2TB/freebsd config/google-chrome"    /home/$login/.config
 
 chown -R $login:wheel /ntfs-2TB/mate
-#fix run "explorer ie" from  xfce-wintc
-echo 'setenv WEBKIT_DISABLE_DMABUF_RENDERER 1' >> /home/$login/.cshrc
 chown  -R $login:wheel /home/$login
 rm -r /tmp/userfolder
-
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/userfolder_install.pid
