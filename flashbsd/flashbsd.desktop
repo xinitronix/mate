@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Icon=/usr/local/share/pixmaps/burn.png
+Name=flashbsd
+Name[ru]=flashbsd
+Categories=System;Utility;Core;GTK;
+Exec=doas flashbsd.sh
+StartupNotify=true
+Terminal=false
+
