@@ -5,4 +5,4 @@ echo stop
 sleep 0.5
 killall -INT $(echo -n 'ps aux | grep xbox360-controllers | grep -v xbox360-turnoff_init ')
 killall -9 xbox360-controllers
-doas service xboxdrv restart
+#doas service xboxdrv restart
