@@ -101,11 +101,12 @@ cp    -R  /tmp/userfolder/.local/share/applications    /home/$login/.local/share
 
 chown  -R      $login:wheel   /mnt
 
-cp       /tmp/userfolder/scripts/reloadlist    /usr/local/bin
-cp       /tmp/userfolder/scripts/echoplaylist  /usr/local/bin
-cp       /tmp/userfolder/scripts/youtube.sh    /usr/local/bin/youtube
-cp       /tmp/userfolder/scripts/kodidlp       /usr/local/bin
-cp       /tmp/userfolder/scripts/socat-dsd.sh  /usr/local/bin 
+cp       /tmp/userfolder/scripts/reloadlist             /usr/local/bin
+cp       /tmp/userfolder/scripts/echoplaylist           /usr/local/bin
+cp       /tmp/userfolder/scripts/echoplaylist_firefox   /usr/local/bin
+cp       /tmp/userfolder/scripts/youtube.sh             /usr/local/bin/youtube
+cp       /tmp/userfolder/scripts/kodidlp                /usr/local/bin
+cp       /tmp/userfolder/scripts/socat-dsd.sh           /usr/local/bin 
 
 zpool import -f zada2
 zpool import -f ntfs-2TB
