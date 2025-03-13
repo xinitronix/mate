@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=echoplaylist_firefox
+Exec=echoplaylist_firefox  %u
+Icon=
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/echo;x-scheme-handler/tonsite;
