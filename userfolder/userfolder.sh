@@ -98,7 +98,7 @@ cp  -R  /tmp/userfolder/scripts                   /home/$login/
 #update-desktop-database
 cp    -R  /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
 #Proton Experimental 
-cp    ../etc/proton.desktop              /home/$login/.local/share/applications 
+cp    ../etc/proton.desktop                            /home/$login/.local/share/applications 
 /usr/local/bin/update-desktop-database                 /home/$login/.local/share/applications
  
 su $login -c 'xdg-mime default echoplaylist.firefox.desktop x-scheme-handler/echo'
