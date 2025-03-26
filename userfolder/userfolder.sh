@@ -86,7 +86,12 @@ cd -
                        cp    ../etc/icons/docker.png                      /home/$login/.config/icons
                        cp    ../etc/icons/shutdown.png                    /home/$login/.config/icons
                        cp    ../etc/icons/ubuntu.png                      /home/$login/.config/icons
- 
+
+#Proton Experimental 
+
+                      cp    ../etc/proton.desktop                         /home/$login/.local/share/applications              
+
+
 #create share folder for virtualbox
 #                       mkdir  /home/$login/share
 #                       chown  -R      $login:wheel                      /home/$login/share
