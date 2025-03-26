@@ -87,11 +87,6 @@ cd -
                        cp    ../etc/icons/shutdown.png                    /home/$login/.config/icons
                        cp    ../etc/icons/ubuntu.png                      /home/$login/.config/icons
 
-#Proton Experimental 
-
-                      cp    ../etc/proton.desktop                         /home/$login/.local/share/applications              
-
-
 #create share folder for virtualbox
 #                       mkdir  /home/$login/share
 #                       chown  -R      $login:wheel                      /home/$login/share
@@ -103,6 +98,8 @@ cp  -R  /tmp/userfolder/scripts                   /home/$login/
 #update-desktop-database
 cp    -R  /tmp/userfolder/.local/share/applications    /home/$login/.local/share/
 /usr/local/bin/update-desktop-database                 /home/$login/.local/share/applications
+#Proton Experimental 
+              cp    ../etc/proton.desktop              /home/$login/.local/share/applications  
 su $login -c 'xdg-mime default echoplaylist.firefox.desktop x-scheme-handler/echo'
 
 chown  -R      $login:wheel   /mnt
