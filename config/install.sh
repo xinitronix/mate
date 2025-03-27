@@ -41,9 +41,10 @@ sh $dir/fstab.sh
                  echo 'nameserver 8.8.8.8'  >     /etc/resolv.conf
 
 #wine-proton
-                   ln -s /usr/local/wine-proton/bin/wine     /usr/local/bin/proton
-                   ln -s /usr/local/wine-proton/bin/winecfg  /usr/local/bin/protoncfg
-                   ln -s /usr/local/wine-proton-e/bin/wine   /usr/local/bin/proton-e
+                   ln -s /usr/local/wine-proton/bin/wine          /usr/local/bin/proton
+                   ln -s /usr/local/wine-proton/bin/winecfg       /usr/local/bin/protoncfg
+                   ln -s /usr/local/wine-proton-e/bin/wine        /usr/local/bin/proton-e
+		   ln -s /usr/local/wine-proton-5.13.6/bin/wine   /usr/local/bin/proton5
 
 #link ssl certificate verify 
                    ln -sf /usr/local/share/certs/ca-root-nss.crt /etc/ssl/cert.pem
