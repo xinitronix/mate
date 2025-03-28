@@ -90,7 +90,12 @@ cd -
 #create share folder for virtualbox
 #                       mkdir  /home/$login/share
 #                       chown  -R      $login:wheel                      /home/$login/share
-                   
+
+#qbittorent
+
+mkdir -p  /home/$login/.config/qBittorrent
+cp     /tmp/userfolder/.config/qBittorrent/qBittorrent.conf  /home/$login/.config/qBittorrent
+                  
 #scripts folder                  
 cp  -R  /tmp/userfolder/.scripts                  /home/$login/
 cp  -R  /tmp/userfolder/scripts                   /home/$login/
