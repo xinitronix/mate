@@ -9,9 +9,9 @@ fi
 dir=$(dirname "$(realpath $0)")
 login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
-#copy   xorg.conf
-# проверяем какая карта ati или nvidia  
-#и копируем нужный xorg.conf
+#copy pkg32.sh
+
+               cp $dir/pkg32.sh                         /usr/local/bin
 
 #tarxf             
                cp $dir/tarxf                           /usr/local/bin
