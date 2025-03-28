@@ -141,7 +141,11 @@ cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
 cp ../etc/icons/system-file-manager.svg /usr/local/share/icons/hicolor/scalable/apps
 
 ln -s /ntfs-2TB/i386-wine-pkg  /home/$login/.i386-wine-pkg
- 
+
+#steam-bottler
+
+ln -s /ntfs-2TB/steam-bottler   /home/$login/steam-bottler
+
 cp -R "/ntfs-2TB/freebsd config/firefox"          /home/$login/.mozilla
 cp -R "/ntfs-2TB/freebsd config/TelegramDesktop"  /home/$login/.local/share
 cp -R "/ntfs-2TB/freebsd config/google-chrome"    /home/$login/.config
