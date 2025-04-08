@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [  -f "/usr/local/etc/mate.pid/idesk_install.pid" ]; then
+    echo "Файл   idesk_install.pid существует"
+    echo "Пропускаем установку idesk"
+    exit 
+fi
+
 dir=$(dirname "$(realpath $0)")
 
 install_first_user () {
@@ -35,3 +41,6 @@ chown -R $login:wheel   /home/$login/.ideskrc
 }
 
 install_first_user
+
+mkdir -p /usr/local/etc/mate.pid
+touch /usr/local/etc/mate.pid/idesk_install.pid
