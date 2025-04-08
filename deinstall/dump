@@ -10,6 +10,7 @@
 /etc/wpa_supplicant.conf
 /etc/X11
 /etc/X11/xorg.conf
+/usr/local/etc/freshclam.conf
 /usr/local/share/pixmaps/system-file-manager-root.svg
 /usr/local/share/applications/rootpcmanfm.desktop
 /usr/local/share/applications/opera-proxy.desktop
