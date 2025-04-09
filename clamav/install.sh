@@ -36,7 +36,8 @@ fi
 install_clamav () {
 dir=$(dirname "$(realpath $0)")
 cp  $dir/freshclam.conf  /usr/local/etc
-cp -R $dir/clamav-gui    /home/$login/.config
+cp -R $dir/clamav-gui    /home/$login/.clamav-gui
+chown  -R      $login:whee  /home/$login/.clamav-gui
 }
 
 install_all_user
