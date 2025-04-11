@@ -2,6 +2,7 @@
 Name=echoplaylist_firefox
 Exec=echoplaylist_firefox  %u
 Icon=
+NoDisplay=true
 Terminal=false
 Type=Application
 MimeType=x-scheme-handler/echo;x-scheme-handler/tonsite;
