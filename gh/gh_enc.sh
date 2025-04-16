@@ -14,7 +14,7 @@ o9uiM2ZPF06GCSjLJCf5HBmhI4H0Sr2SCMzhU/704KMrNZR9iSFHYdYD3pPHXEHE
 phtMrSkK6kVZPozWIIKFiMCyhgz59Z0qhgI7KbEr2CSM/y5+zLuoUtRd7NmP5FtL
 Ydn7o982QtMxVYl1HBixhW15uEEB+uss5Uep0heNdDsHPRlPTY0s6zfAn2WBMOov
 OzgfIZxQlU7avkLfsl8/afAsHvuVCzA1RsO3Mu/4NlJs1qtlBaV6BOonil9ZQS9o
-nUlZR301VVTofpi3w99u7w==" | openssl enc -base64 -d -aes-256-cbc -iter 8 -pass pass:$ssh_passwd > /tmp/gh.sh
+nUlZR301VVTofpi3w99u7w==" | openssl enc -base64 -d -aes-256-cbc -iter 1000000 -pass pass:$ssh_passwd > /tmp/gh.sh
 
 chmod +x /tmp/gh.sh
 cd  /home/$login/.config/gh
