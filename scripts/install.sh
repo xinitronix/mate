@@ -26,7 +26,7 @@ pkg install  -r myrepo  -y  $i
 done
 }
 
-if [ "14.2-STABLE" = "$(uname -r)"  ] || [ "14.3-PRERELEASE" = "$(uname -r)"  ] ; then
+if [ "14.3-STABLE" = "$(uname -r)"  ] || [ "14.3-PRERELEASE" = "$(uname -r)"  ] ; then
     install_14
     echo "install packages freebsd 14"
 else
