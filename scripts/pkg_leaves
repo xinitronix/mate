@@ -9,6 +9,7 @@ doas
 dzen2
 fbpanel
 feh
+gh
 firefox
 leafpad
 linux_base-rl9
@@ -31,6 +32,7 @@ swaybg
 setxkbmap
 sshpass
 streamlink2
+smartmontools
 seatd
 sfwbar
 labwc
