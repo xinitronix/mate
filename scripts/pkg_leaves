@@ -51,6 +51,8 @@ upower
 xdg-utils
 xorg-minimal
 jq
+weston
+waypipe
 xsetroot
 zapret
 p5-App-cpanminus
