@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Waydroid
+Exec=weston
+Icon=waydroid1
+Type=Application
+Terminal=false
+Categories=System;
+
