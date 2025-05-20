@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Windows 10 RDP 
+Exec=/usr/local/bin/win10-rdp
+StartupNotify=true
+Terminal=false
+Icon=remote-desktop-48
+Type=Application
+Categories=RemoteAccess;

@@ -1,0 +1,2 @@
+#!/bin/sh
+xfreerdp /u:vcore  /p:639639 /w:1918 /h:1045  /v:192.168.8.108  /drive:home,/home/definitly  /sound

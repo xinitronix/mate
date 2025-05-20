@@ -9,6 +9,7 @@ doas
 dzen2
 fbpanel
 feh
+freerdp
 gh
 firefox
 leafpad
@@ -55,6 +56,7 @@ weston
 waypipe
 xsetroot
 zapret
+zenity
 p5-App-cpanminus
 p5-Gtk2
 p5-GDBM

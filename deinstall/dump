@@ -30,6 +30,11 @@
 /usr/local/etc/mate.pid/config.sh.pid
 /usr/local/etc/mate.pid/
 /usr/local/bin/myrepo
+/usr/local/bin/win7-rdp
+/usr/local/bin/win10-rdp
+/usr/local/share/applications/win7-rdp.desktop
+/usr/local/share/applications/win10-rdp.desktop
+/usr/local/share/pixmaps/remote-desktop-48.png
 /usr/local/bin/protoncfg
 /usr/local/bin/ubuntu_chroot_change
 /usr/local/bin/binance-on-off
