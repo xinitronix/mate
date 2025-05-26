@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=openSUSE 15 KDE 3 RDP 
+Exec=/usr/local/bin/opensuse15-kde3-rdp
+StartupNotify=true
+Terminal=false
+Icon=opensuse
+Type=Application
+Categories=RemoteAccess;

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+
+port="$(nc -z -v -w 1 192.168.8.130  3389  2>&1)"
+port2="$(echo $port | grep succeeded)"
+
+echo $port2
+
+if [ -z "$port2" ]
+then
+     echo "\$var Пустая"
+     zenity --info --text="виртуальная машина не запущена" --width=500
+else
+     echo "\$var не пустая"
+     echo Y | xfreerdp /u:vcore  /p:639639 /w:1918 /h:1045  /v:192.168.8.130   /drive:home,/home/definitly  /sound
+fi
+
+
