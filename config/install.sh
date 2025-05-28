@@ -20,6 +20,11 @@ sh $dir/fstab.sh
 #/etc/profile
                      echo 'LANG=ru_RU.UTF-8; export LANG'        >>             /etc/profile
                      echo 'MM_CHARSET=UTF-8; export MM_CHARSET'  >>             /etc/profile
+
+#/usr/local/etc/X11/Xwrapper.config
+                     echo 'allowed_users=anybody'              >>               /usr/local/etc/X11/Xwrapper.config
+                     echo 'needs_root_rights = yes'            >>               /usr/local/etc/X11/Xwrapper.config
+
  
 #/etc/csh.login
                      echo 'setenv LANG ru_RU.UTF-8' >>                           /etc/csh.login
