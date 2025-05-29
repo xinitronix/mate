@@ -133,3 +133,6 @@ echo '# This is loader.conf - a file full of useful variables that you can' >> /
 #                    echo  'vmm_load="YES"'                >>                   /boot/defaults/loader.conf
                      echo  'hw.usb.no_boot_wait=1'         >>                   /boot/defaults/loader.conf
                      echo  'hw.usb.usbhid.enable="0"'      >>                   /boot/defaults/loader.conf
+ echo 'vmm_load="YES"' >>  /boot/loader.conf
+ echo 'hw.vmm.enable_vtd=1' >> /boot/loader.conf
+ echo '#pptdevs="1/0/0 0/20/0"' >>  /boot/loader.conf
