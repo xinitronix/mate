@@ -34,3 +34,4 @@ fi
 #                    echo 'xboxdrv_enable="YES"'                                      >>           /etc/rc.conf 
                      echo 'inetd_enable=YES'                                          >>           /etc/rc.conf
                      echo 'webcamd_enable=YES'                                        >>           /etc/rc.conf
+                     echo 'sshd_enable="YES"'                                         >>           /etc/rc.conf
