@@ -35,3 +35,5 @@ fi
                      echo 'inetd_enable=YES'                                          >>           /etc/rc.conf
                      echo 'webcamd_enable=YES'                                        >>           /etc/rc.conf
                      echo 'sshd_enable="YES"'                                         >>           /etc/rc.conf
+                     echo 'virtio_9pnet_load="YES"'                                   >>           /etc/rc.conf
+                     echo 'virtio_9pfs_load="YES"'                                    >>           /etc/rc.conf
