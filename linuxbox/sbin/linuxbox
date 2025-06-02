@@ -34,7 +34,7 @@ CONF_DIR=/usr/local/etc/linuxbox
 : "${FETCH:=/usr/bin/fetch}"
 : "${INSTALL:=/usr/bin/install}"
 
-: "${TAP_ID:=/var/run/dockerbox_tap_id}"
+: "${TAP_ID:=/var/run/linuxbox_tap_id}"
 : "${CAT:=/bin/cat}"
 
 
