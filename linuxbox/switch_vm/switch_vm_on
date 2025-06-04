@@ -4,5 +4,15 @@ if test "$(id -u)" -ne 0; then
 	exit 1
 fi
 
+if [ -z "$1" ]
+then
+     echo "не введен дистр "
+     
+else
+     rm /bhyve/linux/linux.img
+     ln -s  /ntfs-2TB/vm/$1/$1.img /bhyve/linux/linux.img
+
+fi
+
 service linuxbox enable
 gsed -i 's/#pptdevs=/pptdevs=/' /boot/loader.conf

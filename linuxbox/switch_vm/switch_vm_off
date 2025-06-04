@@ -11,7 +11,6 @@ var="$(grep -r "#pptdevs" /boot/loader.conf)"
 
 if [ -z "$var" ]
 then
-     
      gsed -i 's/pptdevs=/#pptdevs=/' /boot/loader.conf
 else
     
