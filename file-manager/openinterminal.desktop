@@ -1,0 +1,18 @@
+[Desktop Entry]
+
+Type=Action
+
+Name=Open in terminal
+
+Icon=xterm-color_48x48
+
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+
+SelectionCount==1
+
+MimeTypes=inode/directory;
+
+Exec=screen_pcmanfm.sh
+
