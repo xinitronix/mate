@@ -14,7 +14,7 @@ doas pkg install  -r myrepo  -y  $pkg
 
 }
 
-if [ "14.3-STABLE" = "$(uname -r)"  ] || [ "14.3-RC1" = "$(uname -r)"  ] ; then
+if [ "14.3-STABLE" = "$(uname -r)"  ] || [ "14.3-RELEASE" = "$(uname -r)"  ] ; then
     
     echo "install packages freebsd 14"
     install_14
