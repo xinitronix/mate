@@ -63,6 +63,7 @@ fi
 
 cd  /home/$login/
 sh  $CURRENTDIRECTORY/cshrc.sh
+sh  $CURRENTDIRECTORY/zshrc.sh
 sh  $CURRENTDIRECTORY/Xdefaults.sh
 sh  $CURRENTDIRECTORY/xinitrc.sh
 sh  $CURRENTDIRECTORY/xxkbrc.sh
