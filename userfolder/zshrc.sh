@@ -13,3 +13,9 @@
  echo 'if [[ -e /usr/local/share/zsh/manjaro-zsh-prompt ]]; then' >> .zshrc
  echo 'source /usr/local/share/zsh/manjaro-zsh-prompt' >> .zshrc
  echo 'fi' >> .zshrc
+ echo 'variable=$(cat   /etc/rc.conf | grep    winbox_enable=\"YES\")' >> .zshrc
+ echo 'if [[ -z "$variable" ]]; then' >> .zshrc
+ echo 'else' >> .zshrc
+ echo 'echo "Переменная '$variable' не пуста"' >> .zshrc
+ echo 'vnc' >> .zshrc
+ echo 'fi' >> .zshrc

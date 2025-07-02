@@ -1,6 +1,7 @@
 #!/bin/sh
 cp rc.d/winbox      /etc/rc.d
 cp sbin/winbox      /usr/local/sbin
+cp vnc       /usr/local/bin
 mkdir -p               /usr/local/etc/winbox
 cp etc/winbox.conf  /usr/local/etc/winbox
 cp etc/loader.conf.winbox  /usr/local/etc/winbox
