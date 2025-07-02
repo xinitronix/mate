@@ -7,11 +7,11 @@
 
 . /etc/rc.subr
 
-: ${linuxbox_enable="NO"}
+: ${winbox_enable="NO"}
 
 name=winbox
-desc="Manage linuxbox on boot, shutdown, suspend, and resume"
-rcvar=linuxbox_enable
+desc="Manage winbox on boot, shutdown, suspend, and resume"
+rcvar=winbox_enable
 extra_commands="suspend resume fetch"
 
 load_rc_config ${name}
