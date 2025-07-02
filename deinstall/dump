@@ -10,6 +10,15 @@
 /etc/wpa_supplicant.conf
 /etc/X11
 /etc/X11/xorg.conf
+/etc/rc.d/winbox
+/usr/local/sbin/winbox
+/usr/local/etc/winbox/winbox.conf
+/usr/local/etc/winbox/loader.conf.winbox
+/usr/local/etc/winbox/loader.conf.linuxbox
+/usr/local/bin/switch_winvm_off
+/usr/local/bin/switch_winvm_on
+/usr/local/bin/vnc
+/usr/local/etc/winbox
 /etc/rc.d/linuxbox
 /usr/local/sbin/linuxbox
 /usr/local/etc/linuxbox
