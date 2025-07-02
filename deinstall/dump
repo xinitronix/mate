@@ -9,6 +9,7 @@
 /etc/ssl/cert.pem
 /etc/wpa_supplicant.conf
 /etc/X11
+/etc/zapret.config
 /etc/X11/xorg.conf
 /etc/rc.d/winbox
 /usr/local/sbin/winbox
