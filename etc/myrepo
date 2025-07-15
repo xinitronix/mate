@@ -14,6 +14,17 @@ doas pkg install  -r myrepo  -y  $pkg
 
 }
 
+stop_ipfw (){
+doas service ipfw stop
+doas killall -9 dvtws
+}
+
+start_ipfw (){
+doas service ipfw start
+}
+
+stop_ipfw
+
 if [ "14.3-STABLE" = "$(uname -r)"  ] || [ "14.3-RELEASE" = "$(uname -r)"  ] ; then
     
     echo "install packages freebsd 14"
@@ -23,3 +34,4 @@ else
     install_15
 fi
 
+start_ipfw 
