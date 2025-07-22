@@ -29,6 +29,9 @@ login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
                     cp $dir/unrpm                            /usr/local/bin
 
+#xorg.conf
+
+                   cp $dir/xorg.conf                      /etc/X11
 
 #copy undeb       
                     cp $dir/undeb                            /usr/local/bin
