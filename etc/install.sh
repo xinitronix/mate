@@ -30,8 +30,12 @@ login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
                     cp $dir/unrpm                            /usr/local/bin
 
 #xorg.conf
-
+                   mkdir -p                               /etc/X11
                    cp $dir/xorg.conf                      /etc/X11
+
+#studio.desktop
+
+                 cp $dir/echoplaystudio.desktop     /usr/local/share/applications
 
 #copy undeb       
                     cp $dir/undeb                            /usr/local/bin

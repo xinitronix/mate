@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Android Studio
+
+Icon=/ntfs-2TB/downloads/android/android-studio/bin/studio.png
+Exec=/ntfs-2TB/downloads/android/android-studio/bin/studio
+Categories=Development;Qt;
+StartupNotify=true
