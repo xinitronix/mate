@@ -35,7 +35,7 @@ login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 
 #studio.desktop
 
-                 cp $dir/echoplaystudio.desktop     /usr/local/share/applications
+                 cp $dir/studio.desktop     /usr/local/share/applications
 
 #copy undeb       
                     cp $dir/undeb                            /usr/local/bin
