@@ -150,6 +150,7 @@ ln -s /ntfs-2TB/steam-bottler   /home/$login/.steam-bottler
 cp -R "/ntfs-2TB/freebsd config/firefox"          /home/$login/.mozilla
 cp -R "/ntfs-2TB/freebsd config/TelegramDesktop"  /home/$login/.local/share
 cp -R "/ntfs-2TB/freebsd config/google-chrome"    /home/$login/.config
+cp -R "/ntfs-2TB/freebsd config/opt"  /
 
 chown -R $login:wheel /ntfs-2TB/mate
 chown  -R $login:wheel /home/$login
