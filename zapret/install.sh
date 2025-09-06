@@ -18,10 +18,10 @@ echo '/usr/local/bin/dvtws --port 989 $CONFIG &' >> /etc/rc.firewall.my
 
 uname=$(uname -r | grep 15)
 
-if [ -z "$line" ]
+if [ -z "$uname" ]
 then
      echo "\$var Пустая"
-  cp  zapret.config.FreeBSD14 /etc/zapret.config/zapret.config
+  cp  zapret.config.FreeBSD14 /etc/zapret.config
 else
      cp  zapret.config.FreeBSD15 /etc/zapret.config
 fi
