@@ -4,6 +4,6 @@ cryptodev_load="YES"
 zfs_load="YES"
 vmm_load="YES"
 hw.vmm.enable_vtd=1
-pptdevs=" 0/20/0  0/31/3"
+pptdevs=" 0/2/0  0/31/3"
 ipdivert_load="YES"
 net.inet.ip.fw.default_to_accept=1
