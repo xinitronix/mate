@@ -53,7 +53,7 @@ xbindkeys
 xboxdrv
 upower
 xdg-utils
-xorg-minimal
+xorg
 jq
 weston
 waypipe
