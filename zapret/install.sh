@@ -26,6 +26,5 @@ else
      cp  zapret.config.FreeBSD15 /etc/zapret.config
 fi
 
-cp  zapret.config /etc 
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/zapret_install.pid

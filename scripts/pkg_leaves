@@ -48,6 +48,7 @@ xinit
 xdialog
 xf86-input-keyboard
 xf86-input-mouse
+xf86-input-libinput
 xfce4-terminal
 xbindkeys
 xboxdrv
