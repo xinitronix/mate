@@ -312,7 +312,7 @@ echo start
 #    _tap="$(get_tap_interface)"
      _tap="$(get_tap_id)"
 #    _grub_args="-m ${DEVICE_MAP} -r hd0,msdos1 -M ${memory}"
-    _bhyve_args="-A -H -P -S -s 0:0,hostbridge -s 1:0,lpc -s 10:0,virtio-net,${_tap}  -s 3:0,ahci-hd,${DISK_IMAGE} -s 7,passthru,0/2/0  -s 11,passthru,0/20/0  -s 12,passthru,0/31/3  -s 15,virtio-9p,sharename=/  -l bootrom,$UEFI -c ${cpu} -m ${memory}"
+    _bhyve_args="-A -H -P -S -s 0:0,hostbridge -s 1:0,lpc -s 10:0,virtio-net,${_tap}  -s 3:0,ahci-hd,${DISK_IMAGE} -s 7,passthru,1/0/0  -s 11,passthru,0/20/0  -s 12,passthru,0/31/3  -s 15,virtio-9p,sharename=/  -l bootrom,$UEFI -c ${cpu} -m ${memory}"
     
     if [ "$1" == "console" ]; then
         _bhyve_args="${_bhyve_args} -l com1,stdio"
