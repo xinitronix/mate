@@ -17,5 +17,5 @@
  echo 'if [[ -z "$variable" ]]; then' >> .zshrc
  echo 'else' >> .zshrc
  echo 'echo "Переменная '$variable' не пуста"' >> .zshrc
- echo 'vnc' >> .zshrc
+# echo 'vnc' >> .zshrc
  echo 'fi' >> .zshrc
