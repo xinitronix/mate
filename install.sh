@@ -39,3 +39,4 @@ CURRENTDIRECTORY=$(pwd)
     done
 
 echo "$(date +'%FT%H:%M:%S%z')" >> $dir/$LOG_FILE
+reboot
