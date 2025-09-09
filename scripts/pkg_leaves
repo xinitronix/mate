@@ -5,6 +5,7 @@ barrier
 edk2-bhyve
 conky
 gsed
+gpu-firmware-intel-kmod-skylake
 doas
 dzen2
 fbpanel
@@ -50,6 +51,7 @@ xf86-input-keyboard
 xf86-input-mouse
 xf86-input-libinput
 xfce4-terminal
+xf86-video-intel
 xbindkeys
 xboxdrv
 upower
