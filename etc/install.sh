@@ -40,6 +40,11 @@ login=$(cat  $dir/../accounts/user | awk '{print $1}' |  head -n1)
 #copy undeb       
                     cp $dir/undeb                            /usr/local/bin
 
+
+#copy update_date      
+                    cp $dir/update_date                            /usr/local/bin
+
+
 #echoplaylist_firefox
 
                     cp $dir/echoplaylist.firefox.desktop      /usr/local/share/applications
