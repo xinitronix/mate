@@ -12,7 +12,7 @@ install_16 () {
 
 for i in $(cat $dir/pkg_leaves); do
 
-pkg install  -r FreeBSD    -y  $i 
+pkg install  -r repo16   $i 
 
 done
 }
@@ -26,13 +26,15 @@ pkg install  -r FreeBSD  -y  $i
 done
 }
 
-if [ "14.3-STABLE" = "$(uname -r)"  ] || [ "14.3-RELEASE" = "$(uname -r)"  ] ; then
-    install_14
-    echo "install packages freebsd 14"
-else
-    install_16
-    echo "install packages freebsd 16"
-fi
+#if [ "14.3-STABLE" = "$(uname -r)"  ] || [ "14.3-RELEASE" = "$(uname -r)"  ] ; then
+#    install_14
+#    echo "install packages freebsd 14"
+#else
+#    install_16
+#    echo "install packages freebsd 16"
+#fi
+
+install_16
 
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/pkg_install.pid
