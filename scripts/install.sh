@@ -12,7 +12,7 @@ install_16 () {
 
 for i in $(cat $dir/pkg_leaves); do
 
-pkg install  -r myrepo  -f  -y  $i 
+pkg install  -r FreeBSD    -y  $i 
 
 done
 }
@@ -21,7 +21,7 @@ install_14 () {
 
 for i in $(cat $dir/pkg_leaves); do
 
-pkg install  -r myrepo  -y  $i 
+pkg install  -r FreeBSD  -y  $i 
 
 done
 }
