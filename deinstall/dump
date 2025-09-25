@@ -19,6 +19,8 @@
 /usr/local/bin/switch_winvm_off
 /usr/local/bin/switch_winvm_on
 /usr/local/bin/vnc
+/usr/local/bin/update_date
+/usr/local/bin/switch_i915
 /usr/local/etc/winbox
 /etc/rc.d/linuxbox
 /usr/local/sbin/linuxbox
