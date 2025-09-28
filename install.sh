@@ -10,12 +10,6 @@ cp  $dir/etc/freebsd.conf  /usr/local/etc/pkg/repos
 
 mkdir -p /usr/local/bin
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
-pkg fetch -y -r myrepo -o . indexinfo
-pkg fetch -y -r myrepo -o . desktop-file-utils
-tar xf $dir/desktop-file-utils-0.28.pkg  -s ",/.*/,,g" "*/update-desktop-database"
-tar xf $dir/indexinfo-0.3.1.pkg -s ",/.*/,,g" "*/indexinfo"
-cp  $dir/indexinfo /usr/local/bin
-cp  $dir/update-desktop-database  /usr/local/bin
 
 if [ -z "$1" ]
 then
