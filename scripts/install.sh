@@ -8,11 +8,11 @@ if [  -f "/usr/local/etc/mate.pid/pkg_install.pid" ]; then
     exit 
 fi
 
-install_16 () {
+install_15 () {
 
 for i in $(cat $dir/pkg_leaves); do
 
-pkg install  -r myrepo16  -y  $i 
+pkg install  -r myrepo15 -y  $i 
 
 done
 }
@@ -30,8 +30,8 @@ if [ "14.3-STABLE" = "$(uname -r)"  ] || [ "14.3-RELEASE" = "$(uname -r)"  ] ; t
     install_14
     echo "install packages freebsd 14"
 else
-    install_16
-    echo "install packages freebsd 16"
+    install_15
+    echo "install packages freebsd 15"
 fi
 
 mkdir -p /usr/local/etc/mate.pid
