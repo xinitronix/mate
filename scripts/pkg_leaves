@@ -28,7 +28,7 @@ ncftp
 pcmanfm
 portsnap
 python3
-py311-gobject3
+py311-pygobject
 screen49
 screen
 sbxkb
