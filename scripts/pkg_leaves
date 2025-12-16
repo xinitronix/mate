@@ -71,6 +71,7 @@ zsh-theme-powerlevel10k
 zsh2
 py311-requests
 py311-charset-normalizer
+py311-beautifulsoup
 p5-App-cpanminus
 p5-Gtk2
 p5-GDBM
