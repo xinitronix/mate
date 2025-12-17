@@ -1,6 +1,8 @@
 GuiGitGnucash
 KodiGui
 alacritty
+android-tools
+android-file-transfer-qt5
 arqiver
 bash
 barrier
@@ -16,6 +18,8 @@ freerdp
 huaweismsgateway
 gh
 git
+gnucash
+gnupg
 firefox
 leafpad
 linux_base-rl9
