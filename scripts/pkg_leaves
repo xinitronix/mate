@@ -1,6 +1,8 @@
 GuiGitGnucash
 KodiGui
 LiveTvGUI-Qt6
+zapret-gui
+huaweismsgateway
 alacritty
 android-tools
 android-file-transfer-qt5
@@ -16,7 +18,6 @@ dzen2
 fbpanel
 feh
 freerdp
-huaweismsgateway
 gh
 git
 gnucash
