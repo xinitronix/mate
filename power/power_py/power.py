@@ -34,10 +34,10 @@ class Main(QtWidgets.QMainWindow):
         self.move(x, y)
 
     def on_reboot(self):
-        os.system("/shutdown -r now")
+        os.system("shutdown -r now")
 
     def on_poweroff(self):
-        os.system("/shutdown -p now")
+        os.system("shutdown -p now")
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
