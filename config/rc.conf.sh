@@ -37,3 +37,5 @@ fi
                      echo 'sshd_enable="YES"'                                         >>           /etc/rc.conf
                      echo 'virtio_9pnet_load="YES"'                                   >>           /etc/rc.conf
                      echo 'virtio_9pfs_load="YES"'                                    >>           /etc/rc.conf
+                     echo 'ciadpi_enable="YES"'                                       >>           /etc/rc.conf
+                     echo 'tun2proxy_enable="YES"'                                    >>           /etc/rc.conf
