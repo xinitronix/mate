@@ -2,7 +2,6 @@ GuiGitGnucash
 KodiGui
 LiveTvGUI-Qt6
 operaproxy-qt6
-zapret-gui
 huaweismsgateway
 alacritty
 android-tools
@@ -74,7 +73,6 @@ jq
 weston
 waypipe
 xsetroot
-zapret
 zenity
 zsh
 zsh-theme-powerlevel10k
