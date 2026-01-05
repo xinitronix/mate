@@ -1,0 +1,7 @@
+doas ciadpi -Ku -a1 -An -o1 -At,r,s -d1 --ip 127.0.0.1  --debug 1 -p 8080
+doas tun2proxy -t byedpi-tun  --proxy socks5://127.0.0.1:8080
+doas ifconfig tun0 create
+doas ifconfig tun0 name byedpi-tun
+doas ifconfig  byedpi-tun    inet 192.168.8.110  192.168.8.1  netmask 255.255.255.0  up
+
+doas route add -host 192.168.1.102 -iface re0

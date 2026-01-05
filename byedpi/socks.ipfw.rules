@@ -1,0 +1,20 @@
+# Очистка
+ipfw -q flush
+
+# 1. Loopback — всегда разрешён
+ipfw add 100 allow all from any to any via lo0
+
+# 2. Разрешить весь трафик через byedpi-tun (в обе стороны)
+ipfw add 200 allow all from any to any via byedpi-tun
+
+# 3. Перенаправить трафик UID 1001 на шлюз byedpi
+ipfw add 300 fwd 10.0.0.255,0 all from any to any uid 1001 out not via byedpi-tun
+
+ipfw add 305 fwd 192.168.8.1,0 all from any to any uid 1001 out not via byedpi-tun
+
+# (Опционально) Заблокировать прямой исходящий трафик от UID 1001
+# — это гарантирует, что трафик может идти ТОЛЬКО через byedpi-tun
+ipfw add 310 deny all from any to any uid 1001 out
+
+# 4. Разрешить всё остальное (для других пользователей)
+ipfw add 65000 allow all from any to any
