@@ -17,7 +17,7 @@ echo 'ipfw add 100 divert 989 tcp from any 80,443 to any tcpflags syn,ack in not
 echo '/usr/local/bin/dvtws --port 989 $CONFIG &' >> /etc/rc.firewall.my
 
 
-     cp  socks.ipfw.rules /etc/
+cp  socks.ipfw.rules /etc/
 
 
 mkdir -p /usr/local/etc/mate.pid

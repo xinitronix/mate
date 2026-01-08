@@ -1,3 +1,5 @@
+/usr/local/etc/mate.pid/byedpi_install.pid
+/etc/socks.ipfw.rules
 /etc/devfs.rules
 /etc/libmap32.conf
 /etc/localtime
