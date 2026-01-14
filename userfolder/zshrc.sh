@@ -19,3 +19,4 @@
  echo 'echo "Переменная '$variable' не пуста"' >> .zshrc
 # echo 'vnc' >> .zshrc
  echo 'fi' >> .zshrc
+echo 'export DOCKER_HOST=tcp://192.168.8.106:2375' >> .zshrc
