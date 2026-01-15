@@ -215,7 +215,7 @@ echo "создаем tint2rc"
  echo 'button_icon = ~/.config/icons/ubuntu.png' >>   tint2rc
  echo 'button_text =' >>   tint2rc
  echo 'button_tooltip = ubuntu_chroot' >>   tint2rc
- echo 'button_lclick_command = ubuntu_chroot' >>   tint2rc
+ echo 'button_lclick_command = ubuntuchroot-qt6' >>   tint2rc
  echo 'button_rclick_command =' >>   tint2rc
  echo 'button_mclick_command =' >>   tint2rc
  echo 'button_uwheel_command =' >>   tint2rc
