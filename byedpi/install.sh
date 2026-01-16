@@ -18,7 +18,7 @@ echo '/usr/local/bin/dvtws --port 989 $CONFIG &' >> /etc/rc.firewall.my
 
 
 cp  socks.ipfw.rules /etc/
-
+cp  whitelist        /usr/local/etc
 
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/byedpi_install.pid
