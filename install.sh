@@ -1,5 +1,5 @@
 #!/bin/sh
-dir=$(dirname "$(realpath $0)")
+dir=$(dirname "$(realpath $0)") 
 
 . $dir/setup.config
 
