@@ -39,6 +39,7 @@ noto-emoji
 openbox
 nvidia-driver
 nvidia-drm-kmod
+nvidia-drm-61-kmod
 ncftp
 pcmanfm
 portsnap
