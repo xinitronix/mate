@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Torbox
 Exec=torbox.py
-Icon=/home/definitly/.config/icons/tor.png
+Icon=/usr/local/share/pixmaps/tor.png
 Type=Application
 Terminal=false
 Categories=System;
