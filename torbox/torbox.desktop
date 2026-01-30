@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Torbox
+Exec=torbox.py
+Icon=/home/definitly/.config/icons/tor.png
+Type=Application
+Terminal=false
+Categories=System;
+Name[ru_RU]=Torbox
