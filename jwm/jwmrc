@@ -6,6 +6,7 @@
  <IconPath>/usr/local/share/icons/AdwaitaLegacy/48x48/legacy/</IconPath>
  <IconPath>/usr/local/share/icons/Adwaita/16x16/places/</IconPath>
  <IconPath>/usr/local/share/icons/hicolor/512x512/apps/</IconPath>
+ <IconPath>/usr/local/share/icons/gnome/16x16/categories/</IconPath>
     <!-- Внешний вид (Темы) -->
     <WindowStyle>
         <Font>DejaVu Sans-11:bold</Font>
@@ -53,7 +54,8 @@ firefox &
 alacritty -e screen_check.sh &
 </StartupCommand>
 
- <RootMenu onroot="123">
+ <RootMenu onroot="123" >
+    <Include>exec:mjwm --no-backup --iconize=Tango --silent --output /dev/stdout</Include>
         <Program icon="utilities-terminal" label="Terminal">xterm</Program>
         <Program icon="system-file-manager" label="Файловый менджер">pcmanfm</Program>
         <Separator/>

@@ -11,6 +11,7 @@ ubuntu_chroot
 wayland/sfwbar
 power
 gh
+jwm
 dockerbox
 userfolder
 tint2

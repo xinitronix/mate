@@ -25,6 +25,7 @@ freerdp
 gh
 git
 gnucash
+gnome-icon-theme
 gnupg
 firefox
 firefox-dev
@@ -32,6 +33,7 @@ leafpad
 lxappearance
 linux_base-rl9
 mc
+mjwm
 xhost
 icewm
 idesk2
