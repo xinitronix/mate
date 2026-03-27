@@ -6,5 +6,5 @@ CURRENTDIRECTORY=$(pwd)
 cp $CURRENTDIRECTORY/jwmrc       /home/$login/.jwmrc
 chown  -R      $login:wheel      /home/$login/.jwmrc
 
-cp $CURRENTDIRECTORY/jwmrc-mjwm      /home/$login/.jwmrc-mjwm
-chown  -R      $login:wheel      /home/$login/.jwmrc-mjwm
+#cp $CURRENTDIRECTORY/jwmrc-mjwm      /home/$login/.jwmrc-mjwm
+#chown  -R      $login:wheel      /home/$login/.jwmrc-mjwm
