@@ -76,6 +76,7 @@ upower
 xdg-utils
 xorg
 jq
+jwm
 weston
 waypipe
 xsetroot
