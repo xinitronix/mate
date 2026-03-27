@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<JWM>
+ <IconPath>/usr/local/share/pixmaps</IconPath>
+ <IconPath>/usr/local/share/icons/hicolor/48x48/apps/</IconPath>
+ <IconPath>/usr/local/share/icons/hicolor/scalable/apps/</IconPath>
+ <IconPath>/usr/local/share/icons/AdwaitaLegacy/48x48/legacy/</IconPath>
+ <IconPath>/usr/local/share/icons/Adwaita/16x16/places/</IconPath>
+ <IconPath>/usr/local/share/icons/hicolor/512x512/apps/</IconPath>
+    <!-- Внешний вид (Темы) -->
+    <WindowStyle>
+        <Font>DejaVu Sans-11:bold</Font>
+        <Width>4</Width>
+        <Height>22</Height>
+        <Active>
+            <Text>#FFFFFF</Text>
+            <Title>#555555</Title>
+            <Outline>#000000</Outline>
+        </Active>
+        <Inactive>
+            <Text>#AAAAAA</Text>
+            <Title>#333333</Title>
+            <Outline>#000000</Outline>
+        </Inactive>
+    </WindowStyle>
+
+    <!-- Настройки трея (панели) -->
+    <Tray autohide="off" delay="0" x="0" y="-1" height="26" layer="above">
+        <TrayButton label="Меню">root:1</TrayButton>
+        <Spacer width="2"/>
+        <TaskList maxwidth="200"/>
+        <Spacer width="2"/>
+        <Clock format="%H:%M:%S"><Button mask="123">exec:xclock</Button></Clock>
+    </Tray>
+
+    <!-- Привязки клавиш -->
+    <Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="Enter">select</Key>
+    <Key key="Escape">escape</Key>
+    <Key key="Super r">exec:run</Key> <!-- Win+R для запуска -->
+
+
+
+
+  
+<StartupCommand>
+    feh --bg-scale /home/definitly/2TB/wallpaper/wallhaven-q6gj8d.jpg &
+xxkb &
+firefox &
+#~/scripts/x2.sh &
+alacritty -e screen_check.sh &
+</StartupCommand>
+
+ <RootMenu onroot="123">
+        <Program icon="utilities-terminal" label="Terminal">xterm</Program>
+        <Program icon="system-file-manager" label="Файловый менджер">pcmanfm</Program>
+        <Separator/>
+        <Restart label="Restart JWM" />
+        <Exit label="Exit JWM" confirm="true" />
+ <Include>/home/definitly/.jwmrc-mjwm</Include>
+    </RootMenu>
+
+</JWM>
