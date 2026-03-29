@@ -8,3 +8,5 @@ chown  -R      $login:wheel      /home/$login/.jwmrc
 
 #cp $CURRENTDIRECTORY/jwmrc-mjwm      /home/$login/.jwmrc-mjwm
 #chown  -R      $login:wheel      /home/$login/.jwmrc-mjwm
+
+cp $CURRENTDIRECTORY/switchwm.sh      /usr/local/bin/switchwm
