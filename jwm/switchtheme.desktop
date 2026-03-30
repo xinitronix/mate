@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.5
+Encoding=UTF-8
+Type=Application
+Name=Темы
+GenericName=System configuration utility
+Icon=preferences-desktop-theme
+Exec=jwm-theme
+Comment=Set up many system configuration settings
+Terminal=true
+StartupNotify=false
+Categories=Settings;System;GTK;

@@ -8,21 +8,7 @@
  <IconPath>/usr/local/share/icons/hicolor/512x512/apps/</IconPath>
  <IconPath>/usr/local/share/icons/gnome/16x16/categories/</IconPath>
     <!-- Внешний вид (Темы) -->
-    <WindowStyle>
-        <Font>DejaVu Sans-11:bold</Font>
-        <Width>4</Width>
-        <Height>22</Height>
-        <Active>
-            <Text>#FFFFFF</Text>
-            <Title>#555555</Title>
-            <Outline>#000000</Outline>
-        </Active>
-        <Inactive>
-            <Text>#AAAAAA</Text>
-            <Title>#333333</Title>
-            <Outline>#000000</Outline>
-        </Inactive>
-    </WindowStyle>
+ <Include>/home/definitly/.jwm/themes/Evil_blue_glow-jwmrc</Include>
 
     <!-- Настройки трея (панели) -->
     <Tray autohide="off" delay="0" x="0" y="-1" height="26" layer="above">
@@ -56,7 +42,7 @@ alacritty -e screen_check.sh &
 </StartupCommand>
 
  <RootMenu onroot="123" >
-    <Include>exec:mjwm --no-backup --iconize=Tango --silent --output /dev/stdout</Include>
+ <Include>exec:mjwm --no-backup --iconize=Tango --silent --output /dev/stdout</Include>
         <Program icon="utilities-terminal" label="Terminal">xterm</Program>
         <Program icon="system-file-manager" label="Файловый менджер">pcmanfm</Program>
         <Separator/>
