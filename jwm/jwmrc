@@ -8,7 +8,7 @@
  <IconPath>/usr/local/share/icons/hicolor/512x512/apps/</IconPath>
  <IconPath>/usr/local/share/icons/gnome/16x16/categories/</IconPath>
     <!-- Внешний вид (Темы) -->
- <Include>/home/definitly/.jwm/themes/Evil_blue_glow-jwmrc</Include>
+ <Include>/home/definitly/.jwm/themes/Arc-darker.theme</Include>
 
     <!-- Настройки трея (панели) -->
     <Tray autohide="off" delay="0" x="0" y="-1" height="26" layer="above">
