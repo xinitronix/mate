@@ -40,9 +40,10 @@ icewm
 idesk2
 noto-emoji
 openbox
-nvidia-driver
-nvidia-drm-kmod
-nvidia-drm-61-kmod
+nvidia-driver-580
+nvidia-drm-kmod-580
+nvidia-drm-66-kmod-580
+nvidia-kmod-580
 ncftp
 pcmanfm
 portsnap
