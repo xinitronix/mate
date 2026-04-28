@@ -51,7 +51,7 @@ DEVICE_MAP="${GUEST_ROOT}/device.map"
 VM_MANAGER_DAEMON_ID="winbox-vm-manager"
 CONFIG="${CONF_DIR}/winbox.conf"
 NAT_IP="10.0.0.254"
-UEFI=/bhyve/win10/BHYVE_UEFI.fd
+UEFI=/bhyve/win10/BHYVE_BHF_UEFI.fd
 help_msg="Usage: sudo winbox [command]
 
 command:
