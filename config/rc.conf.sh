@@ -39,3 +39,5 @@ fi
                      echo 'virtio_9pfs_load="YES"'                                    >>           /etc/rc.conf
                      echo 'ciadpi_enable="YES"'                                       >>           /etc/rc.conf
                      echo 'tun2proxy_enable="YES"'                                    >>           /etc/rc.conf
+                     echo 'static_routes="myroute"'                                   >>           /etc/rc.conf
+                     echo 'route_myroute="-host 94.177.106.71 192.168.8.1"'           >>           /etc/rc.conf
