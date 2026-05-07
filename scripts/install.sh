@@ -26,7 +26,7 @@ pkg install  -r myrepo15  -y  $i
 done
 }
 
-if [ "15.0-STABLE" = "$(uname -r)"  ] || [ "15.1-BETA1" = "$(uname -r)"  ] ; then
+if [ "15.1-STABLE" = "$(uname -r)"  ] || [ "15.1-BETA1" = "$(uname -r)"  ] ; then
     install_15
     echo "install packages freebsd 15"
 else
