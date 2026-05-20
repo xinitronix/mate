@@ -8,7 +8,7 @@ fi
 
 echo 'ipdivert_load="YES"' >> /boot/loader.conf
 echo 'net.inet.ip.fw.default_to_accept=1' >> /boot/loader.conf
-echo 'firewall_enable="YES"' >> /etc/rc.conf 
+echo 'firewall_enable="NO"' >> /etc/rc.conf 
 echo 'firewall_script="/etc/rc.firewall.my"' >> /etc/rc.conf
 echo '. /etc/zapret.config' >> /etc/rc.firewall.my
 echo 'ipfw -q -f flush' >> /etc/rc.firewall.my
