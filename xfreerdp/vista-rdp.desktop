@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Vista Ultimate RDP 
+Exec=/usr/local/bin/vista-rdp
+StartupNotify=true
+Terminal=false
+Icon=remote-desktop-48
+Type=Application
+Categories=RemoteAccess;

@@ -38,11 +38,12 @@ cp $dir/remote-desktop-48.png   /usr/local/share/pixmaps
 cp $dir/opensuse.png   /usr/local/share/pixmaps
 cp $dir/win10-rdp /usr/local/bin
 cp $dir/win7-rdp  /usr/local/bin
+cp $dir/vista-rdp  /usr/local/bin
 cp $dir/opensuse15-kde3-rdp  /usr/local/bin
 cp $dir/opensuse15-kde3-rdp.desktop  /usr/local/share/applications
 cp $dir/win10-rdp.desktop  /usr/local/share/applications
 cp $dir/win7-rdp.desktop   /usr/local/share/applications
-
+cp $dir/vista-rdp.desktop   /usr/local/share/applications
 }
 
 install_first_user
