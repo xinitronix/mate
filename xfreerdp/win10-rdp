@@ -1,7 +1,17 @@
 #!/bin/sh
 
 
-port="$(nc -z -v -w 1 192.168.8.108 3389  2>&1)"
+IP=$(
+    arp-scan --localnet 2>/dev/null |
+    awk '/NetApp/ { print $1; exit }'
+)
+
+if [ -z "$IP" ]; then
+    echo "NetApp не найден"
+    exit 1
+fi
+
+port="$(nc -z -v -w 1 $IP 3389  2>&1)"
 port2="$(echo $port | grep succeeded)"
 
 echo $port2
@@ -12,7 +22,7 @@ then
      zenity --info --text="виртуальная машина не запущена" --width=500
 else
      echo "\$var не пустая"
-     echo Y | xfreerdp /u:vcore  /p:639639 /w:1918 /h:1045  /v:192.168.8.108  /drive:home,/home/definitly  /sound
+     echo Y | xfreerdp /u:vcore  /p:639639 /w:1918 /h:1045  /v:$IP  /drive:home,/home/definitly  /sound
 fi
 
 
