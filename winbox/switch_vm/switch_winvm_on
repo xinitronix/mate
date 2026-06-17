@@ -9,8 +9,7 @@ then
      echo "не введен дистр "
      
 else
-     rm /bhyve/win10/win.img
-     ln -s  /ntfs-2TB/vm/$1/$1.img /bhyve/win10/win.img
+
 
 fi
 
