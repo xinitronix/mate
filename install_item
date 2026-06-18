@@ -28,7 +28,8 @@ i915
 xbox360-turnoff
 postinstall
 idesk
-ssh 
+ssh
+samba 
 file-manager
 waydroid
 byedpi
