@@ -25,7 +25,7 @@ doas service ipfw start
 
 stop_ipfw
 
-if [ "15.1-STABLE" = "$(uname -r)"  ] || [ "15.1-BETA2" = "$(uname -r)"  ] ; then
+if [ "15.1-STABLE" = "$(uname -r)"  ] || [ "15.1-RELEASE" = "$(uname -r)"  ] ; then
     
     echo "install packages freebsd 15"
     install_15
