@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sshpass -p 639639 ssh -o ConnectTimeout=5 vcore@192.168.8.106 "echo 639639 | sudo -S cat /var/log/tor/notices.log" 
+sshpass -p 639639 ssh -o ConnectTimeout=3 vcore@192.168.8.106 "echo 639639 | sudo -S cat /var/log/tor/notices.log" 
