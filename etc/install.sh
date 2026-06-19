@@ -80,5 +80,9 @@ cp $dir/bsdconfig.desktop   /usr/local/share/applications
 
 cp $dir/myrepo /usr/local/bin/
 
+#torlog
+
+cp $dir/torlog /usr/local/bin/
+
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/etc_install.sh.pid
