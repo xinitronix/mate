@@ -6,7 +6,7 @@ if test "$(id -u)" -ne 0; then
 fi
 
 
-RESULT=$(pciconf -l | grep "vgapci0@pci0:0:2:0")
+RESULT=$(pciconf -l | grep "pci0:0:2:0")
 
 if [ -z "$RESULT" ]; then
     zenity --error \
@@ -47,6 +47,29 @@ set_nvidia () {
                rm   /usr/local/etc/X11/xorg.conf.d/20-intel.conf
                cp   /usr/local/etc/i915/xorg.conf   /etc/X11	
 }
+
+if [ -z "$RESULT" ]; then
+    zenity --error \
+    --title="Ошибка GPU" \
+    --text="Видеокарта не найдена.\nПроверь BIOS/UEFI и включи графику."
+    exit 1
+else
+    zenity --info \
+    --title="GPU OK" \
+    --text="Видеокарта обнаружена:\n$RESULT"
+    line=$(cat /etc/rc.conf | grep i915kms)
+
+if [ -z "$line" ]
+then
+     echo "\$var Пустая set mode i915"
+     set_i915kms
+else
+     echo "\$var не пустая set mode nvidia"
+     set_nvidia 
+fi
+
+fi
+
 
 line=$(cat /etc/rc.conf | grep i915kms)
 
