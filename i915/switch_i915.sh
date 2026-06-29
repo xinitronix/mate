@@ -42,15 +42,3 @@ else
 fi
 
 fi
-
-
-line=$(cat /etc/rc.conf | grep i915kms)
-
-if [ -z "$line" ]
-then
-     echo "\$var Пустая set mode i915"
-     set_i915kms
-else
-     echo "\$var не пустая set mode nvidia"
-     set_nvidia 
-fi
