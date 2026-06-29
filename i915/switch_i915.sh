@@ -5,7 +5,7 @@ if test "$(id -u)" -ne 0; then
 	exit 1
 fi
 
-
+RESULT=$(pciconf -l | grep "pci0:0:2:0")
 
 set_i915kms () {
                gsed -i  '\|^kld_list|d'  /etc/rc.conf
