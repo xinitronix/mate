@@ -64,6 +64,10 @@ ln -s   /home/$login/.scripts/umountiso.sh  /usr/local/bin/umountiso
 # copy screen_check.sh
 
 cp   $dir/screen_check.sh   /usr/local/bin
+
+#make_vmm.sh
+
+cp  $dir/make_vmm.sh  /usr/local/bin
                         
 #set_wallpaper.sh
 
