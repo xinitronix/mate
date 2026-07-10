@@ -8,3 +8,5 @@ pptdevs="1/0/0 0/20/0  0/31/3"
 ipdivert_load="YES"
 net.inet.ip.fw.default_to_accept=1
 vmm_name="/usr/local/etc/winbox/vmm.ko"
+boot_mute="YES"
+beastie_disable=YES

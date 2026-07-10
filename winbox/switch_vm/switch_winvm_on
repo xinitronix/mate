@@ -17,3 +17,4 @@ service winbox enable
 service samba_server  enable 
 cp /usr/local/etc/winbox/loader.conf.winbox /boot/loader.conf
 cp /usr/local/etc/winbox/ttys.winbox /etc/ttys
+echo "-m -q" > /boot.config
