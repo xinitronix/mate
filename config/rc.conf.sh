@@ -7,6 +7,7 @@ if [ -f "$file" ] ; then
 fi
                      echo 'zfs_enable="yes"'                                          >>           /etc/rc.conf
                      echo 'dbus_enable="yes"'                                         >>           /etc/rc.conf
+                     echo 'background_dhclient=YES'                                   >>           /etc/rc.conf
                      echo 'linux_enable="YES"'                                        >>           /etc/rc.conf
                      echo 'dahdi_enable="YES"'                                        >>           /etc/rc.conf
                      echo 'wlans_urtwn0="wlan0"'                                      >>           /etc/rc.conf
