@@ -67,7 +67,7 @@ cp   $dir/screen_check.sh   /usr/local/bin
 
 #make_vmm.sh
 
-cp  $dir/make_vmm.sh  /usr/local/bin
+cp  $dir/make_vmm.sh  /usr/local/bin/make_vmm
                         
 #set_wallpaper.sh
 
