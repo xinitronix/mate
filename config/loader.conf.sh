@@ -137,3 +137,4 @@ echo '# This is loader.conf - a file full of useful variables that you can' >> /
  echo 'hw.vmm.enable_vtd=1' >> /boot/loader.conf
  echo '#pptdevs="1/0/0 0/20/0  0/31/3"' >>  /boot/loader.conf
  echo 'autoboot_delay="-1"' >>  /boot/loader.conf
+ echo 'kern.vt.fb.default_mode="1920x1080"'  >>  /boot/loader.conf

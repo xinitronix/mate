@@ -12,3 +12,4 @@ boot_mute="YES"
 beastie_disable=YES
 splash="/boot/images/mylogo.png"
 autoboot_delay="-1"
+kern.vt.fb.default_mode="1920x1080"

@@ -19,7 +19,6 @@ fi
                      echo 'nginx_enable="YES"'                                        >>           /etc/rc.conf
                      echo 'php_fpm_enable="YES"'                                      >>           /etc/rc.conf
                      echo 'kld_list="nvidia-drm linux64 nullfs cuse"'                 >>           /etc/rc.conf
-                     echo 'allscreens_flags=" MODE_283"'                              >>           /etc/rc.conf
                      echo 'sendmail_enable="NO"'                                      >>           /etc/rc.conf
                      echo 'sendmail_msp_queue_enable="NO"'                            >>           /etc/rc.conf
                      echo 'sendmail_outbound_enable="NO"'                             >>           /etc/rc.conf
