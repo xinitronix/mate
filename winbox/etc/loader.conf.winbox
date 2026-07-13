@@ -10,3 +10,5 @@ net.inet.ip.fw.default_to_accept=1
 vmm_name="/usr/local/etc/winbox/vmm.ko"
 boot_mute="YES"
 beastie_disable=YES
+splash="/boot/images/mylogo.png"
+autoboot_delay="-1"
