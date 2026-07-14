@@ -25,7 +25,7 @@
 # when going to single-user mode.
 console	none				unknown	off secure
 #
-ttyv0	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv0	"/usr/libexec/getty Pc"		xterm	off secure
 # Virtual terminals
 ttyv1	"/usr/libexec/getty Pc"		xterm	onifexists secure
 ttyv2	"/usr/libexec/getty Pc"		xterm	onifexists secure
