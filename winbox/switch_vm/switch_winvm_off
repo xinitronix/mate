@@ -10,3 +10,4 @@ service samba_server  onedisable
 cp /usr/local/etc/winbox/loader.conf.linuxbox /boot/loader.conf
 cp /usr/local/etc/winbox/ttys /etc
 rm /boot.config
+sed -i '' 's/^#date$/date/' /etc/rc  
