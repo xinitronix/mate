@@ -27,6 +27,25 @@ INTERVAL=60
 COUNT=0
 LOGFILE=""
 ONESHOT=0
+STOPPING=0
+
+# Ловим TERM/INT явно: не полагаемся на дефолтную обработку сигнала,
+# чтобы гарантированно быстро выйти из цикла, даже если демон/shell
+# по какой-то причине не завершает процесс мгновенно сам.
+trap 'STOPPING=1' TERM INT
+
+# Прерываемый sleep: спим по 1 секунде вместо одного длинного sleep,
+# чтобы остановка (service sysmon stop) занимала ~1 сек, а не до
+# полного значения -i (по умолчанию 60 сек).
+sleep_interruptible() {
+    n="$1"
+    i=0
+    while [ "$i" -lt "$n" ]; do
+        [ "$STOPPING" -eq 1 ] && return
+        sleep 1
+        i=$((i + 1))
+    done
+}
 
 usage() {
     echo "Использование: $0 [-i секунды] [-n итераций] [-l файл] [-c]" >&2
@@ -139,6 +158,8 @@ while :; do
 
     iter=$((iter + 1))
     [ "$COUNT" -gt 0 ] && [ "$iter" -ge "$COUNT" ] && break
+    [ "$STOPPING" -eq 1 ] && break
 
-    sleep "$INTERVAL"
+    sleep_interruptible "$INTERVAL"
+    [ "$STOPPING" -eq 1 ] && break
 done
