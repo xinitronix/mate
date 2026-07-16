@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+# PROVIDE: sysmon
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Настройки в /etc/rc.conf (или /etc/rc.conf.d/sysmon):
+#
+#   sysmon_enable="YES"
+#   sysmon_interval="60"                 # период опроса, сек
+#   sysmon_logfile="/var/log/sysmon.log" # куда писать данные монитора
+#   sysmon_script="/usr/local/libexec/sysmon.sh"
+#
+# Установка:
+#   1) cp sysmon.sh /usr/local/libexec/sysmon.sh
+#      chmod +x /usr/local/libexec/sysmon.sh
+#   2) cp sysmon /usr/local/etc/rc.d/sysmon
+#      chmod +x /usr/local/etc/rc.d/sysmon
+#   3) echo 'sysmon_enable="YES"' >> /etc/rc.conf
+#   4) service sysmon start
+#
+# Управление:
+#   service sysmon start|stop|restart|status
+
+. /etc/rc.subr
+
+name="sysmon"
+rcvar="sysmon_enable"
+desc="CPU temperature / top process monitor"
+
+load_rc_config "$name"
+
+: ${sysmon_enable:="NO"}
+: ${sysmon_interval:="60"}
+: ${sysmon_logfile:="/var/log/sysmon.log"}
+: ${sysmon_script:="/usr/local/libexec/sysmon.sh"}
+
+pidfile="/var/run/${name}.pid"
+
+# daemon(8) держит скрипт запущенным, перезапускает при падении (-r)
+# и отвязывает его от терминала (-f). stdout/stderr самого daemon
+# (например, ошибки запуска) уходят в отдельный файл через -o.
+command="/usr/sbin/daemon"
+command_args="-f -r -P ${pidfile} -o /var/log/sysmon.daemon.log ${sysmon_script} -i ${sysmon_interval} -l ${sysmon_logfile}"
+
+run_rc_command "$1"
