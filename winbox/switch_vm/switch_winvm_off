@@ -7,7 +7,7 @@ fi
 service winbox onedisable
 service samba_server  onedisable
 service sysmon onedisable
-sysrc rc_startmsgs="YES"
+sysrc rc_startmsgs="YES" background_dhclient="NO" sysmon_enable="NO"
 cp /usr/local/etc/winbox/loader.conf.linuxbox /boot/loader.conf
 cp /usr/local/etc/winbox/ttys /etc
 rm /boot.config

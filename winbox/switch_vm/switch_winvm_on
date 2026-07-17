@@ -14,8 +14,8 @@ else
 fi
 
 
-echo 'sysmon_enable="YES"' >> /etc/rc.conf
-sysrc rc_startmsgs="NO"
+
+sysrc rc_startmsgs="NO" sysmon_enable="YES" background_dhclient="YES"
 service winbox enable
 service samba_server  enable 
 cp /usr/local/etc/winbox/loader.conf.winbox /boot/loader.conf
