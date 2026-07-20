@@ -10,3 +10,4 @@ cp etc/ttys.winbox   /usr/local/etc/winbox
 cp etc/ttys   /usr/local/etc/winbox
 cp  switch_vm/switch_winvm_off  /usr/local/bin
 cp  switch_vm/switch_winvm_on   /usr/local/bin
+cp  mylogo.png /boot/images
