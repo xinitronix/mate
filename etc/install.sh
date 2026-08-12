@@ -90,3 +90,5 @@ cp $dir/torlog /usr/local/bin/
 
 mkdir -p /usr/local/etc/mate.pid
 touch /usr/local/etc/mate.pid/etc_install.sh.pid
+
+echo 'daily_status_security_enable="NO"' | sudo tee /etc/periodic.conf
