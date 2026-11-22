@@ -1,6 +1,0 @@
- VBoxHeadless --startvm win &
-
-sleep 5
-
-
-VBoxManage controlvm win setvideomodehint 1680 1050 32
