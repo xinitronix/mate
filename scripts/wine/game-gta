@@ -1,5 +1,0 @@
-#!/bin/sh
-
-cd /home/definitly/wine/gta/drive_c/Program\ Files/GTA\ -\ Vice\ City\ Deluxe
-
-env WINEPREFIX=/home/definitly/wine/gta   wine gta-vc.exe
