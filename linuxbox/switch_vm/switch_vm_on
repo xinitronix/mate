@@ -1,18 +1,54 @@
+
 #!/bin/sh
-if test "$(id -u)" -ne 0; then
-	printf "%s must be run as root\n" "${0##*/}"
-	exit 1
+
+if [ "$(id -u)" -ne 0 ]; then
+    printf "%s must be run as root\n" "${0##*/}"
+    exit 1
 fi
 
-if [ -z "$1" ]
-then
-     echo "не введен дистр "
-     
+# Проверка настройки CSM непосредственно в UEFI NVRAM
+SETUP_VAR="ec87d643-eba4-4bb5-a1e5-3f3e36b20da9-Setup"
+
+if ! SETUP_DUMP=$(efivar -p -H -n "$SETUP_VAR" 2>&1); then
+    printf "ВНИМАНИЕ: не удалось прочитать настройки BIOS через efivar:\n%s\n" "$SETUP_DUMP" >&2
 else
-     rm /bhyve/linux/linux.img
-     ln -s  /ntfs-2TB/vm/$1/$1.img /bhyve/linux/linux.img
+    CSM_VALUE=$(printf '%s\n' "$SETUP_DUMP" |
+        awk '$1 == "1600:" { print $8; exit }')
 
+    case "$CSM_VALUE" in
+        01)
+            printf "ВНИМАНИЕ: CSM включен в настройках BIOS!\n" >&2
+            ;;
+        00)
+            printf "CSM отключен в настройках BIOS.\n"
+            ;;
+        *)
+            printf "ВНИМАНИЕ: не удалось определить состояние CSM (значение: %s).\n" \
+                "${CSM_VALUE:-не найдено}" >&2
+            ;;
+    esac
 fi
+
+if [ -z "$1" ]; then
+    echo "Не указан дистрибутив."
+    echo "Использование: switch_vm_on <имя_дистрибутива>"
+    exit 1
+fi
+
+VM_DIR="/ntfs-2TB/vm/$1"
+VM_IMAGE="$VM_DIR/$1.img"
+LINK="/bhyve/linux/linux.img"
+
+# Проверка существования образа
+if [ ! -f "$VM_IMAGE" ]; then
+    printf "Ошибка: образ не найден: %s\n" "$VM_IMAGE" >&2
+    exit 1
+fi
+
+# Переключение образа
+rm -f "$LINK" || exit 1
+ln -s "$VM_IMAGE" "$LINK" || exit 1
+
+printf "Активирован образ: %s\n" "$VM_IMAGE"
 
 service linuxbox enable
-gsed -i 's/#pptdevs=/pptdevs=/' /boot/loader.conf
