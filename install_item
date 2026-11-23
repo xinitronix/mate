@@ -29,7 +29,8 @@ xbox360-turnoff
 postinstall
 idesk
 ssh
-samba 
+samba
+nested
 file-manager
 waydroid
 byedpi
