@@ -29,26 +29,27 @@ else
     esac
 fi
 
-# Если дистрибутив не указан — ничего не переключаем
-if [ -z "$1" ]; then
-    echo "Дистрибутив не указан. Текущая ссылка оставлена без изменений."
-    exit 0
+
+# Если дистрибутив указан — переключаем образ
+if [ -n "$1" ]; then
+    VM_DIR="/ntfs-2TB/vm/$1"
+    VM_IMAGE="$VM_DIR/$1.img"
+    LINK="/bhyve/linux/linux.img"
+
+    if [ ! -f "$VM_IMAGE" ]; then
+        printf "Ошибка: образ не найден: %s\n" "$VM_IMAGE" >&2
+        exit 1
+    fi
+
+    rm -f "$LINK" || exit 1
+    ln -s "$VM_IMAGE" "$LINK" || exit 1
+
+    printf "Активирован образ: %s\n" "$VM_IMAGE"
+else
+    printf "Дистрибутив не указан. Текущая ссылка на образ сохранена.\n"
 fi
 
-VM_DIR="/ntfs-2TB/vm/$1"
-VM_IMAGE="$VM_DIR/$1.img"
-LINK="/bhyve/linux/linux.img"
+# Включаем режим загрузки Linuxbox в любом случае
+service linuxbox enable || exit 1
 
-# Проверка существования образа
-if [ ! -f "$VM_IMAGE" ]; then
-    printf "Ошибка: образ не найден: %s\n" "$VM_IMAGE" >&2
-    exit 1
-fi
-
-# Переключение образа
-rm -f "$LINK" || exit 1
-ln -s "$VM_IMAGE" "$LINK" || exit 1
-
-printf "Активирован образ: %s\n" "$VM_IMAGE"
-
-service linuxbox enable
+printf "Режим загрузки Linuxbox включен.\n"
