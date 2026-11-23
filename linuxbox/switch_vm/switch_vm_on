@@ -1,55 +1,42 @@
 
 #!/bin/sh
-
-if [ "$(id -u)" -ne 0 ]; then
-    printf "%s must be run as root\n" "${0##*/}"
-    exit 1
+if test "$(id -u)" -ne 0; then
+	printf "%s must be run as root\n" "${0##*/}"
+	exit 1
 fi
 
-# Проверка настройки CSM непосредственно в UEFI NVRAM
+# Проверка CSM в UEFI NVRAM
 SETUP_VAR="ec87d643-eba4-4bb5-a1e5-3f3e36b20da9-Setup"
 
-if ! SETUP_DUMP=$(efivar -p -H -n "$SETUP_VAR" 2>&1); then
-    printf "ВНИМАНИЕ: не удалось прочитать настройки BIOS через efivar:\n%s\n" "$SETUP_DUMP" >&2
-else
-    CSM_VALUE=$(printf '%s\n' "$SETUP_DUMP" |
-        awk '$1 == "1600:" { print $8; exit }')
+if SETUP_DUMP=$(efivar -p -H -n "$SETUP_VAR" 2>&1); then
+	CSM_VALUE=$(printf '%s\n' "$SETUP_DUMP" |
+		awk '$1 == "1600:" { print $8; exit }')
 
-    case "$CSM_VALUE" in
-        01)
-            printf "ВНИМАНИЕ: CSM включен в настройках BIOS!\n" >&2
-            ;;
-        00)
-            printf "CSM отключен в настройках BIOS.\n"
-            ;;
-        *)
-            printf "ВНИМАНИЕ: не удалось определить состояние CSM (значение: %s).\n" \
-                "${CSM_VALUE:-не найдено}" >&2
-            ;;
-    esac
+	case "$CSM_VALUE" in
+		01)
+			printf "ВНИМАНИЕ: CSM включен в настройках BIOS!\n" >&2
+			;;
+		00)
+			printf "CSM отключен в настройках BIOS.\n"
+			;;
+		*)
+			printf "ВНИМАНИЕ: не удалось определить состояние CSM (значение: %s).\n" \
+				"${CSM_VALUE:-не найдено}" >&2
+			;;
+	esac
+else
+	printf "ВНИМАНИЕ: не удалось прочитать настройки BIOS через efivar:\n%s\n" "$SETUP_DUMP" >&2
 fi
 
-
-# Если дистрибутив указан — переключаем образ
-if [ -n "$1" ]; then
-    VM_DIR="/ntfs-2TB/vm/$1"
-    VM_IMAGE="$VM_DIR/$1.img"
-    LINK="/bhyve/linux/linux.img"
-
-    if [ ! -f "$VM_IMAGE" ]; then
-        printf "Ошибка: образ не найден: %s\n" "$VM_IMAGE" >&2
-        exit 1
-    fi
-
-    rm -f "$LINK" || exit 1
-    ln -s "$VM_IMAGE" "$LINK" || exit 1
-
-    printf "Активирован образ: %s\n" "$VM_IMAGE"
+if [ -z "$1" ]
+then
+     echo "не введен дистр "
+     
 else
-    printf "Дистрибутив не указан. Текущая ссылка на образ сохранена.\n"
+     rm /bhyve/linux/linux.img
+     ln -s  /ntfs-2TB/vm/$1/$1.img /bhyve/linux/linux.img
+
 fi
 
-# Включаем режим загрузки Linuxbox в любом случае
-service linuxbox enable || exit 1
-
-printf "Режим загрузки Linuxbox включен.\n"
+service linuxbox enable
+gsed -i 's/#pptdevs=/pptdevs=/' /boot/loader.conf
