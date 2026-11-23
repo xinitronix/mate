@@ -32,7 +32,7 @@ fi
 if [ -z "$1" ]; then
     echo "Не указан дистрибутив."
     echo "Использование: switch_vm_on <имя_дистрибутива>"
-    exit 1
+   
 fi
 
 VM_DIR="/ntfs-2TB/vm/$1"
