@@ -135,6 +135,8 @@ rm -R /usr/src
 ln -s /ntfs-2TB/src /usr/src
 
 # copy  system-file-manager-root.svg to  /usr/local/share/pixmaps
+mkdir -p  /usr/local/share/pixmaps
+mkdir -p  /usr/local/share/applications
 cp  ../etc/icons/system-file-manager-root.svg    /usr/local/share/pixmaps
 cp  ../etc/rootpcmanfm.desktop                   /usr/local/share/applications
 
