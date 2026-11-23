@@ -1,24 +1,57 @@
+
 #!/bin/sh
-if test "$(id -u)" -ne 0; then
-	printf "%s must be run as root\n" "${0##*/}"
-	exit 1
+
+if [ "$(id -u)" -ne 0 ]; then
+    printf "%s must be run as root\n" "${0##*/}"
+    exit 1
 fi
 
-if [ -z "$1" ]
-then
-     echo "не введен дистр "
-     
+if [ -z "$1" ]; then
+    echo "Не указан дистрибутив."
+    echo "Использование: $0 <имя_дистрибутива>"
+    exit 1
+fi
+
+# Проверка настройки CSM в UEFI NVRAM
+SETUP_VAR="ec87d643-eba4-4bb5-a1e5-3f3e36b20da9-Setup"
+
+if SETUP_DUMP=$(efivar -p -H -n "$SETUP_VAR" 2>&1); then
+    CSM_VALUE=$(printf '%s\n' "$SETUP_DUMP" |
+        awk '$1 == "1600:" { print $8; exit }')
+
+    case "$CSM_VALUE" in
+        01)
+            printf "ВНИМАНИЕ: CSM включен в BIOS!\n" >&2
+            ;;
+        00)
+            printf "CSM отключен в BIOS.\n"
+            ;;
+        *)
+            printf "ВНИМАНИЕ: не удалось определить состояние CSM (значение: %s).\n" \
+                "${CSM_VALUE:-не найдено}" >&2
+            ;;
+    esac
 else
-
-
+    printf "ВНИМАНИЕ: не удалось прочитать настройки BIOS через efivar:\n%s\n" \
+        "$SETUP_DUMP" >&2
 fi
 
+# Настройки системы
+sysrc rc_startmsgs="NO" \
+      sysmon_enable="YES" \
+      background_dhclient="YES" || exit 1
 
+# Включение служб
+service winbox enable || exit 1
+service samba_server enable || exit 1
 
-sysrc rc_startmsgs="NO" sysmon_enable="YES" background_dhclient="YES"
-service winbox enable
-service samba_server  enable 
-cp /usr/local/etc/winbox/loader.conf.winbox /boot/loader.conf
-cp /usr/local/etc/winbox/ttys.winbox /etc/ttys
-echo "-m -q" > /boot.config
-sed -i '' 's/^date$/#date/' /etc/rc 
+# Настройки загрузки Winbox
+cp /usr/local/etc/winbox/loader.conf.winbox /boot/loader.conf || exit 1
+cp /usr/local/etc/winbox/ttys.winbox /etc/ttys || exit 1
+
+echo "-m -q" > /boot.config || exit 1
+
+# Отключение вывода даты при загрузке
+sed -i '' 's/^date$/#date/' /etc/rc || exit 1
+
+echo "Настройки Winbox и Samba применены."
